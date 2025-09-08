@@ -1,0 +1,136 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2025-09-05T14:46:56.703Z",
+    "end": "2025-09-05T14:46:58.930Z",
+    "duration": 2227,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6e95d91a-392f-4135-bcaa-2adb5b1df901",
+      "title": "",
+      "fullFile": "cypress/e2e/registration_api.cy.ts",
+      "file": "cypress/e2e/registration_api.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5269f331-a0f6-4092-b2a1-7a0f9afe7dd0",
+          "title": "API - User Registration",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should register a new user successfully",
+              "fullTitle": "API - User Registration should register a new user successfully",
+              "timedOut": null,
+              "duration": 1341,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"/registration_api.cy.ts/API - User Registration -- should register a new user successfully (failed).png\"\n    ]\n  ]\n}",
+              "code": "cy.request({\n    method: 'POST',\n    url: \"\".concat(Cypress.env('API_URL'), \"/createAccount\"),\n    form: true,\n    body: {\n        name: 'Test User',\n        email: uniqueEmail,\n        password: 'password123',\n        title: 'Mr',\n        birth_date: '01',\n        birth_month: 'January',\n        birth_year: '1990',\n        firstname: 'Test',\n        lastname: 'User',\n        company: 'Test Company',\n        address1: '123 Test Street',\n        address2: 'Apt 4B',\n        country: 'United States',\n        zipcode: '10001',\n        state: 'New York',\n        city: 'New York',\n        mobile_number: '1234567890'\n    }\n}).then(function (response) {\n    expect(response.status).to.eq(201);\n    expect(response.body).to.include('User created!');\n});",
+              "err": {
+                "message": "AssertionError: expected 200 to equal 201",
+                "estack": "AssertionError: expected 200 to equal 201\n    at Context.eval (webpack://assesstemt/./cypress/e2e/registration_api.cy.ts:29:33)\n    at getRet (https://automationexercise.com/__cypress/runner/cypress_runner.js:121549:20)\n    at tryCatcher (https://automationexercise.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://automationexercise.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://automationexercise.com/__cypress/runner/cypress_runner.js:121560:66)\n    at Context.then (https://automationexercise.com/__cypress/runner/cypress_runner.js:121811:21)",
+                "diff": "- 200\n+ 201\n"
+              },
+              "uuid": "e08fba59-2024-40f1-9a98-e29cf1e89a27",
+              "parentUUID": "5269f331-a0f6-4092-b2a1-7a0f9afe7dd0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should not allow registration with an existing email",
+              "fullTitle": "API - User Registration should not allow registration with an existing email",
+              "timedOut": null,
+              "duration": 650,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"/registration_api.cy.ts/API - User Registration -- should not allow registration with an existing email (failed).png\"\n    ]\n  ]\n}",
+              "code": "cy.request({\n    method: 'POST',\n    url: \"\".concat(Cypress.env('API_URL'), \"/createAccount\"),\n    form: true,\n    failOnStatusCode: false,\n    body: {\n        name: 'Test User',\n        email: uniqueEmail,\n        password: 'password123',\n        title: 'Mr',\n        birth_date: '01',\n        birth_month: 'January',\n        birth_year: '1990',\n        firstname: 'Test',\n        lastname: 'User',\n        company: 'Test Company',\n        address1: '123 Test Street',\n        address2: 'Apt 4B',\n        country: 'United States',\n        zipcode: '10001',\n        state: 'New York',\n        city: 'New York',\n        mobile_number: '1234567890'\n    }\n}).then(function (response) {\n    expect(response.status).to.eq(400);\n    expect(response.body).to.include('Email already exists!');\n});",
+              "err": {
+                "message": "AssertionError: expected 200 to equal 400",
+                "estack": "AssertionError: expected 200 to equal 400\n    at Context.eval (webpack://assesstemt/./cypress/e2e/registration_api.cy.ts:60:33)\n    at getRet (https://automationexercise.com/__cypress/runner/cypress_runner.js:121549:20)\n    at tryCatcher (https://automationexercise.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://automationexercise.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://automationexercise.com/__cypress/runner/cypress_runner.js:121560:66)\n    at Context.then (https://automationexercise.com/__cypress/runner/cypress_runner.js:121811:21)",
+                "diff": "- 200\n+ 400\n"
+              },
+              "uuid": "5f161d87-0c44-4a05-b9a2-daa95933d47a",
+              "parentUUID": "5269f331-a0f6-4092-b2a1-7a0f9afe7dd0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "e08fba59-2024-40f1-9a98-e29cf1e89a27",
+            "5f161d87-0c44-4a05-b9a2-daa95933d47a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1991,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "charts": true,
+        "reportPageTitle": "Kinetik QA Assessment",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

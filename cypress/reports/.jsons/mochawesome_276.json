@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-08T09:54:04.611Z",
+    "end": "2025-09-08T09:54:12.707Z",
+    "duration": 8096,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "536915d1-3f1a-41db-9818-db4b35c37d7a",
+      "title": "",
+      "fullFile": "cypress/e2e/add_to_cart_from_recommended.cy.ts",
+      "file": "cypress/e2e/add_to_cart_from_recommended.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c1f9414f-8f21-4991-aecf-f0c396f5d37c",
+          "title": "Add to cart from Recommended items",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add a product to the cart from the recommended items section",
+              "fullTitle": "Add to cart from Recommended items should add a product to the cart from the recommended items section",
+              "timedOut": null,
+              "duration": 7874,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/add_to_cart_from_recommended.cy.ts\"\n}",
+              "code": "cy.visit('http://automationexercise.com');\ncy.scrollTo('bottom');\nHomePage_1.default.getRecommendedItems().should('be.visible');\nHomePage_1.default.getAddToCartFromRecommended().first().click({ force: true });\nProductsPage_1.default.viewCartButton.click();\ncy.get('#cart_info_table').should('be.visible');",
+              "err": {},
+              "uuid": "4f638703-5559-4124-9188-f2fe43ae6102",
+              "parentUUID": "c1f9414f-8f21-4991-aecf-f0c396f5d37c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4f638703-5559-4124-9188-f2fe43ae6102"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7874,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "charts": true,
+        "reportPageTitle": "Kinetik QA Assessment",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

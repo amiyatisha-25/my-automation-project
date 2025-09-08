@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-05T20:02:44.051Z",
+    "end": "2025-09-05T20:03:01.645Z",
+    "duration": 17594,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0407a8aa-56e5-4ef5-b1e4-87cca36a30b3",
+      "title": "",
+      "fullFile": "cypress/e2e/view_category_products.cy.ts",
+      "file": "cypress/e2e/view_category_products.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c35f976d-7233-4e91-a7f1-dac6419c1189",
+          "title": "Test Case 18: View Category Products",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should view category products",
+              "fullTitle": "Test Case 18: View Category Products should view category products",
+              "timedOut": null,
+              "duration": 17346,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/view_category_products.cy.ts\"\n}",
+              "code": "// 3. Verify that categories are visible on left side bar\nhomePage.categorySidebar.should('be.visible');\n// 4. Click on 'Women' category\nhomePage.womenCategory.click();\ncy.wait(500); // Wait for sub-categories to load\n// 5. Click on any category link under 'Women' category, for example: Dress\nhomePage.womenDressCategory.click();\ncy.url().should('include', '/category_products/1');\n// 6. Verify that category page is displayed and confirm text 'WOMEN - TOPS PRODUCTS'\ncy.get('.title.text-center').should('contain.text', 'Women - Dress Products');\n// 7. On left side bar, click on any sub-category link of 'Men' category\nhomePage.menCategory.click();\ncy.wait(500); // Wait for sub-categories to load\nhomePage.menTshirtsCategory.click();\ncy.url().should('include', '/category_products/3');\n// 8. Verify that user is navigated to that category page\ncy.get('.title.text-center').should('contain.text', 'Men - Tshirts Products');",
+              "err": {},
+              "uuid": "485e49ea-dc80-4433-8a29-7f822973fb78",
+              "parentUUID": "c35f976d-7233-4e91-a7f1-dac6419c1189",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "485e49ea-dc80-4433-8a29-7f822973fb78"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17346,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "charts": true,
+        "reportPageTitle": "Kinetik QA Assessment",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

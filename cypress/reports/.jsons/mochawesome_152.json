@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-08T05:39:28.212Z",
+    "end": "2025-09-08T05:39:37.219Z",
+    "duration": 9007,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d0ac52a7-9de0-44ef-97a5-72e14c49e856",
+      "title": "",
+      "fullFile": "cypress/e2e/view_cart_brand_products.cy.ts",
+      "file": "cypress/e2e/view_cart_brand_products.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "77d3345b-ebac-4321-a647-cbcd3e286895",
+          "title": "Test Case 19: View & Cart Brand Products",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should view and cart brand products",
+              "fullTitle": "Test Case 19: View & Cart Brand Products should view and cart brand products",
+              "timedOut": null,
+              "duration": 8885,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/view_cart_brand_products.cy.ts\"\n}",
+              "code": "// 3. Click on 'Products' button\nproductsPage.productsButton.click();\n// 4. Verify that Brands are visible on left side bar\nproductsPage.brandsSidebar.should('be.visible');\n// 5. Click on any brand name, for example: Polo\nproductsPage.poloBrand.click();\n// 6. Verify that user is navigated to brand page and brand products are displayed\ncy.url().should('include', '/brand_products/Polo');\ncy.contains('Brand - Polo Products').should('be.visible');\n// 7. On left side bar, click on any other brand link, for example: H&M\nproductsPage.hmBrand.click();\n// 8. Verify that user is navigated to that brand page and can see products\ncy.url().should('include', '/brand_products/H&M');\ncy.contains('Brand - H&M Products').should('be.visible');",
+              "err": {},
+              "uuid": "6dc9e984-31de-41b5-b0f7-7a747718872b",
+              "parentUUID": "77d3345b-ebac-4321-a647-cbcd3e286895",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6dc9e984-31de-41b5-b0f7-7a747718872b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8885,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "charts": true,
+        "reportPageTitle": "Kinetik QA Assessment",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

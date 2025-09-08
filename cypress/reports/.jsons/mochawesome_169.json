@@ -1,0 +1,128 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-08T06:16:25.060Z",
+    "end": "2025-09-08T06:16:26.742Z",
+    "duration": 1682,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "203e224a-1f22-4089-9e02-4bf729592c55",
+      "title": "",
+      "fullFile": "cypress/e2e/registration_api.cy.ts",
+      "file": "cypress/e2e/registration_api.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "34c010c5-e188-4eb2-aff5-53c64b4aff99",
+          "title": "API - User Registration",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should register a new user successfully",
+              "fullTitle": "API - User Registration should register a new user successfully",
+              "timedOut": null,
+              "duration": 1172,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/registration_api.cy.ts\"\n}",
+              "code": "cy.request({\n    method: 'POST',\n    url: \"\".concat(Cypress.env('API_URL'), \"/createAccount\"),\n    form: true,\n    body: {\n        name: 'Test User',\n        email: uniqueEmail,\n        password: 'password123',\n        title: 'Mr',\n        birth_date: '01',\n        birth_month: 'January',\n        birth_year: '1990',\n        firstname: 'Test',\n        lastname: 'User',\n        company: 'Test Company',\n        address1: '123 Test Street',\n        address2: 'Apt 4B',\n        country: 'United States',\n        zipcode: '10001',\n        state: 'New York',\n        city: 'New York',\n        mobile_number: '1234567890'\n    }\n}).then(function (response) {\n    expect(response.status).to.eq(200);\n    expect(response.body).to.include('User created!');\n});",
+              "err": {},
+              "uuid": "0387e5bf-718f-4c34-991d-792f7b9a95f7",
+              "parentUUID": "34c010c5-e188-4eb2-aff5-53c64b4aff99",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should not allow registration with an existing email",
+              "fullTitle": "API - User Registration should not allow registration with an existing email",
+              "timedOut": null,
+              "duration": 378,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/registration_api.cy.ts\"\n}",
+              "code": "cy.request({\n    method: 'POST',\n    url: \"\".concat(Cypress.env('API_URL'), \"/createAccount\"),\n    form: true,\n    failOnStatusCode: false,\n    body: {\n        name: 'Test User',\n        email: uniqueEmail,\n        password: 'password123',\n        title: 'Mr',\n        birth_date: '01',\n        birth_month: 'January',\n        birth_year: '1990',\n        firstname: 'Test',\n        lastname: 'User',\n        company: 'Test Company',\n        address1: '123 Test Street',\n        address2: 'Apt 4B',\n        country: 'United States',\n        zipcode: '10001',\n        state: 'New York',\n        city: 'New York',\n        mobile_number: '1234567890'\n    }\n}).then(function (response) {\n    expect(response.status).to.eq(200);\n    expect(response.body).to.include('Email already exists!');\n});",
+              "err": {},
+              "uuid": "d41b5f5b-e210-4fd7-bec3-469b7d6e7ccf",
+              "parentUUID": "34c010c5-e188-4eb2-aff5-53c64b4aff99",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0387e5bf-718f-4c34-991d-792f7b9a95f7",
+            "d41b5f5b-e210-4fd7-bec3-469b7d6e7ccf"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1550,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "charts": true,
+        "reportPageTitle": "Kinetik QA Assessment",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

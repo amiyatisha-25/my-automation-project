@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-05T16:36:35.982Z",
+    "end": "2025-09-05T16:36:56.965Z",
+    "duration": 20983,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "aeacc21a-5fb3-4b02-94c2-1b8642f49629",
+      "title": "",
+      "fullFile": "cypress/e2e/purchase_flow.cy.ts",
+      "file": "cypress/e2e/purchase_flow.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b171f5c5-1183-4c2c-a38e-5d1b09824edb",
+          "title": "End-to-End Purchase Flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should complete the purchase flow",
+              "fullTitle": "End-to-End Purchase Flow should complete the purchase flow",
+              "timedOut": null,
+              "duration": 20670,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/purchase_flow.cy.ts\"\n}",
+              "code": "cy.fixture('user_credentials.json').then(function (credentials) {\n    // UI Login\n    cy.visit('/login');\n    loginPage.login(credentials.email, credentials.password);\n    cy.contains('Logged in as').should('be.visible');\n    // Add products to cart\n    productsPage.addFirstProductToCart();\n    cy.get('.modal-footer button').click();\n    productsPage.addSecondProductToCart();\n    cy.get('.modal-body a[href=\"/view_cart\"]').click({ force: true });\n    // Proceed to checkout\n    checkoutPage.proceedToCheckoutButton.click();\n    cy.get('#address_delivery').should('be.visible');\n    cy.get('[name=\"message\"]').type('Test order');\n    checkoutPage.placeOrderButton.click();\n    // Complete order\n    cy.url().should('include', '/payment');\n    checkoutPage.nameOnCardInput.should('be.visible').type('Test User');\n    checkoutPage.cardNumberInput.type('1234567890123456');\n    checkoutPage.cvcInput.type('123');\n    checkoutPage.expiryMonthInput.type('01');\n    checkoutPage.expiryYearInput.type('2026');\n    checkoutPage.payAndConfirmOrderButton.click();\n    // Verify order placement\n    checkoutPage.orderPlacedMessage.should('be.visible');\n    cy.url().should('include', '/payment_done');\n    // Download invoice\n    checkoutPage.downloadInvoiceButton.click();\n    // Verify invoice file\n    cy.readFile('cypress/downloads/invoice.txt').should('have.length.gt', 0);\n});",
+              "err": {},
+              "uuid": "1a798d3e-6c75-4105-9a0a-facfeb40a899",
+              "parentUUID": "b171f5c5-1183-4c2c-a38e-5d1b09824edb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1a798d3e-6c75-4105-9a0a-facfeb40a899"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 20670,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "charts": true,
+        "reportPageTitle": "Kinetik QA Assessment",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-08T06:58:08.651Z",
+    "end": "2025-09-08T06:58:15.431Z",
+    "duration": 6780,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e9a7a9f1-ad26-4603-ba57-a7408bc87244",
+      "title": "",
+      "fullFile": "cypress/e2e/subscription_home_page.cy.ts",
+      "file": "cypress/e2e/subscription_home_page.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "313cd794-a2be-48bd-869b-d588a6c202e3",
+          "title": "Test Case 10: Verify Subscription in home page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should verify subscription in home page",
+              "fullTitle": "Test Case 10: Verify Subscription in home page should verify subscription in home page",
+              "timedOut": null,
+              "duration": 6703,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/subscription_home_page.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Scroll down to footer\ncy.scrollTo('bottom');\n// 5. Verify text 'SUBSCRIPTION'\nhomePage.subscriptionText.should('be.visible');\n// 6. Enter email address in input and click arrow button\nhomePage.subscriptionEmailInput.type(\"test_sub_\".concat(Date.now(), \"@example.com\"));\nhomePage.subscribeButton.click();\n// 7. Verify success message 'You have been successfully subscribed!' is visible\nhomePage.subscriptionSuccessMessage.should('be.visible');",
+              "err": {},
+              "uuid": "e4bb9d36-e0bb-4b1b-a27b-a0b427b4ea45",
+              "parentUUID": "313cd794-a2be-48bd-869b-d588a6c202e3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e4bb9d36-e0bb-4b1b-a27b-a0b427b4ea45"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6703,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "charts": true,
+        "reportPageTitle": "Kinetik QA Assessment",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

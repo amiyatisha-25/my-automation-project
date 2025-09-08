@@ -1,0 +1,113 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-09-05T14:46:50.429Z",
+    "end": "2025-09-05T14:46:52.209Z",
+    "duration": 1780,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "49d687ff-9ffa-412f-a653-e203fcb08d36",
+      "title": "",
+      "fullFile": "cypress/e2e/purchase_flow.cy.ts",
+      "file": "cypress/e2e/purchase_flow.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "30536f11-3dad-4b7e-b97d-a7d7ba2209d5",
+          "title": "End-to-End Purchase Flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should complete the purchase flow",
+              "fullTitle": "End-to-End Purchase Flow should complete the purchase flow",
+              "timedOut": null,
+              "duration": 1651,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"/purchase_flow.cy.ts/End-to-End Purchase Flow -- should complete the purchase flow -- before all hook (failed).png\"\n    ]\n  ]\n}",
+              "code": "cy.fixture('user_credentials.json').then(function (credentials) {\n    // UI Login\n    cy.visit('/login');\n    loginPage.login(credentials.email, credentials.password);\n    cy.contains('Logged in as').should('be.visible');\n    // Add products to cart\n    productsPage.addFirstProductToCart();\n    cy.contains('Added!').should('be.visible');\n    cy.get('.modal-footer button').click();\n    productsPage.addSecondProductToCart();\n    cy.contains('Added!').should('be.visible');\n    cy.get('.modal-footer button').click();\n    // Proceed to checkout\n    productsPage.goToCart();\n    checkoutPage.proceedToCheckoutButton.click();\n    cy.get('#cart_items').should('be.visible');\n    checkoutPage.proceedToCheckoutButton.click();\n    cy.get('#address_delivery').should('be.visible');\n    cy.get('[name=\"message\"]').type('Test order');\n    checkoutPage.placeOrderButton.click();\n    // Complete order\n    checkoutPage.nameOnCardInput.type('Test User');\n    checkoutPage.cardNumberInput.type('1234567890123456');\n    checkoutPage.cvcInput.type('123');\n    checkoutPage.expiryMonthInput.type('01');\n    checkoutPage.expiryYearInput.type('2030');\n    checkoutPage.payAndConfirmOrderButton.click();\n    // Verify order placement\n    checkoutPage.orderPlacedMessage.should('be.visible');\n    cy.url().should('include', '/payment_done');\n    // Download invoice\n    checkoutPage.downloadInvoiceButton.click();\n    // Verify invoice file\n    cy.readFile('cypress/downloads/invoice.txt').should('have.length.gt', 0);\n});",
+              "err": {
+                "message": "AssertionError: expected 200 to equal 201\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `End-to-End Purchase Flow`",
+                "estack": "AssertionError: expected 200 to equal 201\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `End-to-End Purchase Flow`\n    at Context.eval (webpack://assesstemt/./cypress/e2e/purchase_flow.cy.ts:39:33)\n    at getRet (https://automationexercise.com/__cypress/runner/cypress_runner.js:121549:20)\n    at tryCatcher (https://automationexercise.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://automationexercise.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://automationexercise.com/__cypress/runner/cypress_runner.js:121560:66)\n    at Context.then (https://automationexercise.com/__cypress/runner/cypress_runner.js:121811:21)",
+                "diff": "- '200'\n+ '201'\n"
+              },
+              "uuid": "ea2d4a68-d065-4767-b01a-6c42137017c1",
+              "parentUUID": "30536f11-3dad-4b7e-b97d-a7d7ba2209d5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ea2d4a68-d065-4767-b01a-6c42137017c1"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1651,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "charts": true,
+        "reportPageTitle": "Kinetik QA Assessment",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

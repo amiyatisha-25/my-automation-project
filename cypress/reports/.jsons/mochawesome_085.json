@@ -1,0 +1,113 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-09-06T11:17:30.325Z",
+    "end": "2025-09-06T11:18:12.954Z",
+    "duration": 42629,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "caaf3a56-fb4a-4b4a-8d73-2dfb39538a55",
+      "title": "",
+      "fullFile": "cypress/e2e/search_products_verify_cart_after_login.cy.ts",
+      "file": "cypress/e2e/search_products_verify_cart_after_login.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d46e11f8-1cb3-4312-aae4-a582180f3178",
+          "title": "Test Case 20: Search Products and Verify Cart After Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should search products and verify cart after login",
+              "fullTitle": "Test Case 20: Search Products and Verify Cart After Login should search products and verify cart after login",
+              "timedOut": null,
+              "duration": 15395,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/search_products_verify_cart_after_login.cy.ts\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/search_products_verify_cart_after_login.cy.ts/Test Case 20 Search Products and Verify Cart After Login -- should search products and verify cart after login (failed).png\"\n      ],\n      [\n        \"/search_products_verify_cart_after_login.cy.ts/Test Case 20 Search Products and Verify Cart After Login -- should search products and verify cart after login (failed) (attempt 2).png\"\n      ],\n      [\n        \"/search_products_verify_cart_after_login.cy.ts/Test Case 20 Search Products and Verify Cart After Login -- should search products and verify cart after login (failed) (attempt 3).png\"\n      ]\n    ]\n  }\n]",
+              "code": "// 3. Click on 'Products' button\nproductsPage.productsButton.click();\n// 4. Verify user is navigated to ALL PRODUCTS page successfully\nproductsPage.allProductsText.should('be.visible');\n// 5. Enter product name in search input and click search button\nproductsPage.searchInput.type('Blue Top');\nproductsPage.searchButton.click();\n// 6. Verify 'SEARCHED PRODUCTS' is visible\nproductsPage.searchedProductsText.should('be.visible');\n// 7. Verify all the products related to search are visible\nproductsPage.allSearchedProducts.each(function ($el) {\n    cy.wrap($el).should('contain.text', 'Blue Top');\n});\n// 8. Add those products to cart\nproductsPage.addProductToCartByName('Blue Top');\nproductsPage.viewCartButton.click();\n// 9. Verify that products are visible in cart\nproductsPage.productOneInCart.should('be.visible');\n// 10. Click 'Signup / Login' button and submit login details\nregistrationPage.signupLoginButton.click();\nloginPage.login(userEmail, userPassword);\n// 11. Again, go to Cart page\ncy.visit('/view_cart');\n// 12. Verify that those products are visible in cart after login as well\nproductsPage.productOneInCart.should('be.visible');\n// 13. Click 'Delete Account' button\ncy.contains('Delete Account').click();\n// 14. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nregistrationPage.accountDeletedText.should('be.visible');\nregistrationPage.continueButton.click();",
+              "err": {
+                "message": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 2 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click",
+                "estack": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 2 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click\n    at mouseAction (https://automationexercise.com/__cypress/runner/cypress_runner.js:113786:68)\n    at Context.click (https://automationexercise.com/__cypress/runner/cypress_runner.js:113953:14)\n    at wrapped (https://automationexercise.com/__cypress/runner/cypress_runner.js:141517:19)\n    at <unknown> (https://automationexercise.com/__cypress/runner/cypress_runner.js:147453:15)\n    at tryCatcher (https://automationexercise.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://automationexercise.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://automationexercise.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromiseCtx (https://automationexercise.com/__cypress/runner/cypress_runner.js:1583:10)\n    at _drainQueueStep (https://automationexercise.com/__cypress/runner/cypress_runner.js:2381:12)\n    at _drainQueue (https://automationexercise.com/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (https://automationexercise.com/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (https://automationexercise.com/__cypress/runner/cypress_runner.js:2256:14)",
+                "diff": null
+              },
+              "uuid": "67a391a8-a182-4d74-b960-55df8c02978f",
+              "parentUUID": "d46e11f8-1cb3-4312-aae4-a582180f3178",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "67a391a8-a182-4d74-b960-55df8c02978f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 15395,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "charts": true,
+        "reportPageTitle": "Kinetik QA Assessment",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

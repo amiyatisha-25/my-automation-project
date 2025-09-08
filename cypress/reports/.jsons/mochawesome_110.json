@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-07T08:30:47.219Z",
+    "end": "2025-09-07T08:31:13.921Z",
+    "duration": 26702,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a2ba7b5c-aef5-4468-88a8-c43eee9446bc",
+      "title": "",
+      "fullFile": "cypress/e2e/place_order_register_while_checkout.cy.ts",
+      "file": "cypress/e2e/place_order_register_while_checkout.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7472fb25-39a0-4e52-b73f-3d9005e19ffe",
+          "title": "Test Case 14: Place Order: Register while Checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should place order by registering while checkout",
+              "fullTitle": "Test Case 14: Place Order: Register while Checkout should place order by registering while checkout",
+              "timedOut": null,
+              "duration": 26582,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/place_order_register_while_checkout.cy.ts\"\n}",
+              "code": "// 4. Click 'Signup / Login' button on the home page.\nregistrationPage.signupLoginButton.click();\n// 5. Fill all details in Signup and create account\nregistrationPage.fillSignupForm('Test User', userEmail);\nregistrationPage.clickSignupButton();\nregistrationPage.fillAccountInfo(userPassword, 'Mr', 'Test', 'User', 'Test Company', '123 Test Street', 'Apt 4B', 'United States', 'New York', 'New York', '10001', '1234567890');\nregistrationPage.clickCreateAccountButton();\n// 6. Verify 'ACCOUNT CREATED!' and click 'Continue' button\nregistrationPage.accountCreatedText.should('be.visible');\nregistrationPage.continueButton.click();\n// 7. Verify ' Logged in as username' at top\ncy.contains('Logged in as Test User').should('be.visible');\n// 8. Add products to cart\nproductsPage.addFirstProductToCart();\nproductsPage.continueShoppingButton.click();\n// 9. Click 'Cart' button\nproductsPage.cartButton.click();\n// 10. Verify that cart page is displayed\ncy.url().should('include', '/view_cart');\n// 11. Click Proceed To Checkout\ncheckoutPage.proceedToCheckoutButton.click();\n// 12. Verify Address Details and Review Your Order\ncy.get('#address_delivery').should('be.visible');\ncy.get('#address_invoice').should('be.visible');\n// 13. Enter description in comment text area and click 'Place Order'\ncy.get('[name=\"message\"]').type('Test order comments');\ncheckoutPage.placeOrderButton.click();\n// 14. Enter payment details: Name on Card, Card Number, CVC, Expiration date\ncheckoutPage.nameOnCardInput.type('Test User');\ncheckoutPage.cardNumberInput.type('1234567890123456');\ncheckoutPage.cvcInput.type('123');\ncheckoutPage.expiryMonthInput.type('01');\ncheckoutPage.expiryYearInput.type('2026');\n// 15. Click 'Pay and Confirm Order' button\ncheckoutPage.payAndConfirmOrderButton.click();\n// 16. Verify success message 'Your order has been placed successfully!'\ncheckoutPage.orderPlacedMessage.should('be.visible');\n// 17. Click 'Delete Account' button\ncy.contains('Delete Account').click();\n// 18. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nregistrationPage.accountDeletedText.should('be.visible');\nregistrationPage.continueButton.click();",
+              "err": {},
+              "uuid": "f77e68a8-b499-4be9-b524-78e59deb73b5",
+              "parentUUID": "7472fb25-39a0-4e52-b73f-3d9005e19ffe",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f77e68a8-b499-4be9-b524-78e59deb73b5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 26582,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "charts": true,
+        "reportPageTitle": "Kinetik QA Assessment",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

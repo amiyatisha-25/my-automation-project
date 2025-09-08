@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-08T06:50:23.908Z",
+    "end": "2025-09-08T06:50:40.173Z",
+    "duration": 16265,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f19a4c76-b03f-4086-a1fe-96be10f1cc47",
+      "title": "",
+      "fullFile": "cypress/e2e/contact_us.cy.ts",
+      "file": "cypress/e2e/contact_us.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "43b370d7-08e9-400f-9800-f7e6f353bc70",
+          "title": "Test Case 6: Contact Us Form",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should submit the contact us form successfully",
+              "fullTitle": "Test Case 6: Contact Us Form should submit the contact us form successfully",
+              "timedOut": null,
+              "duration": 16058,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/contact_us.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Contact Us' button\ncontactUsPage.contactUsButton.click();\n// 5. Verify 'GET IN TOUCH' is visible\ncontactUsPage.getInTouchText.should('be.visible');\n// 6. Enter name, email, subject and message\ncontactUsPage.nameInput.type('Test User');\ncontactUsPage.emailInput.type('test@example.com');\ncontactUsPage.subjectInput.type('Test Subject');\ncontactUsPage.messageInput.type('This is a test message.');\n// 7. Upload file\nvar fileName = 'example.txt';\ncy.fixture(fileName).then(function (fileContent) {\n    contactUsPage.uploadFileInput.attachFile({ fileContent: fileContent, fileName: fileName, mimeType: 'text/plain' });\n});\n// 8. Click 'Submit' button\ncontactUsPage.submitButton.click();\n// 9. Click OK button on alert\ncy.on('window:confirm', function (str) {\n    expect(str).to.equal('Press OK to proceed!');\n    return true; // click OK\n});\n// 10. Verify success message 'Success! Your details have been submitted successfully.' is visible\ncontactUsPage.successMessage.should('be.visible');\n// 11. Click 'Home' button and verify that landed to home page successfully\ncontactUsPage.homeButton.click();\ncy.url().should('eq', 'https://automationexercise.com/');",
+              "err": {},
+              "uuid": "f5c90796-3221-4899-a3e9-5490d495df06",
+              "parentUUID": "43b370d7-08e9-400f-9800-f7e6f353bc70",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f5c90796-3221-4899-a3e9-5490d495df06"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16058,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "charts": true,
+        "reportPageTitle": "Kinetik QA Assessment",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

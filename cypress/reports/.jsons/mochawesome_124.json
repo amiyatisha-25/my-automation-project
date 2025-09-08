@@ -1,0 +1,113 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-09-07T08:34:06.161Z",
+    "end": "2025-09-07T08:34:16.381Z",
+    "duration": 10220,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c19b5b20-b319-4a0e-9fd0-e43d18e0cbcc",
+      "title": "",
+      "fullFile": "cypress/e2e/view_cart_brand_products.cy.ts",
+      "file": "cypress/e2e/view_cart_brand_products.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d0731054-670e-4a98-b512-06120afd4093",
+          "title": "Test Case 19: View & Cart Brand Products",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should view and cart brand products",
+              "fullTitle": "Test Case 19: View & Cart Brand Products should view and cart brand products",
+              "timedOut": null,
+              "duration": 2994,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/view_cart_brand_products.cy.ts\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/view_cart_brand_products.cy.ts/Test Case 19 View & Cart Brand Products -- should view and cart brand products (failed).png\"\n      ],\n      [\n        \"/view_cart_brand_products.cy.ts/Test Case 19 View & Cart Brand Products -- should view and cart brand products (failed) (attempt 2).png\"\n      ],\n      [\n        \"/view_cart_brand_products.cy.ts/Test Case 19 View & Cart Brand Products -- should view and cart brand products (failed) (attempt 3).png\"\n      ]\n    ]\n  }\n]",
+              "code": "// 3. Click on 'Products' button\nproductsPage.productsButton.click();\n// 4. Verify that Brands are visible on left side bar\nproductsPage.brandsSidebar.should('be.visible');\n// 5. Click on any brand name, for example: Polo\nproductsPage.poloBrand.click();\n// 6. Verify that user is navigated to brand page and brand products are displayed\ncy.url().should('include', '/brand_products/Polo');\ncy.contains('Brand - Polo Products').should('be.visible');\n// 7. On left side bar, click on any other brand link, for example: H&M\nproductsPage.hmBrand.click();\n// 8. Verify that user is navigated to that brand page and can see products\ncy.url().should('include', '/brand_products/H&M');\ncy.contains('Brand - H&M Products').should('be.visible');",
+              "err": {
+                "message": "TypeError: Cannot read properties of undefined (reading 'click')",
+                "estack": "TypeError: Cannot read properties of undefined (reading 'click')\n    at Context.eval (webpack://assesstemt/./cypress/e2e/view_cart_brand_products.cy.ts:18:32)\n    at runnable.fn (https://automationexercise.com/__cypress/runner/cypress_runner.js:141784:19)\n    at callFn (https://automationexercise.com/__cypress/runner/cypress_runner.js:160853:21)\n    at Runnable.run (https://automationexercise.com/__cypress/runner/cypress_runner.js:160840:7)\n    at <unknown> (https://automationexercise.com/__cypress/runner/cypress_runner.js:166935:30)\n    at PassThroughHandlerContext.finallyHandler (https://automationexercise.com/__cypress/runner/cypress_runner.js:4042:23)\n    at PassThroughHandlerContext.tryCatcher (https://automationexercise.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://automationexercise.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://automationexercise.com/__cypress/runner/cypress_runner.js:1546:18)",
+                "diff": null
+              },
+              "uuid": "6a37cdeb-f497-46ea-a264-0e13d4d5ce75",
+              "parentUUID": "d0731054-670e-4a98-b512-06120afd4093",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "6a37cdeb-f497-46ea-a264-0e13d4d5ce75"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2994,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "charts": true,
+        "reportPageTitle": "Kinetik QA Assessment",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
