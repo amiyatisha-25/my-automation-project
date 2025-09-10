@@ -1,15 +1,15 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 2,
+    "tests": 1,
     "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2025-09-05T17:05:06.419Z",
-    "end": "2025-09-05T17:06:02.634Z",
-    "duration": 56215,
-    "testsRegistered": 2,
-    "passPercent": 50,
+    "failures": 0,
+    "start": "2025-09-10T05:55:57.725Z",
+    "end": "2025-09-10T05:56:27.685Z",
+    "duration": 29960,
+    "testsRegistered": 1,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,73 +18,49 @@
   },
   "results": [
     {
-      "uuid": "8f00d39f-43c5-4344-9c9a-762dbdb5b7d8",
+      "uuid": "19348a6f-fb79-481b-ac71-87778abf53cf",
       "title": "",
-      "fullFile": "cypress/e2e/add_products_to_cart.cy.ts",
-      "file": "cypress/e2e/add_products_to_cart.cy.ts",
+      "fullFile": "cypress/e2e/verify_address_details_in_checkout_page.cy.ts",
+      "file": "cypress/e2e/verify_address_details_in_checkout_page.cy.ts",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "061beda5-08b2-4d53-8f80-13cf6c28a64b",
-          "title": "Test Case 12: Add Products in Cart",
+          "uuid": "8e9ecff3-73a2-44be-a86a-f67d759ce9b2",
+          "title": "Verify address details in checkout page",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "should add products to cart and verify details",
-              "fullTitle": "Test Case 12: Add Products in Cart should add products to cart and verify details",
+              "title": "should verify that the delivery and billing addresses are the same as the registration address",
+              "fullTitle": "Verify address details in checkout page should verify that the delivery and billing addresses are the same as the registration address",
               "timedOut": null,
-              "duration": 15606,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
-              "pending": false,
-              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/add_products_to_cart.cy.ts\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/add_products_to_cart.cy.ts/Test Case 12 Add Products in Cart -- should add products to cart and verify details (failed).png\"\n      ],\n      [\n        \"/add_products_to_cart.cy.ts/Test Case 12 Add Products in Cart -- should add products to cart and verify details (failed) (attempt 2).png\"\n      ],\n      [\n        \"/add_products_to_cart.cy.ts/Test Case 12 Add Products in Cart -- should add products to cart and verify details (failed) (attempt 3).png\"\n      ]\n    ]\n  }\n]",
-              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click 'Products' button\nproductsPage.productsButton.click();\n// 5. Hover over first product and click 'Add to cart'\nproductsPage.addFirstProductToCart();\n// 6. Click 'Continue Shopping' button\nproductsPage.continueShoppingButton.click();\n// 7. Hover over second product and click 'Add to cart'\nproductsPage.addSecondProductToCart();\nproductsPage.viewCartButton.should('be.visible');\n// 8. Click 'View Cart' button\nproductsPage.viewCartButton.click();\n// 9. Verify both products are added to Cart\nproductsPage.productOneInCart.should('be.visible');\nproductsPage.productTwoInCart.should('be.visible');\n// 10. Verify their prices, quantity and total price\nproductsPage.productOnePrice.should('be.visible');\nproductsPage.productOneQuantity.should('contain.text', '1'); // Assuming quantity is 1 by default\nproductsPage.productOneTotalPrice.should('be.visible');\nproductsPage.productTwoPrice.should('be.visible');\nproductsPage.productTwoQuantity.should('contain.text', '1'); // Assuming quantity is 1 by default\nproductsPage.productTwoTotalPrice.should('be.visible');",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `1`, but never found it. Queried from:\n\n              > cy.get(.cart_info tbody tr)",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `1`, but never found it. Queried from:\n\n              > cy.get(.cart_info tbody tr)\n    at Context.eval (webpack://assesstemt/./cypress/e2e/add_products_to_cart.cy.ts:32:34)",
-                "diff": null
-              },
-              "uuid": "287723bd-31f1-47b8-846a-4c680a390cae",
-              "parentUUID": "061beda5-08b2-4d53-8f80-13cf6c28a64b",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "should remove products from cart",
-              "fullTitle": "Test Case 12: Add Products in Cart should remove products from cart",
-              "timedOut": null,
-              "duration": 11119,
+              "duration": 29811,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/add_products_to_cart.cy.ts\"\n}",
-              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click 'Products' button\nproductsPage.productsButton.click();\n// 5. Hover over first product and click 'Add to cart'\nproductsPage.addFirstProductToCart();\n// 6. Click 'View Cart' button\nproductsPage.viewCartButton.click();\n// 7. Verify product is added to Cart\nproductsPage.productOneInCart.should('be.visible');\n// 8. Click 'X' button corresponding to particular product\nproductsPage.getRemoveFromCartButton(0).click();\n// 9. Verify that product is removed from the cart\nproductsPage.cartEmptyMessage.should('be.visible');",
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/verify_address_details_in_checkout_page.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\n// 3. Verify that home page is visible successfully\ncy.get('body').should('be.visible');\n// 4. Click 'Signup / Login' button\nRegistrationPage_1.default.signupLoginButton.click();\n// 5. Fill all details in Signup and create account\nRegistrationPage_1.default.signup(name, email);\ncy.wait(2000);\nRegistrationPage_1.default.fillAccountDetails('Mrs', password, '1', // day (example value)\n'January', // month (example value)\n'1990', // year (example value)\nfirstName, lastName, company, address1, address2, country, state, city, zipcode, mobileNumber);\nRegistrationPage_1.default.createAccount();\n// 6. Verify 'ACCOUNT CREATED!' and click 'Continue' button\nRegistrationPage_1.default.accountCreatedMessage.should('be.visible');\nRegistrationPage_1.default.continueButton.click();\n// 7. Verify ' Logged in as username' at top\ncy.contains('Logged in as ' + name).should('be.visible');\n// 8. Add products to cart\nProductsPage_1.default.addFirstProductToCart();\nProductsPage_1.default.continueShoppingButton.click();\n// 9. Click 'Cart' button\nProductsPage_1.default.cartButton.click();\n// 10. Verify that cart page is displayed\ncy.url().should('include', '/view_cart');\n// 11. Click Proceed To Checkout\nCheckoutPage_1.default.proceedToCheckoutButton.click();\n// 12. Verify that the delivery address is same address filled at the time registration of account\nCheckoutPage_1.default.deliveryAddress.should('contain', address1);\nCheckoutPage_1.default.deliveryAddress.should('contain', address2);\nCheckoutPage_1.default.deliveryAddress.should('contain', city);\nCheckoutPage_1.default.deliveryAddress.should('contain', state);\nCheckoutPage_1.default.deliveryAddress.should('contain', zipcode);\nCheckoutPage_1.default.deliveryAddress.should('contain', country);\n// 13. Verify that the billing address is same address filled at the time registration of account\nCheckoutPage_1.default.billingAddress.should('contain', address1);\nCheckoutPage_1.default.billingAddress.should('contain', address2);\nCheckoutPage_1.default.billingAddress.should('contain', city);\nCheckoutPage_1.default.billingAddress.should('contain', state);\nCheckoutPage_1.default.billingAddress.should('contain', zipcode);\nCheckoutPage_1.default.billingAddress.should('contain', country);\n// 14. Click 'Delete Account' button\nRegistrationPage_1.default.deleteAccountButton.click();\n// 15. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nRegistrationPage_1.default.accountDeletedText.should('be.visible');\nRegistrationPage_1.default.continueButton.click();",
               "err": {},
-              "uuid": "b52d6669-a4c4-40a6-8ea6-6979585a1d01",
-              "parentUUID": "061beda5-08b2-4d53-8f80-13cf6c28a64b",
+              "uuid": "c3de238d-99ce-4726-9385-e48e53d1c191",
+              "parentUUID": "8e9ecff3-73a2-44be-a86a-f67d759ce9b2",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b52d6669-a4c4-40a6-8ea6-6979585a1d01"
+            "c3de238d-99ce-4726-9385-e48e53d1c191"
           ],
-          "failures": [
-            "287723bd-31f1-47b8-846a-4c680a390cae"
-          ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 26725,
+          "duration": 29811,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

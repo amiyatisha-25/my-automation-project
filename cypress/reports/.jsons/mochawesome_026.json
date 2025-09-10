@@ -1,15 +1,15 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
+    "tests": 2,
     "passes": 1,
     "pending": 0,
-    "failures": 0,
-    "start": "2025-09-05T16:37:45.729Z",
-    "end": "2025-09-05T16:37:54.261Z",
-    "duration": 8532,
-    "testsRegistered": 1,
-    "passPercent": 100,
+    "failures": 1,
+    "start": "2025-09-10T05:55:34.726Z",
+    "end": "2025-09-10T05:55:37.626Z",
+    "duration": 2900,
+    "testsRegistered": 2,
+    "passPercent": 50,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,49 +18,73 @@
   },
   "results": [
     {
-      "uuid": "a88e8686-60cc-4b78-ad34-652915662672",
+      "uuid": "c7e72dd3-5796-4b2d-90a7-d397c7d9d37f",
       "title": "",
-      "fullFile": "cypress/e2e/test_cases_page.cy.ts",
-      "file": "cypress/e2e/test_cases_page.cy.ts",
+      "fullFile": "cypress/e2e/task2_api_automation.cy.ts",
+      "file": "cypress/e2e/task2_api_automation.cy.ts",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "31fc8796-b1f9-4264-8feb-9061a88b4148",
-          "title": "Test Case 7: Verify Test Cases Page",
+          "uuid": "6b022c9c-7328-4904-bd5d-fa1403e97c16",
+          "title": "Task 2: API Automation",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "should navigate to the test cases page",
-              "fullTitle": "Test Case 7: Verify Test Cases Page should navigate to the test cases page",
+              "title": "should register a new user and validate the response",
+              "fullTitle": "Task 2: API Automation should register a new user and validate the response",
               "timedOut": null,
-              "duration": 8428,
+              "duration": 1132,
               "state": "passed",
-              "speed": "medium",
+              "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/test_cases_page.cy.ts\"\n}",
-              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Test Cases' button\nregistrationPage.testCasesButton.click();\n// 5. Verify user is navigated to test cases page successfully\ncy.url().should('include', '/test_cases');",
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/task2_api_automation.cy.ts\"\n}",
+              "code": "cy.request({\n    method: 'POST',\n    url: \"\".concat(Cypress.env('API_URL'), \"/createAccount\"),\n    form: true,\n    body: {\n        name: firstName,\n        email: email,\n        password: password,\n        title: 'Mr',\n        birth_date: '10',\n        birth_month: 'January',\n        birth_year: '1990',\n        firstname: firstName,\n        lastname: lastName,\n        company: 'Test Company',\n        address1: '123 Test St',\n        country: 'United States',\n        zipcode: '12345',\n        state: 'California',\n        city: 'Los Angeles',\n        mobile_number: '1234567890',\n    },\n}).then(function (response) {\n    expect(response.status).to.eq(200);\n    expect(response.body).to.include('User created!');\n});",
               "err": {},
-              "uuid": "79afcc0b-e609-4af2-82e5-5782372c5882",
-              "parentUUID": "31fc8796-b1f9-4264-8feb-9061a88b4148",
+              "uuid": "04db33c6-eb3a-4c59-bf62-a8d6f7dd1ad7",
+              "parentUUID": "6b022c9c-7328-4904-bd5d-fa1403e97c16",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should fail to register with an existing email and validate the response",
+              "fullTitle": "Task 2: API Automation should fail to register with an existing email and validate the response",
+              "timedOut": null,
+              "duration": 500,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/task2_api_automation.cy.ts\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/task2_api_automation.cy.ts/Task 2 API Automation -- should fail to register with an existing email and validate the response (failed).png\"\n      ],\n      [\n        \"/task2_api_automation.cy.ts/Task 2 API Automation -- should fail to register with an existing email and validate the response (failed) (attempt 2).png\"\n      ],\n      [\n        \"/task2_api_automation.cy.ts/Task 2 API Automation -- should fail to register with an existing email and validate the response (failed) (attempt 3).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.request({\n    method: 'POST',\n    url: \"\".concat(Cypress.env('API_URL'), \"/createAccount\"),\n    form: true,\n    body: {\n        name: firstName,\n        email: email, // Using the same email as the previous test\n        password: password,\n        firstname: firstName,\n        lastname: lastName,\n    },\n}).then(function (response) {\n    expect(response.status).to.eq(200);\n    expect(response.body).to.include('Email already exists!');\n});",
+              "err": {
+                "message": "AssertionError: expected '{\"responseCode\": 400, \"message\": \"Bad request, address1 parameter is missing in POST request.\"}' to include 'Email already exists!'",
+                "estack": "AssertionError: expected '{\"responseCode\": 400, \"message\": \"Bad request, address1 parameter is missing in POST request.\"}' to include 'Email already exists!'\n    at Context.eval (webpack://assesstemt/./cypress/e2e/task2_api_automation.cy.ts:53:31)\n    at getRet (https://automationexercise.com/__cypress/runner/cypress_runner.js:121549:20)\n    at tryCatcher (https://automationexercise.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://automationexercise.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://automationexercise.com/__cypress/runner/cypress_runner.js:121560:66)\n    at Context.then (https://automationexercise.com/__cypress/runner/cypress_runner.js:121811:21)",
+                "diff": null
+              },
+              "uuid": "919c963d-430f-4131-908f-603c8e02f10e",
+              "parentUUID": "6b022c9c-7328-4904-bd5d-fa1403e97c16",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "79afcc0b-e609-4af2-82e5-5782372c5882"
+            "04db33c6-eb3a-4c59-bf62-a8d6f7dd1ad7"
           ],
-          "failures": [],
+          "failures": [
+            "919c963d-430f-4131-908f-603c8e02f10e"
+          ],
           "pending": [],
           "skipped": [],
-          "duration": 8428,
+          "duration": 1632,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

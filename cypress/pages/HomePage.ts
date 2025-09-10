@@ -59,7 +59,7 @@ export class HomePage {
     return cy.contains('Logged in as');
   }
 
-  verifyLoggedInAs(name: string) {
+  verifyLoggedInAs(name: string, p0: { timeout: number; }) {
     this.loggedInAsText.should('be.visible').and('contain', name);
   }
 

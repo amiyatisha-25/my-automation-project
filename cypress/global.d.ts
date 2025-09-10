@@ -5,5 +5,6 @@ declare namespace Cypress {
      * @example cy.createNewUser().then(user => { ... })
      */
     createNewUser(): Chainable<any>;
+    downloadFile(url: string, directory: string, filename: string): Chainable<void>;
   }
 }

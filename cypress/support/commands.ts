@@ -44,6 +44,15 @@ Cypress.Commands.add('createNewUser', () => {
   });
 });
 
+Cypress.Commands.add('downloadFile', (url, directory, filename) => {
+  return cy.request({
+    url,
+    encoding: 'binary',
+  }).then((response) => {
+    cy.writeFile(`${directory}/${filename}`, response.body, 'binary');
+  });
+});
+
 
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })

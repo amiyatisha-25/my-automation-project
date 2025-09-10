@@ -1,15 +1,15 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 2,
+    "tests": 1,
     "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2025-09-05T17:06:52.109Z",
-    "end": "2025-09-05T17:08:06.921Z",
-    "duration": 74812,
-    "testsRegistered": 2,
-    "passPercent": 50,
+    "failures": 0,
+    "start": "2025-09-10T05:56:31.333Z",
+    "end": "2025-09-10T05:56:38.095Z",
+    "duration": 6762,
+    "testsRegistered": 1,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,73 +18,49 @@
   },
   "results": [
     {
-      "uuid": "94d566d4-2942-4424-ac42-dd1675219033",
+      "uuid": "6006279c-b02e-44b1-9b67-d2aef1ea6982",
       "title": "",
-      "fullFile": "cypress/e2e/add_products_to_cart.cy.ts",
-      "file": "cypress/e2e/add_products_to_cart.cy.ts",
+      "fullFile": "cypress/e2e/verify_product_quantity_in_cart.cy.ts",
+      "file": "cypress/e2e/verify_product_quantity_in_cart.cy.ts",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "674dec68-a7e8-41ce-bf9f-82a40f4d69f5",
-          "title": "Test Case 12: Add Products in Cart",
+          "uuid": "c4e74c09-b505-4e4a-9171-6ab4b2e76ff5",
+          "title": "Test Case 13: Verify Product quantity in Cart",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "should add products to cart and verify details",
-              "fullTitle": "Test Case 12: Add Products in Cart should add products to cart and verify details",
+              "title": "should verify product quantity in cart",
+              "fullTitle": "Test Case 13: Verify Product quantity in Cart should verify product quantity in cart",
               "timedOut": null,
-              "duration": 19586,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
-              "pending": false,
-              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/add_products_to_cart.cy.ts\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/add_products_to_cart.cy.ts/Test Case 12 Add Products in Cart -- should add products to cart and verify details (failed).png\"\n      ],\n      [\n        \"/add_products_to_cart.cy.ts/Test Case 12 Add Products in Cart -- should add products to cart and verify details (failed) (attempt 2).png\"\n      ],\n      [\n        \"/add_products_to_cart.cy.ts/Test Case 12 Add Products in Cart -- should add products to cart and verify details (failed) (attempt 3).png\"\n      ]\n    ]\n  }\n]",
-              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click 'Products' button\nproductsPage.productsButton.click();\n// 5. Hover over first product and click 'Add to cart'\nproductsPage.addFirstProductToCart();\n// 6. Click 'Continue Shopping' button\nproductsPage.continueShoppingButton.click();\n// 7. Hover over second product and click 'Add to cart'\nproductsPage.addSecondProductToCart();\ncy.wait(500);\nproductsPage.viewCartButton.should('be.visible');\n// 8. Click 'View Cart' button\nproductsPage.viewCartButton.click();\n// 9. Verify both products are added to Cart\nproductsPage.productOneInCart.should('be.visible');\nproductsPage.productTwoInCart.should('be.visible');\n// 10. Verify their prices, quantity and total price\nproductsPage.productOnePrice.should('be.visible');\nproductsPage.productOneQuantity.should('contain.text', '1'); // Assuming quantity is 1 by default\nproductsPage.productOneTotalPrice.should('be.visible');\nproductsPage.productTwoPrice.should('be.visible');\nproductsPage.productTwoQuantity.should('contain.text', '1'); // Assuming quantity is 1 by default\nproductsPage.productTwoTotalPrice.should('be.visible');",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `1`, but never found it. Queried from:\n\n              > cy.get(.cart_info tbody tr)",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `1`, but never found it. Queried from:\n\n              > cy.get(.cart_info tbody tr)\n    at Context.eval (webpack://assesstemt/./cypress/e2e/add_products_to_cart.cy.ts:33:34)",
-                "diff": null
-              },
-              "uuid": "2f1f52e0-9f57-4bcf-b5d8-ae0514391763",
-              "parentUUID": "674dec68-a7e8-41ce-bf9f-82a40f4d69f5",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "should remove products from cart",
-              "fullTitle": "Test Case 12: Add Products in Cart should remove products from cart",
-              "timedOut": null,
-              "duration": 11597,
+              "duration": 6561,
               "state": "passed",
-              "speed": "slow",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/add_products_to_cart.cy.ts\"\n}",
-              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click 'Products' button\nproductsPage.productsButton.click();\n// 5. Hover over first product and click 'Add to cart'\nproductsPage.addFirstProductToCart();\n// 6. Click 'View Cart' button\nproductsPage.viewCartButton.click();\n// 7. Verify product is added to Cart\nproductsPage.productOneInCart.should('be.visible');\n// 8. Click 'X' button corresponding to particular product\nproductsPage.getRemoveFromCartButton(0).click();\n// 9. Verify that product is removed from the cart\nproductsPage.cartEmptyMessage.should('be.visible');",
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/verify_product_quantity_in_cart.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click 'View Product' for any product on home page\nproductsPage.viewProductButton(1).click(); // Assuming we view the first product\n// 5. Verify product detail is opened\nproductsPage.productNameDetail.should('be.visible');\nproductsPage.productPriceDetail.should('be.visible');\n// 6. Increase quantity to 4\ncy.get('#quantity').clear().type('4');\n// 7. Click 'Add to cart' button\ncy.get('button.btn.btn-default.cart').should('be.visible').click();\n// 8. Click 'View Cart' button\nproductsPage.viewCartButton.click();\n// 9. Verify that product is displayed in cart page with exact quantity\nproductsPage.productOneQuantity.should('contain.text', '4');",
               "err": {},
-              "uuid": "819b8100-3529-44a5-ae37-f521a8cd82ca",
-              "parentUUID": "674dec68-a7e8-41ce-bf9f-82a40f4d69f5",
+              "uuid": "c12d58f8-8b2b-413c-b58e-c4584f784c9b",
+              "parentUUID": "c4e74c09-b505-4e4a-9171-6ab4b2e76ff5",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "819b8100-3529-44a5-ae37-f521a8cd82ca"
+            "c12d58f8-8b2b-413c-b58e-c4584f784c9b"
           ],
-          "failures": [
-            "2f1f52e0-9f57-4bcf-b5d8-ae0514391763"
-          ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 31183,
+          "duration": 6561,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

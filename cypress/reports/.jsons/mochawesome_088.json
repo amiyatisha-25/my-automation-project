@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2025-09-06T11:26:32.229Z",
-    "end": "2025-09-06T11:27:23.362Z",
-    "duration": 51133,
+    "failures": 0,
+    "start": "2025-09-10T10:04:35.252Z",
+    "end": "2025-09-10T10:04:59.410Z",
+    "duration": 24158,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "167ed663-967e-4524-b01b-2429d520b16c",
+      "uuid": "3cccbe84-09a9-4cf0-8faa-02b546a30ef4",
       "title": "",
       "fullFile": "cypress/e2e/search_products_verify_cart_after_login.cy.ts",
       "file": "cypress/e2e/search_products_verify_cart_after_login.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f4b6e41c-e576-41f8-b688-ec53eac249cd",
+          "uuid": "cb6743f8-27d5-4399-8f66-42b9f5558e18",
           "title": "Test Case 20: Search Products and Verify Cart After Login",
           "fullFile": "",
           "file": "",
@@ -38,33 +38,29 @@
               "title": "should search products and verify cart after login",
               "fullTitle": "Test Case 20: Search Products and Verify Cart After Login should search products and verify cart after login",
               "timedOut": null,
-              "duration": 13525,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 24071,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
-              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/search_products_verify_cart_after_login.cy.ts\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/search_products_verify_cart_after_login.cy.ts/Test Case 20 Search Products and Verify Cart After Login -- should search products and verify cart after login (failed).png\"\n      ],\n      [\n        \"/search_products_verify_cart_after_login.cy.ts/Test Case 20 Search Products and Verify Cart After Login -- should search products and verify cart after login (failed) (attempt 2).png\"\n      ],\n      [\n        \"/search_products_verify_cart_after_login.cy.ts/Test Case 20 Search Products and Verify Cart After Login -- should search products and verify cart after login (failed) (attempt 3).png\"\n      ]\n    ]\n  }\n]",
-              "code": "// 3. Click on 'Products' button\nproductsPage.productsButton.click();\n// 4. Verify user is navigated to ALL PRODUCTS page successfully\nproductsPage.allProductsText.should('be.visible');\n// 5. Enter product name in search input and click search button\nproductsPage.searchInput.type('Blue Top');\nproductsPage.searchButton.click();\n// 6. Verify 'SEARCHED PRODUCTS' is visible\nproductsPage.searchedProductsText.should('be.visible');\n// 7. Verify all the products related to search are visible\nproductsPage.allSearchedProducts.each(function ($el) {\n    cy.wrap($el).should('contain.text', 'Blue Top');\n});\n// 8. Add those products to cart\nproductsPage.addProductToCartByName('Blue Top');\ncy.wait(1000);\nproductsPage.viewCartButton.click();\n// 9. Verify that products are visible in cart\nproductsPage.productOneInCart.should('be.visible');\n// 10. Click 'Signup / Login' button and submit login details\nregistrationPage.signupLoginButton.click();\nloginPage.login(userEmail, userPassword);\n// 11. Again, go to Cart page\nproductsPage.cartButton.click();\n// 12. Verify that those products are visible in cart after login as well\nproductsPage.productOneInCart.should('be.visible');\n// 13. Click 'Delete Account' button\ncy.contains('Delete Account').click();\n// 14. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nregistrationPage.accountDeletedText.should('be.visible');\nregistrationPage.continueButton.click();",
-              "err": {
-                "message": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 2 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click",
-                "estack": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 2 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click\n    at mouseAction (https://automationexercise.com/__cypress/runner/cypress_runner.js:113786:68)\n    at Context.click (https://automationexercise.com/__cypress/runner/cypress_runner.js:113953:14)\n    at wrapped (https://automationexercise.com/__cypress/runner/cypress_runner.js:141517:19)\n    at <unknown> (https://automationexercise.com/__cypress/runner/cypress_runner.js:147453:15)\n    at tryCatcher (https://automationexercise.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://automationexercise.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://automationexercise.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromiseCtx (https://automationexercise.com/__cypress/runner/cypress_runner.js:1583:10)\n    at _drainQueueStep (https://automationexercise.com/__cypress/runner/cypress_runner.js:2381:12)\n    at _drainQueue (https://automationexercise.com/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (https://automationexercise.com/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (https://automationexercise.com/__cypress/runner/cypress_runner.js:2256:14)",
-                "diff": null
-              },
-              "uuid": "46894b29-178b-4207-ab61-697bb12edd8f",
-              "parentUUID": "f4b6e41c-e576-41f8-b688-ec53eac249cd",
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/search_products_verify_cart_after_login.cy.ts\"\n}",
+              "code": "// 3. Click on 'Products' button\nproductsPage.productsButton.click();\n// 4. Verify user is navigated to ALL PRODUCTS page successfully\nproductsPage.allProductsText.should('be.visible');\n// 5. Enter product name in search input and click search button\nproductsPage.searchInput.type('Blue Top');\nproductsPage.searchButton.click();\n// 6. Verify 'SEARCHED PRODUCTS' is visible\nproductsPage.searchedProductsText.should('be.visible');\n// 7. Verify all the products related to search are visible\nproductsPage.allSearchedProducts.each(function ($el) {\n    cy.wrap($el).should('contain.text', 'Blue Top');\n});\n// 8. Add those products to cart\nproductsPage.addProductToCartByName('Blue Top');\nproductsPage.continueShoppingButton.click();\n// 9. Click 'Cart' button and verify that products are visible in cart\nproductsPage.cartButton.click();\nproductsPage.productOneInCart.should('be.visible');\n// 10. Click 'Signup / Login' button and submit login details\nregistrationPage.signupLoginButton.click();\nloginPage.login(userEmail, userPassword);\n// 11. Again, go to Cart page\nproductsPage.cartButton.click();\n// 12. Verify that those products are visible in cart after login as well\nproductsPage.productOneInCart.should('be.visible');\n// 13. Click 'Delete Account' button\ncy.contains('Delete Account').click();\n// 14. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nregistrationPage.accountDeletedText.should('be.visible');\nregistrationPage.continueButton.click();",
+              "err": {},
+              "uuid": "c1aff9b1-2ef4-4c50-8247-8d5a73458a31",
+              "parentUUID": "cb6743f8-27d5-4399-8f66-42b9f5558e18",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "46894b29-178b-4207-ab61-697bb12edd8f"
+          "passes": [
+            "c1aff9b1-2ef4-4c50-8247-8d5a73458a31"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 13525,
+          "duration": 24071,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

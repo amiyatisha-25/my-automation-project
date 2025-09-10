@@ -16,7 +16,7 @@ describe('Add review on product', () => {
     cy.get('a[href="/product_details/1"]').click();
 
     // 6. Verify 'Write Your Review' is visible
-    cy.get('h2').should('contain', 'Write Your Review');
+    cy.get('.shop-details-tab').should('contain', 'Write Your Review');
 
     // 7. Enter name, email and review
     cy.get('a[href="#reviews"]').should('be.visible');    

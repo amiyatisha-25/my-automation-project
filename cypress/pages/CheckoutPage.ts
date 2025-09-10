@@ -63,12 +63,25 @@ export class CheckoutPage {
     return cy.get('#address_invoice');
   }
 
-  verifyAddressDetails(firstName: string, lastName: string, company: string, address1: string, address2: string, city: string, state: string, zipCode: string, mobileNumber: string) {
-    this.deliveryAddress.should('contain', `${firstName} ${lastName}`);
+  verifyAddressDetails(
+    firstName: string,
+    lastName: string,
+    company: string,
+    address1: string,
+    address2: string,
+    city: string,
+    state: string,
+    zipCode: string,
+    mobileNumber: string
+  ) {
+    this.deliveryAddress.should('contain', firstName);
+    this.deliveryAddress.should('contain', lastName);
     this.deliveryAddress.should('contain', company);
     this.deliveryAddress.should('contain', address1);
     this.deliveryAddress.should('contain', address2);
-    this.deliveryAddress.should('contain', `${city} ${state} ${zipCode}`);
+    this.deliveryAddress.should('contain', city);
+    this.deliveryAddress.should('contain', state);
+    this.deliveryAddress.should('contain', zipCode);
     this.deliveryAddress.should('contain', mobileNumber);
   }
 

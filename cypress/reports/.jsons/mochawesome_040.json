@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2025-09-05T17:48:57.982Z",
-    "end": "2025-09-05T17:49:43.803Z",
-    "duration": 45821,
+    "start": "2025-09-10T06:32:00.830Z",
+    "end": "2025-09-10T06:32:06.438Z",
+    "duration": 5608,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "f4db8aba-91c9-40de-9f1f-5c3fa6665745",
+      "uuid": "ac3ad9bd-83a3-47b5-a236-18689b15e4a6",
       "title": "",
-      "fullFile": "cypress/e2e/place_order_register_while_checkout.cy.ts",
-      "file": "cypress/e2e/place_order_register_while_checkout.cy.ts",
+      "fullFile": "cypress/e2e/task1_e2e_purchase_flow.cy.ts",
+      "file": "cypress/e2e/task1_e2e_purchase_flow.cy.ts",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "11406f25-7ed3-422c-8fc2-ae1c73d2de71",
-          "title": "Test Case 14: Place Order: Register while Checkout",
+          "uuid": "035bdd8e-a926-4a9c-b424-5dec0fa7d489",
+          "title": "Task 1: End-to-End Purchase Flow",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "should place order by registering while checkout",
-              "fullTitle": "Test Case 14: Place Order: Register while Checkout should place order by registering while checkout",
+              "title": "should allow a new user to register, purchase products, and download an invoice",
+              "fullTitle": "Task 1: End-to-End Purchase Flow should allow a new user to register, purchase products, and download an invoice",
               "timedOut": null,
-              "duration": 15493,
+              "duration": 1374,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/place_order_register_while_checkout.cy.ts\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/place_order_register_while_checkout.cy.ts/Test Case 14 Place Order Register while Checkout -- should place order by registering while checkout (failed).png\"\n      ],\n      [\n        \"/place_order_register_while_checkout.cy.ts/Test Case 14 Place Order Register while Checkout -- should place order by registering while checkout (failed) (attempt 2).png\"\n      ],\n      [\n        \"/place_order_register_while_checkout.cy.ts/Test Case 14 Place Order Register while Checkout -- should place order by registering while checkout (failed) (attempt 3).png\"\n      ]\n    ]\n  }\n]",
-              "code": "// 4. Add products to cart\nproductsPage.addFirstProductToCart();\nproductsPage.continueShoppingButton.click();\n// 5. Click 'Cart' button\nproductsPage.cartButton.click();\n// 6. Verify that cart page is displayed\ncy.url().should('include', '/view_cart');\n// 7. Click Proceed To Checkout\ncheckoutPage.proceedToCheckoutButton.click();\n// 8. Click 'Register / Login' button\ncy.contains('Register / Login').click();\n// 9. Fill all details in Signup and create account\nregistrationPage.fillSignupForm('Test User', userEmail);\nregistrationPage.clickSignupButton();\nregistrationPage.fillAccountInfo(userPassword, 'Mr', 'Test', 'User', 'Test Company', '123 Test Street', 'Apt 4B', 'United States', 'New York', 'New York', '10001', '1234567890');\nregistrationPage.clickCreateAccountButton();\n// 10. Verify 'ACCOUNT CREATED!' and click 'Continue' button\nregistrationPage.accountCreatedMessage.should('be.visible');\nregistrationPage.continueButton.click();\n// 11. Verify ' Logged in as username' at top\ncy.contains('Logged in as Test User').should('be.visible');\n// 12.Click 'Cart' button\nproductsPage.cartButton.click();\n// 13. Click 'Proceed To Checkout' button\ncheckoutPage.proceedToCheckoutButton.click();\n// 14. Verify Address Details and Review Your Order\ncy.get('#address_delivery').should('be.visible');\ncy.get('#address_invoice').should('be.visible');\n// 15. Enter description in comment text area and click 'Place Order'\ncy.get('[name=\"message\"]').type('Test order comments');\ncheckoutPage.placeOrderButton.click();\n// 16. Enter payment details: Name on Card, Card Number, CVC, Expiration date\ncheckoutPage.nameOnCardInput.type('Test User');\ncheckoutPage.cardNumberInput.type('1234567890123456');\ncheckoutPage.cvcInput.type('123');\ncheckoutPage.expiryMonthInput.type('01');\ncheckoutPage.expiryYearInput.type('2026');\n// 17. Click 'Pay and Confirm Order' button\ncheckoutPage.payAndConfirmOrderButton.click();\n// 18. Verify success message 'Your order has been placed successfully!'\ncheckoutPage.orderPlacedMessage.should('be.visible');\n// 19. Click 'Delete Account' button\ncy.contains('Delete Account').click();\n// 20. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nregistrationPage.accountDeletedText.should('be.visible');\nregistrationPage.continueButton.click();",
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/task1_e2e_purchase_flow.cy.ts\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/task1_e2e_purchase_flow.cy.ts/Task 1 End-to-End Purchase Flow -- should allow a new user to register, purchase products, and download an invoice (failed).png\"\n      ],\n      [\n        \"/task1_e2e_purchase_flow.cy.ts/Task 1 End-to-End Purchase Flow -- should allow a new user to register, purchase products, and download an invoice (failed) (attempt 2).png\"\n      ],\n      [\n        \"/task1_e2e_purchase_flow.cy.ts/Task 1 End-to-End Purchase Flow -- should allow a new user to register, purchase products, and download an invoice (failed) (attempt 3).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.log(\"Using email: \".concat(user.email));\n// Create account via API\ncy.request({\n    method: 'POST',\n    url: 'https://automationexercise.com/api/createAccount',\n    form: true,\n    body: {\n        name: \"\".concat(user.firstName, \" \").concat(user.lastName),\n        email: user.email,\n        password: user.password,\n        title: 'Mr',\n        birth_date: faker_1.faker.date.birthdate().getDate().toString(),\n        birth_month: (faker_1.faker.date.birthdate().getMonth() + 1).toString(),\n        birth_year: faker_1.faker.date.birthdate().getFullYear().toString(),\n        firstname: user.firstName,\n        lastname: user.lastName,\n        company: user.company,\n        address1: user.address1,\n        address2: user.address2,\n        country: 'United States',\n        zipcode: user.zipCode,\n        state: user.state,\n        city: user.city,\n        mobile_number: user.mobileNumber,\n    },\n}).then(function (response) {\n    expect(response.status).to.equal(200);\n    expect(response.body).to.contain('User created!');\n});\n// Store credentials\ncy.writeFile('cypress/fixtures/user_credentials.json', {\n    email: user.email,\n    password: user.password,\n});\n// Navigate to the website\ncy.visit('http://automationexercise.com');\n// Log in with the created user\ncy.fixture('user_credentials.json').then(function (credentials) {\n    homePage.clickCartButton();\n    loginPage.login(credentials.email, credentials.password);\n});\nhomePage.verifyLoggedInAs(user.firstName, { timeout: 15000 });\n// Add products to cart\nproductsPage.addFirstProductToCart();\ncy.get('.modal-content').should('be.visible');\ncy.get('.modal-title').should('contain.text', 'Added!');\ncy.get('button.close-modal').click(); // Close the modal\nproductsPage.addSecondProductToCart('Stylish Dress');\n// Proceed to checkout\nhomePage.clickCartButton();\ncy.url().should('include', '/view_cart');\ncy.contains('Shopping Cart').should('be.visible');\ncheckoutPage.clickProceedToCheckout();\n// Verify address and review order\ncheckoutPage.verifyAddressDetails(user.firstName, user.lastName, user.company, user.address1, user.address2, user.city, user.state, user.zipCode, user.mobileNumber);\ncheckoutPage.verifyReviewOrder();\n// Place order\ncheckoutPage.enterComment('This is a test order comment.');\ncheckoutPage.clickPlaceOrder();\n// Enter payment details\ncheckoutPage.enterPaymentDetails(faker_1.faker.finance.accountName(), faker_1.faker.finance.creditCardNumber(), faker_1.faker.finance.creditCardCVV(), faker_1.faker.date.future().getMonth().toString(), faker_1.faker.date.future().getFullYear().toString());\n// Confirm order\ncheckoutPage.clickPayAndConfirmOrder();\ncheckoutPage.verifyOrderPlacedSuccessMessage();\n// Download invoice\ncy.contains('Download Invoice', { timeout: 10000 })\n    .should('be.visible')\n    .then(function ($el) {\n    var invoiceUrl = $el.attr('href');\n    cy.downloadFile(\"http://automationexercise.com\".concat(invoiceUrl), 'cypress/downloads', 'invoice.txt');\n});\n// Verify invoice file\ncy.readFile('cypress/downloads/invoice.txt').should('exist').and('not.be.empty');\n// Continue and delete account\ncheckoutPage.clickContinueButton();\nhomePage.clickDeleteAccountButton();\nregistrationPage.verifyAccountDeleted();\nregistrationPage.clickContinueButton();",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-qa=\"signup-name\"]`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-qa=\"signup-name\"]`, but never found it.\n    at RegistrationPage.get (webpack://assesstemt/./cypress/pages/RegistrationPage.ts:11:14)\n    at __webpack_modules__../cypress/pages/RegistrationPage.ts.RegistrationPage.fillSignupForm (webpack://assesstemt/./cypress/pages/RegistrationPage.ts:139:9)\n    at Context.eval (webpack://assesstemt/./cypress/e2e/place_order_register_while_checkout.cy.ts:47:21)",
+                "message": "AssertionError: expected '{\"responseCode\": 400, \"message\": \"Email already exists!\"}' to include 'User created!'",
+                "estack": "AssertionError: expected '{\"responseCode\": 400, \"message\": \"Email already exists!\"}' to include 'User created!'\n    at Context.eval (webpack://assesstemt/./cypress/e2e/task1_e2e_purchase_flow.cy.ts:72:37)\n    at getRet (https://automationexercise.com/__cypress/runner/cypress_runner.js:121549:20)\n    at tryCatcher (https://automationexercise.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://automationexercise.com/__cypress/runner/cypress_runner.js:4285:29)",
                 "diff": null
               },
-              "uuid": "61e8ab77-b028-4bec-8a19-df1cb18238b5",
-              "parentUUID": "11406f25-7ed3-422c-8fc2-ae1c73d2de71",
+              "uuid": "23cbce94-ba4f-415f-89aa-17be9ed5721a",
+              "parentUUID": "035bdd8e-a926-4a9c-b424-5dec0fa7d489",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "61e8ab77-b028-4bec-8a19-df1cb18238b5"
+            "23cbce94-ba4f-415f-89aa-17be9ed5721a"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 15493,
+          "duration": 1374,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

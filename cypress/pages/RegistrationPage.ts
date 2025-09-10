@@ -3,6 +3,10 @@ export class RegistrationPage {
     return cy.get('a[href="/login"]').first();
   }
 
+  get registerLoginButton() {
+    return cy.get('.modal-body > :nth-child(2) > a > u');
+  }
+
   get newUserSignupText() {
     return cy.contains('New User Signup!');
   }
