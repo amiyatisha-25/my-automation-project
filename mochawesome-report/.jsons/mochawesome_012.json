@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-10T15:32:09.744Z",
+    "end": "2025-09-10T15:32:18.365Z",
+    "duration": 8621,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fa144c40-f981-4e5d-84c0-71e76452de17",
+      "title": "",
+      "fullFile": "cypress/e2e/register_existing_email.cy.ts",
+      "file": "cypress/e2e/register_existing_email.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2fca84a6-1736-4cea-816e-87a10d519036",
+          "title": "Test Case 5: Register User with existing email",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should display error when registering with existing email",
+              "fullTitle": "Test Case 5: Register User with existing email should display error when registering with existing email",
+              "timedOut": null,
+              "duration": 8478,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/register_existing_email.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Signup / Login' button\nregistrationPage.signupLoginButton.click();\n// 5. Verify 'New User Signup!' is visible\nregistrationPage.newUserSignupText.should('be.visible');\n// 6. Enter name and already registered email address\nregistrationPage.signupNameInput.type(name);\nregistrationPage.signupEmailInput.type(existingEmail);\n// 7. Click 'Signup' button\nregistrationPage.signupButton.click();\n// 8. Verify error 'Email Address already exist!' is visible\nregistrationPage.emailAlreadyExistError.should('be.visible');",
+              "err": {},
+              "uuid": "215ba74e-e17e-4428-97c9-0327312e9127",
+              "parentUUID": "2fca84a6-1736-4cea-816e-87a10d519036",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "215ba74e-e17e-4428-97c9-0327312e9127"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8478,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report/.jsons",
+        "charts": true,
+        "reportPageTitle": "Kinetik QA Assessment",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

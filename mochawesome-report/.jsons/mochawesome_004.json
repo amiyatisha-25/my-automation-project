@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-10T15:28:16.889Z",
+    "end": "2025-09-10T15:28:57.105Z",
+    "duration": 40216,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "64745131-e70f-4769-8eaa-d8688bf8baf0",
+      "title": "",
+      "fullFile": "cypress/e2e/download_invoice_after_purchase.cy.ts",
+      "file": "cypress/e2e/download_invoice_after_purchase.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "10eafbd7-ad53-4656-8f25-0416180e1477",
+          "title": "Test Case 24: Download Invoice after purchase order",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should download invoice after purchase order",
+              "fullTitle": "Test Case 24: Download Invoice after purchase order should download invoice after purchase order",
+              "timedOut": null,
+              "duration": 40078,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/download_invoice_after_purchase.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Add products to cart\nproductsPage.addFirstProductToCart();\ncy.get('.modal-content').should('be.visible');\ncy.get('.modal-title').should('contain.text', 'Added!');\ncy.get('button.close-modal').click();\n// 5. Click 'Cart' button\nhomePage.clickCartButton();\n// 6. Verify that cart page is displayed\ncy.url().should('include', '/view_cart');\ncy.contains('Shopping Cart').should('be.visible');\n// 7. Click Proceed To Checkout\ncheckoutPage.clickProceedToCheckout();\n// 8. Click 'Register / Login' button\nregistrationPage.registerLoginButton.click();\n// 9. Fill all details in Signup and create account\nregistrationPage.signup(name, email);\nregistrationPage.fillAccountDetails('Mr', password, '1', 'January', '1990', firstName, lastName, company, address1, address2, 'United States', state, city, zipCode, mobileNumber);\nregistrationPage.createAccount();\n// 10. Verify 'ACCOUNT CREATED!' and click 'Continue' button\nregistrationPage.accountCreatedText.should('be.visible');\nregistrationPage.continueButton.click();\n// 11. Verify ' Logged in as username' at top\ncy.contains('Logged in as ' + name).should('be.visible');\n// 12. Click 'Cart' button\nhomePage.clickCartButton();\n// 13. Click 'Proceed To Checkout' button\ncheckoutPage.clickProceedToCheckout();\n// 14. Verify Address Details and Review Your Order\ncheckoutPage.verifyAddressDetails(firstName, lastName, company, address1, address2, city, state, zipCode, mobileNumber);\ncheckoutPage.verifyReviewOrder();\n// 15. Enter description in comment text area and click 'Place Order'\ncheckoutPage.enterComment('This is a test order comment.');\ncheckoutPage.clickPlaceOrder();\n// 16. Enter payment details: Name on Card, Card Number, CVC, Expiration date\ncheckoutPage.enterPaymentDetails(faker_1.faker.finance.accountName(), faker_1.faker.finance.creditCardNumber(), faker_1.faker.finance.creditCardCVV(), faker_1.faker.date.future().getMonth().toString(), faker_1.faker.date.future().getFullYear().toString());\n// 17. Click 'Pay and Confirm Order' button\ncheckoutPage.clickPayAndConfirmOrder();\n// 18. Verify success message 'Your order has been placed successfully!'\ncheckoutPage.verifyOrderPlacedSuccessMessage();\n// 19. Click 'Download Invoice' button and verify invoice is downloaded successfully.\ncy.contains('Download Invoice', { timeout: 10000 })\n    .should('be.visible')\n    .then(function ($el) {\n    var invoiceUrl = $el.attr('href');\n    cy.downloadFile(\"http://automationexercise.com\".concat(invoiceUrl), 'cypress/downloads', 'invoice.txt');\n});\ncy.readFile('cypress/downloads/invoice.txt').should('exist').and('not.be.empty');\n// 20. Click 'Continue' button\ncheckoutPage.clickContinueButton();\n// 21. Click 'Delete Account' button\nhomePage.clickDeleteAccountButton();\n// 22. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nregistrationPage.verifyAccountDeleted();\nregistrationPage.clickContinueButton();",
+              "err": {},
+              "uuid": "fc511a21-6fd5-47b9-bc57-ba732758d544",
+              "parentUUID": "10eafbd7-ad53-4656-8f25-0416180e1477",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fc511a21-6fd5-47b9-bc57-ba732758d544"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 40078,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report/.jsons",
+        "charts": true,
+        "reportPageTitle": "Kinetik QA Assessment",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

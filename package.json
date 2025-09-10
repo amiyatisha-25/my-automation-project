@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pretest": "rm -rf cypress/reports/.jsons mochawesome.json mochawesome-report",
+    "pretest": "rm -rf mochawesome-report mochawesome.json",
     "test": "cypress run",
     "posttest": "npm run cy:report",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "cy:run:chrome": "cypress run --browser chrome",
     "cy:run:firefox": "cypress run --browser firefox",
-    "cy:report": "mochawesome-merge cypress/reports/.jsons/*.json > mochawesome.json && marge mochawesome.json"
+    "cy:report": "mochawesome-merge mochawesome-report/.jsons/*.json > mochawesome.json && marge mochawesome.json"
   },
   "keywords": [],
   "author": "",
