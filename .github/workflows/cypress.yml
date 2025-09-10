@@ -90,7 +90,7 @@ jobs:
 
       - name: Merge reports and generate HTML
         run: |
-          npx mochawesome-merge cypress/reports/.jsons/*.json > mochawesome.json
+          npx mochawesome-merge cypress/reports/**/*.json > mochawesome.json
           npx marge mochawesome.json
 
       - name: Upload final HTML report
