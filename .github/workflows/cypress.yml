@@ -9,6 +9,10 @@ on:
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chrome, firefox]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -21,18 +25,42 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Clean up old reports
+        run: rm -rf cypress/reports/.jsons mochawesome.json mochawesome-report
+
       - name: Run Cypress tests
         uses: cypress-io/github-action@v6
         with:
-          browser: chrome
+          browser: ${{ matrix.browser }}
           record: false
 
       - name: Upload raw test results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: raw-test-results-chrome
-          path: mochawesome-report/.jsons/*.json
+          name: raw-test-results-${{ matrix.browser }}
+          path: cypress/reports/.jsons/*.json
+
+      - name: Upload screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-screenshots-${{ matrix.browser }}
+          path: cypress/screenshots
+
+      - name: Upload videos
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-videos-${{ matrix.browser }}
+          path: cypress/videos
+
+      - name: Upload invoice
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-invoice-${{ matrix.browser }}
+          path: cypress/downloads/invoice.txt
 
   report:
     runs-on: ubuntu-latest
@@ -44,29 +72,3 @@ jobs:
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Download raw test results
-        uses: actions/download-artifact@v4
-        with:
-          pattern: raw-test-results-*
-          path: mochawesome-report
-          merge-multiple: true
-
-      - name: List report files
-        run: ls -l mochawesome-report
-
-      - name: Merge reports and generate HTML
-        run: |
-          npx mochawesome-merge mochawesome-report/.jsons/*.json > mochawesome.json
-          npx marge mochawesome.json --reportDir mochawesome-report
-
-      - name: Upload final HTML report
-        uses: actions/upload-artifact@v4
-        with:
-          name: final-report
-          path: mochawesome-report/mochawesome.html
