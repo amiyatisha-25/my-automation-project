@@ -30,7 +30,7 @@ export default defineConfig({
     downloadsFolder: "cypress/downloads",
     reporter: "cypress-mochawesome-reporter",
     reporterOptions: {
-      reportDir: "cypress/reports",
+      reportDir: "mochawesome-report",
       charts: true,
       reportPageTitle: "Kinetik QA Assessment",
       embeddedScreenshots: true,

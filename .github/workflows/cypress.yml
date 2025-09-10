@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: raw-test-results-${{ matrix.browser }}
-          path: cypress/reports/.jsons
+          path: cypress/reports/*.json
 
       - name: Upload screenshots
         if: failure()
@@ -82,15 +82,15 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           pattern: raw-test-results-*
-          path: cypress/reports/.jsons
+          path: cypress/reports
           merge-multiple: true
 
       - name: List report files
-        run: ls -lR cypress/reports/.jsons
+        run: ls -lR cypress/reports
 
       - name: Merge reports and generate HTML
         run: |
-          npx mochawesome-merge cypress/reports/.jsons/*.json > mochawesome.json
+          npx mochawesome-merge cypress/reports/*.json > mochawesome.json
           npx marge mochawesome.json
 
       - name: Upload final HTML report
