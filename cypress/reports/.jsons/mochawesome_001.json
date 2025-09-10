@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-09-09T12:44:46.733Z",
-    "end": "2025-09-09T12:44:58.748Z",
-    "duration": 12015,
+    "start": "2025-09-10T11:35:09.637Z",
+    "end": "2025-09-10T11:35:22.024Z",
+    "duration": 12387,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "287cf28d-ec45-4d08-b16e-36da5aeb27b0",
+      "uuid": "ace811f7-3f3b-4a64-a6d5-c9b4aadd59dc",
       "title": "",
       "fullFile": "cypress/e2e/add_review_on_product.cy.ts",
       "file": "cypress/e2e/add_review_on_product.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "276a26c3-f45f-4542-a74e-dd27f8e6de30",
+          "uuid": "02a41f8a-fed5-4a25-89bb-33d86bdf336e",
           "title": "Add review on product",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should add a review on a product",
               "fullTitle": "Add review on product should add a review on a product",
               "timedOut": null,
-              "duration": 11883,
+              "duration": 12284,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/add_review_on_product.cy.ts\"\n}",
               "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\ncy.url().should('eq', 'https://automationexercise.com/');\n// 3. Click on 'Products' button    \ncy.get('a[href=\"/products\"]').click();\n// 4. Verify user is navigated to ALL PRODUCTS page successfully\ncy.get('h2.title.text-center').should('contain', 'All Products');\n// 5. Click on 'View Product' button\ncy.get('a[href=\"/product_details/1\"]').click();\n// 6. Verify 'Write Your Review' is visible\ncy.get('.shop-details-tab').should('contain', 'Write Your Review');\n// 7. Enter name, email and review\ncy.get('a[href=\"#reviews\"]').should('be.visible');\ncy.get('input#name').type('Tisha');\ncy.get('input#email').type('tisha@example.com');\ncy.get('textarea#review').type('This is a great product!');\n// 8. Click 'Submit' button \ncy.get('button#button-review').click();\n// 9. Verify success message 'Thank you for your review.' is visible\ncy.get('div.alert-success span').should('contain', 'Thank you for your review.');",
               "err": {},
-              "uuid": "b4fd7f15-419a-457a-88fd-3addc8857923",
-              "parentUUID": "276a26c3-f45f-4542-a74e-dd27f8e6de30",
+              "uuid": "a8b78510-6379-4074-9f9b-b8cd8c6ec319",
+              "parentUUID": "02a41f8a-fed5-4a25-89bb-33d86bdf336e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b4fd7f15-419a-457a-88fd-3addc8857923"
+            "a8b78510-6379-4074-9f9b-b8cd8c6ec319"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 11883,
+          "duration": 12284,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

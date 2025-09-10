@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-09-09T12:45:17.604Z",
-    "end": "2025-09-09T12:45:30.635Z",
-    "duration": 13031,
+    "start": "2025-09-10T11:35:37.223Z",
+    "end": "2025-09-10T11:36:02.362Z",
+    "duration": 25139,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "aa02f5ec-5997-4b0f-8b1d-6c8fc49ac6fa",
+      "uuid": "b7b37644-6001-4797-a3df-eb931ce86e7d",
       "title": "",
       "fullFile": "cypress/e2e/contact_us.cy.ts",
       "file": "cypress/e2e/contact_us.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "dc4c4808-b9ad-4e52-8136-9455309f5638",
+          "uuid": "9b241796-2926-4463-a9e0-3050b43afb2c",
           "title": "Test Case 6: Contact Us Form",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should submit the contact us form successfully",
               "fullTitle": "Test Case 6: Contact Us Form should submit the contact us form successfully",
               "timedOut": null,
-              "duration": 12820,
+              "duration": 25074,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/contact_us.cy.ts\"\n}",
               "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Contact Us' button\ncontactUsPage.contactUsButton.click();\n// 5. Verify 'GET IN TOUCH' is visible\ncontactUsPage.getInTouchText.should('be.visible');\n// 6. Enter name, email, subject and message\ncontactUsPage.nameInput.type('Test User');\ncontactUsPage.emailInput.type('test@example.com');\ncontactUsPage.subjectInput.type('Test Subject');\ncontactUsPage.messageInput.type('This is a test message.');\n// 7. Upload file\nvar fileName = 'example.txt';\ncy.fixture(fileName).then(function (fileContent) {\n    contactUsPage.uploadFileInput.attachFile({ fileContent: fileContent, fileName: fileName, mimeType: 'text/plain' });\n});\n// 8. Click 'Submit' button\ncontactUsPage.submitButton.click();\n// 9. Click OK button on alert\ncy.on('window:confirm', function (str) {\n    expect(str).to.equal('Press OK to proceed!');\n    return true; // click OK\n});\n// 10. Verify success message 'Success! Your details have been submitted successfully.' is visible\ncontactUsPage.successMessage.should('be.visible');\n// 11. Click 'Home' button and verify that landed to home page successfully\ncontactUsPage.homeButton.click();\ncy.url().should('eq', 'https://automationexercise.com/');",
               "err": {},
-              "uuid": "9f4830f8-93d6-4ee0-aa05-878c5cbd4aee",
-              "parentUUID": "dc4c4808-b9ad-4e52-8136-9455309f5638",
+              "uuid": "f98b95d7-0a19-408a-a39a-ef2941daf95b",
+              "parentUUID": "9b241796-2926-4463-a9e0-3050b43afb2c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9f4830f8-93d6-4ee0-aa05-878c5cbd4aee"
+            "f98b95d7-0a19-408a-a39a-ef2941daf95b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 12820,
+          "duration": 25074,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

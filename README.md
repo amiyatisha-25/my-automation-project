@@ -30,7 +30,7 @@ This project contains automated tests for the Kinetik QA Engineer (Level 3) asse
 3.  Run the tests:
 
     ```bash
-    npx cypress run
+    npm test
     ```
 
 4.  To open the Cypress Test Runner:
@@ -41,20 +41,22 @@ This project contains automated tests for the Kinetik QA Engineer (Level 3) asse
 
 ## CI/CD
 
-A successful CI/CD run with artifacts can be found here: [Link to CI/CD run]
+A successful CI/CD run with artifacts can be found here: [https://github.com/tisha/Assesstemt/actions/runs/10057313851](https://github.com/tisha/Assesstemt/actions/runs/10057313851)
+
+The CI/CD pipeline is configured to run the test suite in parallel across Chrome and Firefox browsers, as defined in `.github/workflows/cypress.yml`.
 
 ## Notes
 
 *   The tests are designed to be run against the live website: `https://automationexercise.com`
-*   A new user is created via API for each test run to ensure test independence.
+*   A new user is created via API for each test run to ensure test independence. The credentials for this user are stored in `cypress/fixtures/user_credentials.json`.
 *   The downloaded invoice is stored in the `cypress/downloads` directory and uploaded as an artifact in the CI/CD run.
+*   **Test Retries:** Tests will be retried up to 2 times on failure when run via `cypress run`, as configured in `cypress.config.ts`.
 *   **API Discrepancy:** The assessment instructions state that the `/api/createAccount` endpoint should return a `201` status code for successful user creation and `400` for a duplicate user. 
-
 *   **Test Data Cleanup:** The `cypress/downloads` folder is cleared before each run.
 
 ## Parallel and Cross-Browser Execution
 
-To run tests in parallel, you can use the `--parallel` flag with the `cypress run` command. You will need to set up a Cypress Dashboard project for this.
+To run tests in parallel locally, you can use the `--parallel` flag with the `cypress run` command. You will need to set up a Cypress Dashboard project for this.
 
 To run tests on a different browser, you can use the `--browser` flag:
 

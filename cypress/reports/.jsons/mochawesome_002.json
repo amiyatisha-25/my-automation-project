@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-09-09T12:45:03.731Z",
-    "end": "2025-09-09T12:45:11.097Z",
-    "duration": 7366,
+    "start": "2025-09-10T11:35:25.665Z",
+    "end": "2025-09-10T11:35:33.374Z",
+    "duration": 7709,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "27ed23e3-af67-4613-a9e3-38e59f1a5374",
+      "uuid": "9fcec630-2c9a-4b55-a079-2debf5b02b5c",
       "title": "",
       "fullFile": "cypress/e2e/add_to_cart_from_recommended.cy.ts",
       "file": "cypress/e2e/add_to_cart_from_recommended.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d29f7436-02d3-45a1-87e0-a0b75f4e3cf9",
+          "uuid": "24413337-7750-4dd8-9eb5-bec49d40804c",
           "title": "Add to cart from Recommended items",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should add a product to the cart from the recommended items section",
               "fullTitle": "Add to cart from Recommended items should add a product to the cart from the recommended items section",
               "timedOut": null,
-              "duration": 7268,
+              "duration": 7635,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/add_to_cart_from_recommended.cy.ts\"\n}",
               "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\n// 3. Scroll to bottom of page\ncy.scrollTo('bottom');\n// 4. Verify 'RECOMMENDED ITEMS' are visible\nHomePage_1.default.getRecommendedItems().should('be.visible');\n// 5. Click on 'Add To Cart' on Recommended product\nHomePage_1.default.getAddToCartFromRecommended().first().click({ force: true });\n// 6. Click on 'View Cart' button\nProductsPage_1.default.viewCartButton.click();\n// 7. Verify that product is displayed in cart page\ncy.get('#cart_info_table').should('be.visible');",
               "err": {},
-              "uuid": "a4766cde-951e-47fa-9e1d-fee79839849d",
-              "parentUUID": "d29f7436-02d3-45a1-87e0-a0b75f4e3cf9",
+              "uuid": "cd6f07f6-3d68-44af-88b8-7930437178c9",
+              "parentUUID": "24413337-7750-4dd8-9eb5-bec49d40804c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a4766cde-951e-47fa-9e1d-fee79839849d"
+            "cd6f07f6-3d68-44af-88b8-7930437178c9"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 7268,
+          "duration": 7635,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
