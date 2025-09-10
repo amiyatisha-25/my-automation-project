@@ -93,7 +93,7 @@ jobs:
 
       - name: Merge reports and generate HTML
         run: |
-          npx mochawesome-merge mochawesome-report/*.json > mochawesome.json
+          npx mochawesome-merge mochawesome-report/.jsons/*.json > mochawesome.json
           npx marge mochawesome.json --reportDir mochawesome-report
 
       - name: Upload final HTML report
@@ -101,3 +101,5 @@ jobs:
         with:
           name: final-report
           path: mochawesome-report/mochawesome.html
+
+     
