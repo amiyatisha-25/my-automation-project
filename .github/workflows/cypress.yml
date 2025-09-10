@@ -26,7 +26,7 @@ jobs:
         run: npm install
 
       - name: Clean up old reports
-        run: rm -rf cypress/reports/.jsons mochawesome.json mochawesome-report
+        run: rm -rf mochawesome-report mochawesome.json
 
       - name: Run Cypress tests
         uses: cypress-io/github-action@v6
@@ -34,12 +34,15 @@ jobs:
           browser: ${{ matrix.browser }}
           record: false
 
+      - name: List files in mochawesome-report directory
+        run: ls -lR mochawesome-report
+
       - name: Upload raw test results
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: raw-test-results-${{ matrix.browser }}
-          path: cypress/reports/.jsons/*.json
+          path: mochawesome-report/*.json
 
       - name: Upload screenshots
         if: failure()
@@ -82,19 +85,8 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           pattern: raw-test-results-*
-          path: cypress/reports
+          path: mochawesome-report
           merge-multiple: true
 
       - name: List report files
-        run: ls -lR cypress/reports
-
-      - name: Merge reports and generate HTML
-        run: |
-          npx mochawesome-merge cypress/reports/**/*.json > mochawesome.json
-          npx marge mochawesome.json
-
-      - name: Upload final HTML report
-        uses: actions/upload-artifact@v4
-        with:
-          name: final-report
-          path: mochawesome-report/mochawesome.html
+        run: ls -l mochawesome-report
