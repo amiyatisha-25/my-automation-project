@@ -35,6 +35,9 @@ export default defineConfig({
       reportPageTitle: "Kinetik QA Assessment",
       embeddedScreenshots: true,
       inlineAssets: true,
+      overwrite: false,
+      html: true,
+      json: true
     },
     retries: {
       runMode: 2,
