@@ -2,9 +2,9 @@ name: Cypress Tests
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   cypress-run:
@@ -14,13 +14,11 @@ jobs:
       matrix:
         browser: [chrome, firefox]
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
+      - uses: actions/checkout@v4
+      - name: Use Node.js 22.x
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "22"
 
       - name: Install dependencies
         run: npm install
@@ -29,15 +27,12 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: ${{ matrix.browser }}
-          record: true
-        env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
+          record: false
+
       - name: Generate and Upload HTML Report
         if: always()
         run: npm run posttest
-      
+
       - name: Upload HTML report
         if: always()
         uses: actions/upload-artifact@v4
@@ -64,4 +59,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cypress-invoice
-          path: cypress/downloads/invoice.pdf
+          path: cypress/downloads/invoice.txt
