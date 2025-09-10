@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-10T13:11:57.959Z",
+    "end": "2025-09-10T13:13:12.118Z",
+    "duration": 74159,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "466da647-8092-4a3a-a79a-d004c694b13d",
+      "title": "",
+      "fullFile": "cypress/e2e/purchase_flow.cy.ts",
+      "file": "cypress/e2e/purchase_flow.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "36026eb0-2947-4f73-8559-41912af662c3",
+          "title": "End-to-End Purchase Flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should complete the purchase flow",
+              "fullTitle": "End-to-End Purchase Flow should complete the purchase flow",
+              "timedOut": null,
+              "duration": 74010,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/purchase_flow.cy.ts\"\n}",
+              "code": "// UI Login\ncy.visit('/login');\nloginPage.login(this.user.email, this.user.password);\ncy.contains('Logged in as').should('be.visible');\n// Add products to cart\nproductsPage.addFirstProductToCart();\ncy.get('.modal-footer button').click();\nproductsPage.addSecondProductToCart('Men Tshirt');\ncy.get('.modal-body a[href=\"/view_cart\"]').click({ force: true });\n// Proceed to checkout\ncheckoutPage.proceedToCheckoutButton.click();\ncy.get('#address_delivery').should('be.visible');\ncy.get('[name=\"message\"]').type('Test order');\ncheckoutPage.placeOrderButton.click();\n// Complete order\ncy.url().should('include', '/payment');\ncheckoutPage.nameOnCardInput.should('be.visible').type('Test User');\ncheckoutPage.cardNumberInput.type('1234567890123456');\ncheckoutPage.cvcInput.type('123');\ncheckoutPage.expiryMonthInput.type('01');\ncheckoutPage.expiryYearInput.type('2026');\ncheckoutPage.payAndConfirmOrderButton.click();\n// Verify order placement\ncheckoutPage.orderPlacedMessage.should('be.visible');\ncy.url().should('include', '/payment_done');\n// Download invoice\ncheckoutPage.downloadInvoiceButton.click();\n// Verify invoice file\ncy.readFile('cypress/downloads/invoice.txt').should('have.length.gt', 0);",
+              "err": {},
+              "uuid": "d8bc047f-517a-49a8-8e07-8278656557ef",
+              "parentUUID": "36026eb0-2947-4f73-8559-41912af662c3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d8bc047f-517a-49a8-8e07-8278656557ef"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 74010,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "charts": true,
+        "reportPageTitle": "Kinetik QA Assessment",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
