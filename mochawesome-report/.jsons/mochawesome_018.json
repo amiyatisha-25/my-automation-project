@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-10T15:34:39.194Z",
+    "end": "2025-09-10T15:35:44.010Z",
+    "duration": 64816,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e1832355-7d21-47c1-842c-a3d92c02b293",
+      "title": "",
+      "fullFile": "cypress/e2e/search_products_verify_cart_after_login.cy.ts",
+      "file": "cypress/e2e/search_products_verify_cart_after_login.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "27c4b07b-2417-47ca-9fe1-73b8a5b1ff6e",
+          "title": "Test Case 20: Search Products and Verify Cart After Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should search products and verify cart after login",
+              "fullTitle": "Test Case 20: Search Products and Verify Cart After Login should search products and verify cart after login",
+              "timedOut": null,
+              "duration": 64734,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/search_products_verify_cart_after_login.cy.ts\"\n}",
+              "code": "// 3. Click on 'Products' button\nproductsPage.productsButton.click();\n// 4. Verify user is navigated to ALL PRODUCTS page successfully\nproductsPage.allProductsText.should('be.visible');\n// 5. Enter product name in search input and click search button\nproductsPage.searchInput.type('Blue Top');\nproductsPage.searchButton.click();\n// 6. Verify 'SEARCHED PRODUCTS' is visible\nproductsPage.searchedProductsText.should('be.visible');\n// 7. Verify all the products related to search are visible\nproductsPage.allSearchedProducts.each(function ($el) {\n    cy.wrap($el).should('contain.text', 'Blue Top');\n});\n// 8. Add those products to cart\nproductsPage.addProductToCartByName('Blue Top');\nproductsPage.continueShoppingButton.click();\n// 9. Click 'Cart' button and verify that products are visible in cart\nproductsPage.cartButton.click();\nproductsPage.productOneInCart.should('be.visible');\n// 10. Click 'Signup / Login' button and submit login details\nregistrationPage.signupLoginButton.click();\nloginPage.login(userEmail, userPassword);\n// 11. Again, go to Cart page\nproductsPage.cartButton.click();\n// 12. Verify that those products are visible in cart after login as well\nproductsPage.productOneInCart.should('be.visible');\n// 13. Click 'Delete Account' button\ncy.contains('Delete Account').click();\n// 14. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nregistrationPage.accountDeletedText.should('be.visible');\nregistrationPage.continueButton.click();",
+              "err": {},
+              "uuid": "09cbe3cb-fe59-44c8-bf82-8bc52c34ec10",
+              "parentUUID": "27c4b07b-2417-47ca-9fe1-73b8a5b1ff6e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "09cbe3cb-fe59-44c8-bf82-8bc52c34ec10"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 64734,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report/.jsons",
+        "charts": true,
+        "reportPageTitle": "Kinetik QA Assessment",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
