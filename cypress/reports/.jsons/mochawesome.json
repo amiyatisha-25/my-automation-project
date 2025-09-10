@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2025-09-10T11:34:37.478Z",
-    "end": "2025-09-10T11:35:06.070Z",
-    "duration": 28592,
+    "start": "2025-09-10T12:53:07.857Z",
+    "end": "2025-09-10T12:55:31.589Z",
+    "duration": 143732,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "88dc40c3-47b6-4836-972b-3667cdd4b7c3",
+      "uuid": "65b45199-d538-4b17-b1c1-175a563ff066",
       "title": "",
       "fullFile": "cypress/e2e/add_products_to_cart.cy.ts",
       "file": "cypress/e2e/add_products_to_cart.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "01e2fc08-d6f6-421b-a47d-d46c796e9f00",
+          "uuid": "fe1c914e-a7bb-44b3-853a-3653f561c589",
           "title": "Test Case 12: Add Products in Cart",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should add products to cart and verify details",
               "fullTitle": "Test Case 12: Add Products in Cart should add products to cart and verify details",
               "timedOut": null,
-              "duration": 15475,
+              "duration": 53440,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/add_products_to_cart.cy.ts\"\n}",
               "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click 'Products' button\nproductsPage.productsButton.click();\n// 5. Hover over first product and click 'Add to cart'\nproductsPage.addFirstProductToCart();\n// 6. Click 'Continue Shopping' button\nproductsPage.continueShoppingButton.click();\n// 7. Hover over second product and click 'Add to cart'\nproductsPage.addSecondProductToCart('Men Tshirt');\ncy.wait(500);\n// 8. Click 'View Cart' button\nproductsPage.viewCartButton.click();\n// 9. Verify both products are added to Cart\nproductsPage.productOneInCart.should('be.visible');\nproductsPage.productTwoInCart.should('be.visible');\n// 10. Verify their prices, quantity and total price\nproductsPage.productOnePrice.should('be.visible');\nproductsPage.productOneQuantity.should('contain.text', '1'); // Assuming quantity is 1 by default\nproductsPage.productOneTotalPrice.should('be.visible');\nproductsPage.productTwoPrice.should('be.visible');\nproductsPage.productTwoQuantity.should('contain.text', '1'); // Assuming quantity is 1 by default\nproductsPage.productTwoTotalPrice.should('be.visible');",
               "err": {},
-              "uuid": "53bf0f47-68b0-4381-a113-fd0f9ad48d63",
-              "parentUUID": "01e2fc08-d6f6-421b-a47d-d46c796e9f00",
+              "uuid": "0430271c-0408-4aef-bfab-00eed3b41ebe",
+              "parentUUID": "fe1c914e-a7bb-44b3-853a-3653f561c589",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "should remove products from cart",
               "fullTitle": "Test Case 12: Add Products in Cart should remove products from cart",
               "timedOut": null,
-              "duration": 12731,
+              "duration": 89975,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/add_products_to_cart.cy.ts\"\n}",
               "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click 'Products' button\nproductsPage.productsButton.click();\n// 5. Hover over first product and click 'Add to cart'\nproductsPage.addFirstProductToCart();\n// 6. Click 'View Cart' button\nproductsPage.viewCartButton.click();\n// 7. Verify product is added to Cart\nproductsPage.productOneInCart.should('be.visible');\n// 8. Click 'X' button corresponding to particular product\nproductsPage.getRemoveFromCartButton(0).click();\n// 9. Verify that product is removed from the cart\nproductsPage.cartEmptyMessage.should('be.visible');",
               "err": {},
-              "uuid": "faf04e9e-ef37-4aaf-b62b-b5124620ba64",
-              "parentUUID": "01e2fc08-d6f6-421b-a47d-d46c796e9f00",
+              "uuid": "f541893d-e776-4444-b027-bceeab82ae57",
+              "parentUUID": "fe1c914e-a7bb-44b3-853a-3653f561c589",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "53bf0f47-68b0-4381-a113-fd0f9ad48d63",
-            "faf04e9e-ef37-4aaf-b62b-b5124620ba64"
+            "0430271c-0408-4aef-bfab-00eed3b41ebe",
+            "f541893d-e776-4444-b027-bceeab82ae57"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 28206,
+          "duration": 143415,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
