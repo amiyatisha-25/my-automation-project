@@ -1,0 +1,3222 @@
+{
+  "stats": {
+    "suites": 54,
+    "tests": 56,
+    "passes": 56,
+    "pending": 0,
+    "failures": 0,
+    "testsRegistered": 56,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2025-09-11T07:45:46.279Z",
+    "end": "2025-09-11T08:34:12.566Z",
+    "duration": 2906287
+  },
+  "results": [
+    {
+      "uuid": "a907e4ba-9051-4549-8f30-0de0109216da",
+      "title": "",
+      "fullFile": "cypress/e2e/add_products_to_cart.cy.ts",
+      "file": "cypress/e2e/add_products_to_cart.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7b652e61-b71d-4bcf-9419-e2326b425fb9",
+          "title": "Test Case 12: Add Products in Cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add products to cart and verify details",
+              "fullTitle": "Test Case 12: Add Products in Cart should add products to cart and verify details",
+              "timedOut": null,
+              "duration": 14222,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/add_products_to_cart.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click 'Products' button\nproductsPage.productsButton.click();\n// 5. Hover over first product and click 'Add to cart'\nproductsPage.addFirstProductToCart();\n// 6. Click 'Continue Shopping' button\nproductsPage.continueShoppingButton.click();\n// 7. Hover over second product and click 'Add to cart'\nproductsPage.addSecondProductToCart('Men Tshirt');\ncy.wait(500);\n// 8. Click 'View Cart' button\nproductsPage.viewCartButton.click();\n// 9. Verify both products are added to Cart\nproductsPage.productOneInCart.should('be.visible');\nproductsPage.productTwoInCart.should('be.visible');\n// 10. Verify their prices, quantity and total price\nproductsPage.productOnePrice.should('be.visible');\nproductsPage.productOneQuantity.should('contain.text', '1'); // Assuming quantity is 1 by default\nproductsPage.productOneTotalPrice.should('be.visible');\nproductsPage.productTwoPrice.should('be.visible');\nproductsPage.productTwoQuantity.should('contain.text', '1'); // Assuming quantity is 1 by default\nproductsPage.productTwoTotalPrice.should('be.visible');",
+              "err": {},
+              "uuid": "0c729e73-900a-4316-8293-9eaec677b64e",
+              "parentUUID": "7b652e61-b71d-4bcf-9419-e2326b425fb9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should remove products from cart",
+              "fullTitle": "Test Case 12: Add Products in Cart should remove products from cart",
+              "timedOut": null,
+              "duration": 9393,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/add_products_to_cart.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click 'Products' button\nproductsPage.productsButton.click();\n// 5. Hover over first product and click 'Add to cart'\nproductsPage.addFirstProductToCart();\n// 6. Click 'View Cart' button\nproductsPage.viewCartButton.click();\n// 7. Verify product is added to Cart\nproductsPage.productOneInCart.should('be.visible');\n// 8. Click 'X' button corresponding to particular product\nproductsPage.getRemoveFromCartButton(0).click();\n// 9. Verify that product is removed from the cart\nproductsPage.cartEmptyMessage.should('be.visible');",
+              "err": {},
+              "uuid": "5613052e-226e-46e8-a9f4-7b62f1fe359a",
+              "parentUUID": "7b652e61-b71d-4bcf-9419-e2326b425fb9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0c729e73-900a-4316-8293-9eaec677b64e",
+            "5613052e-226e-46e8-a9f4-7b62f1fe359a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 23615,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "9fc59ad0-2c95-4bc8-8228-8d4bef49ca14",
+      "title": "",
+      "fullFile": "cypress/e2e/add_review_on_product.cy.ts",
+      "file": "cypress/e2e/add_review_on_product.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7ac48369-be7e-4089-a018-990763cf2dac",
+          "title": "Add review on product",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add a review on a product",
+              "fullTitle": "Add review on product should add a review on a product",
+              "timedOut": null,
+              "duration": 15289,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/add_review_on_product.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\ncy.url().should('eq', 'https://automationexercise.com/');\n// 3. Click on 'Products' button    \ncy.get('a[href=\"/products\"]').click();\n// 4. Verify user is navigated to ALL PRODUCTS page successfully\ncy.get('h2.title.text-center').should('contain', 'All Products');\n// 5. Click on 'View Product' button\ncy.get('a[href=\"/product_details/1\"]').click();\n// 6. Verify 'Write Your Review' is visible\ncy.get('.shop-details-tab').should('contain', 'Write Your Review');\n// 7. Enter name, email and review\ncy.get('a[href=\"#reviews\"]').should('be.visible');\ncy.get('input#name').type('Tisha');\ncy.get('input#email').type('tisha@example.com');\ncy.get('textarea#review').type('This is a great product!');\n// 8. Click 'Submit' button \ncy.get('button#button-review').click();\n// 9. Verify success message 'Thank you for your review.' is visible\ncy.get('div.alert-success span').should('contain', 'Thank you for your review.');",
+              "err": {},
+              "uuid": "d38e5ad1-f32f-4766-8ba6-521397cd4786",
+              "parentUUID": "7ac48369-be7e-4089-a018-990763cf2dac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d38e5ad1-f32f-4766-8ba6-521397cd4786"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15289,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "464eb2e6-ee8c-4698-b615-a89dc14de67d",
+      "title": "",
+      "fullFile": "cypress/e2e/add_to_cart_from_recommended.cy.ts",
+      "file": "cypress/e2e/add_to_cart_from_recommended.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9c046587-9e10-4e04-b085-4d537093354d",
+          "title": "Add to cart from Recommended items",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add a product to the cart from the recommended items section",
+              "fullTitle": "Add to cart from Recommended items should add a product to the cart from the recommended items section",
+              "timedOut": null,
+              "duration": 7646,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/add_to_cart_from_recommended.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\n// 3. Scroll to bottom of page\ncy.scrollTo('bottom');\n// 4. Verify 'RECOMMENDED ITEMS' are visible\nHomePage_1.default.getRecommendedItems().should('be.visible');\n// 5. Click on 'Add To Cart' on Recommended product\nHomePage_1.default.getAddToCartFromRecommended().first().click({ force: true });\n// 6. Click on 'View Cart' button\nProductsPage_1.default.viewCartButton.click();\n// 7. Verify that product is displayed in cart page\ncy.get('#cart_info_table').should('be.visible');",
+              "err": {},
+              "uuid": "efecc0f6-2021-4c1a-8441-2d06aab27cc8",
+              "parentUUID": "9c046587-9e10-4e04-b085-4d537093354d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "efecc0f6-2021-4c1a-8441-2d06aab27cc8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7646,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "de4b48f8-e8bb-4da0-b96c-2734f6d84718",
+      "title": "",
+      "fullFile": "cypress/e2e/contact_us.cy.ts",
+      "file": "cypress/e2e/contact_us.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "90a02bb0-e7fd-443e-9ead-60b6e65775a2",
+          "title": "Test Case 6: Contact Us Form",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should submit the contact us form successfully",
+              "fullTitle": "Test Case 6: Contact Us Form should submit the contact us form successfully",
+              "timedOut": null,
+              "duration": 29097,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/contact_us.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Contact Us' button\ncontactUsPage.contactUsButton.click();\n// 5. Verify 'GET IN TOUCH' is visible\ncontactUsPage.getInTouchText.should('be.visible');\n// 6. Enter name, email, subject and message\ncontactUsPage.nameInput.type('Test User');\ncontactUsPage.emailInput.type('test@example.com');\ncontactUsPage.subjectInput.type('Test Subject');\ncontactUsPage.messageInput.type('This is a test message.');\n// 7. Upload file\nvar fileName = 'example.txt';\ncy.fixture(fileName).then(function (fileContent) {\n    contactUsPage.uploadFileInput.attachFile({ fileContent: fileContent, fileName: fileName, mimeType: 'text/plain' });\n});\n// 8. Click 'Submit' button\ncontactUsPage.submitButton.click();\n// 9. Click OK button on alert\ncy.on('window:confirm', function (str) {\n    expect(str).to.equal('Press OK to proceed!');\n    return true; // click OK\n});\n// 10. Verify success message 'Success! Your details have been submitted successfully.' is visible\ncontactUsPage.successMessage.should('be.visible');\n// 11. Click 'Home' button and verify that landed to home page successfully\ncontactUsPage.homeButton.click();\ncy.url().should('eq', 'https://automationexercise.com/');",
+              "err": {},
+              "uuid": "de213d1b-e701-4583-9db2-5b897c49f8d0",
+              "parentUUID": "90a02bb0-e7fd-443e-9ead-60b6e65775a2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "de213d1b-e701-4583-9db2-5b897c49f8d0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 29097,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "cac52123-e45a-4b37-8142-c935462d59d0",
+      "title": "",
+      "fullFile": "cypress/e2e/download_invoice_after_purchase.cy.ts",
+      "file": "cypress/e2e/download_invoice_after_purchase.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7dfa4c54-e231-41d2-af49-518164537c35",
+          "title": "Test Case 24: Download Invoice after purchase order",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should download invoice after purchase order",
+              "fullTitle": "Test Case 24: Download Invoice after purchase order should download invoice after purchase order",
+              "timedOut": null,
+              "duration": 40265,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/download_invoice_after_purchase.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Add products to cart\nproductsPage.addFirstProductToCart();\ncy.get('.modal-content').should('be.visible');\ncy.get('.modal-title').should('contain.text', 'Added!');\ncy.get('button.close-modal').click();\n// 5. Click 'Cart' button\nhomePage.clickCartButton();\n// 6. Verify that cart page is displayed\ncy.url().should('include', '/view_cart');\ncy.contains('Shopping Cart').should('be.visible');\n// 7. Click Proceed To Checkout\ncheckoutPage.clickProceedToCheckout();\n// 8. Click 'Register / Login' button\nregistrationPage.registerLoginButton.click();\n// 9. Fill all details in Signup and create account\nregistrationPage.signup(name, email);\nregistrationPage.fillAccountDetails('Mr', password, '1', 'January', '1990', firstName, lastName, company, address1, address2, 'United States', state, city, zipCode, mobileNumber);\nregistrationPage.createAccount();\n// 10. Verify 'ACCOUNT CREATED!' and click 'Continue' button\nregistrationPage.accountCreatedText.should('be.visible');\nregistrationPage.continueButton.click();\n// 11. Verify ' Logged in as username' at top\ncy.contains('Logged in as ' + name).should('be.visible');\n// 12. Click 'Cart' button\nhomePage.clickCartButton();\n// 13. Click 'Proceed To Checkout' button\ncheckoutPage.clickProceedToCheckout();\n// 14. Verify Address Details and Review Your Order\ncheckoutPage.verifyAddressDetails(firstName, lastName, company, address1, address2, city, state, zipCode, mobileNumber);\ncheckoutPage.verifyReviewOrder();\n// 15. Enter description in comment text area and click 'Place Order'\ncheckoutPage.enterComment('This is a test order comment.');\ncheckoutPage.clickPlaceOrder();\n// 16. Enter payment details: Name on Card, Card Number, CVC, Expiration date\ncheckoutPage.enterPaymentDetails(faker_1.faker.finance.accountName(), faker_1.faker.finance.creditCardNumber(), faker_1.faker.finance.creditCardCVV(), faker_1.faker.date.future().getMonth().toString(), faker_1.faker.date.future().getFullYear().toString());\n// 17. Click 'Pay and Confirm Order' button\ncheckoutPage.clickPayAndConfirmOrder();\n// 18. Verify success message 'Your order has been placed successfully!'\ncheckoutPage.verifyOrderPlacedSuccessMessage();\n// 19. Click 'Download Invoice' button and verify invoice is downloaded successfully.\ncy.contains('Download Invoice', { timeout: 10000 })\n    .should('be.visible')\n    .then(function ($el) {\n    var invoiceUrl = $el.attr('href');\n    cy.downloadFile(\"http://automationexercise.com\".concat(invoiceUrl), 'cypress/downloads', 'invoice.txt');\n});\ncy.readFile('cypress/downloads/invoice.txt').should('exist').and('not.be.empty');\n// 20. Click 'Continue' button\ncheckoutPage.clickContinueButton();\n// 21. Click 'Delete Account' button\nhomePage.clickDeleteAccountButton();\n// 22. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nregistrationPage.verifyAccountDeleted();\nregistrationPage.clickContinueButton();",
+              "err": {},
+              "uuid": "0582d2bc-4a0d-4ea3-890d-271c40af6f9d",
+              "parentUUID": "7dfa4c54-e231-41d2-af49-518164537c35",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0582d2bc-4a0d-4ea3-890d-271c40af6f9d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 40265,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "6ce7f4a4-c4b3-46a1-9b51-aa1f2598e67f",
+      "title": "",
+      "fullFile": "cypress/e2e/login_incorrect.cy.ts",
+      "file": "cypress/e2e/login_incorrect.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3d3761ee-8530-41e6-89e1-c2d7cb0819f6",
+          "title": "Test Case 3: Login User with incorrect email and password",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should not login with incorrect credentials",
+              "fullTitle": "Test Case 3: Login User with incorrect email and password should not login with incorrect credentials",
+              "timedOut": null,
+              "duration": 10194,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/login_incorrect.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Signup / Login' button\nregistrationPage.signupLoginButton.click();\n// 5. Verify 'Login to your account' is visible\nloginPage.loginToYourAccountText.should('be.visible');\n// 6. Enter incorrect email address and password\nloginPage.login('wrong@email.com', 'wrongpassword');\n// 7. Click 'login' button is handled by loginPage.login\n// 8. Verify error 'Your email or password is incorrect!' is visible\nloginPage.incorrectLoginError.should('be.visible');",
+              "err": {},
+              "uuid": "6684b034-453c-4e0c-b835-efdb7c5e2990",
+              "parentUUID": "3d3761ee-8530-41e6-89e1-c2d7cb0819f6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6684b034-453c-4e0c-b835-efdb7c5e2990"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10194,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "107f2383-206f-4c59-8c33-76fde652cb78",
+      "title": "",
+      "fullFile": "cypress/e2e/logout.cy.ts",
+      "file": "cypress/e2e/logout.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d5d0fcc7-eff6-4641-ab69-ecfb9dabf81b",
+          "title": "Test Case 4: Logout User",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should logout a user",
+              "fullTitle": "Test Case 4: Logout User should logout a user",
+              "timedOut": null,
+              "duration": 21679,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/logout.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Signup / Login' button\nregistrationPage.signupLoginButton.click();\n// 5. Verify 'Login to your account' is visible\nloginPage.loginToYourAccountText.should('be.visible');\n// 6. Enter correct email address and password\nloginPage.login(this.user.email, this.user.password);\n// 7. Click 'login' button is handled by loginPage.login\n// 8. Verify that 'Logged in as username' is visible\nregistrationPage.loggedInAsText.should('be.visible').and('contain', this.user.name);\n// 9. Click 'Logout' button\nregistrationPage.logoutButton.click();\n// 10. Verify that user is navigated to login page\ncy.url().should('include', '/login');",
+              "err": {},
+              "uuid": "9f521350-ed17-4948-b507-eae10c13b50a",
+              "parentUUID": "d5d0fcc7-eff6-4641-ab69-ecfb9dabf81b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9f521350-ed17-4948-b507-eae10c13b50a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 21679,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8eeed8af-d73b-4827-843e-4d9f1e31cc42",
+      "title": "",
+      "fullFile": "cypress/e2e/place_order_login_before_checkout.cy.ts",
+      "file": "cypress/e2e/place_order_login_before_checkout.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b8cce458-cf71-4eaf-a53a-4327f44709f6",
+          "title": "Test Case 16: Place Order: Login before Checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should place order by logging in before checkout",
+              "fullTitle": "Test Case 16: Place Order: Login before Checkout should place order by logging in before checkout",
+              "timedOut": null,
+              "duration": 41621,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/place_order_login_before_checkout.cy.ts\"\n}",
+              "code": "// Create a user via API and write credentials to a fixture file\ncy.request({\n    method: 'POST',\n    url: \"\".concat(Cypress.env('API_URL'), \"/createAccount\"),\n    form: true,\n    body: {\n        name: 'Test User',\n        email: userEmail,\n        password: userPassword,\n        title: 'Mr',\n        birth_date: '01',\n        birth_month: 'January',\n        birth_year: '1990',\n        firstname: 'Test',\n        lastname: 'User',\n        company: 'Test Company',\n        address1: '123 Test Street',\n        address2: 'Apt 4B',\n        country: 'United States',\n        zipcode: '10001',\n        state: 'New York',\n        city: 'New York',\n        mobile_number: '1234567890'\n    }\n}).then(function (response) {\n    expect(response.status).to.eq(200);\n});\n// 4. Click 'Signup / Login' button\nregistrationPage.signupLoginButton.click();\n// 5. Fill email, password and click 'Login' button\nloginPage.login(userEmail, userPassword);\n// 6. Verify 'Logged in as username' at top\ncy.contains('Logged in as Test User').should('be.visible');\n// 8. Add products to cart\nproductsPage.addFirstProductToCart();\nproductsPage.continueShoppingButton.click();\n// 9. Click 'Cart' button\nproductsPage.cartButton.click();\n// 10. Verify that cart page is displayed\ncy.url().should('include', '/view_cart');\n// 11. Click Proceed To Checkout\ncheckoutPage.proceedToCheckoutButton.click();\n// 12. Verify Address Details and Review Your Order\ncy.get('#address_delivery').should('be.visible');\ncy.get('#address_invoice').should('be.visible');\n// 13. Enter description in comment text area and click 'Place Order'\ncy.get('[name=\"message\"]').type('Test order comments');\ncheckoutPage.placeOrderButton.click();\n// 14. Enter payment details: Name on Card, Card Number, CVC, Expiration date\ncheckoutPage.nameOnCardInput.type('Test User');\ncheckoutPage.cardNumberInput.type('1234567890123456');\ncheckoutPage.cvcInput.type('123');\ncheckoutPage.expiryMonthInput.type('01');\ncheckoutPage.expiryYearInput.type('2026');\n// 15. Click 'Pay and Confirm Order' button\ncheckoutPage.payAndConfirmOrderButton.click();\n// 16. Verify success message 'Your order has been placed successfully!'\ncheckoutPage.orderPlacedMessage.should('be.visible');\n// 17. Click 'Delete Account' button\ncy.contains('Delete Account').click();\n// 18. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nregistrationPage.accountDeletedText.should('be.visible');\nregistrationPage.continueButton.click();",
+              "err": {},
+              "uuid": "60902849-7649-4536-a909-95860134e686",
+              "parentUUID": "b8cce458-cf71-4eaf-a53a-4327f44709f6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "60902849-7649-4536-a909-95860134e686"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 41621,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "983180ce-7429-4241-9b55-7031d97994ad",
+      "title": "",
+      "fullFile": "cypress/e2e/place_order_register_before_checkout.cy.ts",
+      "file": "cypress/e2e/place_order_register_before_checkout.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "38715074-504b-4f01-8328-5159827de0f4",
+          "title": "Test Case 15: Place Order: Register before Checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should place order by registering while checkout",
+              "fullTitle": "Test Case 15: Place Order: Register before Checkout should place order by registering while checkout",
+              "timedOut": null,
+              "duration": 52108,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/place_order_register_before_checkout.cy.ts\"\n}",
+              "code": "// 4. Click 'Signup / Login' button on the home page.\nregistrationPage.signupLoginButton.click();\n// 5. Fill all details in Signup and create account\nregistrationPage.signup('Test User', userEmail);\nregistrationPage.fillAccountDetails('Mr', userPassword, '1', 'January', '1990', 'Test', 'User', 'Test Company', '123 Test Street', 'Apt 4B', 'United States', 'New York', 'New York', '10001', '1234567890');\nregistrationPage.createAccount();\n// 6. Verify 'ACCOUNT CREATED!' and click 'Continue' button\nregistrationPage.accountCreatedText.should('be.visible');\nregistrationPage.continueButton.click();\n// 7. Verify ' Logged in as username' at top\ncy.contains('Logged in as Test User').should('be.visible');\n// 8. Add products to cart\nproductsPage.addFirstProductToCart();\nproductsPage.continueShoppingButton.click();\n// 9. Click 'Cart' button\nproductsPage.cartButton.click();\n// 10. Verify that cart page is displayed\ncy.url().should('include', '/view_cart');\n// 11. Click Proceed To Checkout\ncheckoutPage.proceedToCheckoutButton.click();\n// 12. Verify Address Details and Review Your Order\ncy.get('#address_delivery').should('be.visible');\ncy.get('#address_invoice').should('be.visible');\n// 13. Enter description in comment text area and click 'Place Order'\ncy.get('[name=\"message\"]').type('Test order comments');\ncheckoutPage.placeOrderButton.click();\n// 14. Enter payment details: Name on Card, Card Number, CVC, Expiration date\ncheckoutPage.nameOnCardInput.type('Test User');\ncheckoutPage.cardNumberInput.type('1234567890123456');\ncheckoutPage.cvcInput.type('123');\ncheckoutPage.expiryMonthInput.type('01');\ncheckoutPage.expiryYearInput.type('2026');\n// 15. Click 'Pay and Confirm Order' button\ncheckoutPage.payAndConfirmOrderButton.click();\n// 16. Verify success message 'Your order has been placed successfully!'\ncheckoutPage.orderPlacedMessage.should('be.visible');\n// 17. Click 'Delete Account' button\ncy.contains('Delete Account').click();\n// 18. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nregistrationPage.accountDeletedText.should('be.visible');\nregistrationPage.continueButton.click();",
+              "err": {},
+              "uuid": "807b603a-5c9e-4377-a631-57d2084b8b55",
+              "parentUUID": "38715074-504b-4f01-8328-5159827de0f4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "807b603a-5c9e-4377-a631-57d2084b8b55"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 52108,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "316a5888-9e1b-481c-95a2-59522d3ff2f1",
+      "title": "",
+      "fullFile": "cypress/e2e/place_order_register_while_checkout.cy.ts",
+      "file": "cypress/e2e/place_order_register_while_checkout.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "db9691c1-1764-4b03-97ea-3d09e46b5150",
+          "title": "Test Case 14: Place Order: Register while Checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should place order by registering while checkout",
+              "fullTitle": "Test Case 14: Place Order: Register while Checkout should place order by registering while checkout",
+              "timedOut": null,
+              "duration": 42958,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/place_order_register_while_checkout.cy.ts\"\n}",
+              "code": "// 4. Click 'Signup / Login' button on the home page.\nregistrationPage.signupLoginButton.click();\n// 5. Fill all details in Signup and create account\nregistrationPage.signup('Test User', userEmail);\nregistrationPage.fillAccountDetails('Mr', userPassword, '1', 'January', '1990', 'Test', 'User', 'Test Company', '123 Test Street', 'Apt 4B', 'United States', 'New York', 'New York', '10001', '1234567890');\nregistrationPage.createAccount();\n// 6. Verify 'ACCOUNT CREATED!' and click 'Continue' button\nregistrationPage.accountCreatedText.should('be.visible');\nregistrationPage.continueButton.click();\n// 7. Verify ' Logged in as username' at top\ncy.contains('Logged in as Test User').should('be.visible');\n// 8. Add products to cart\nproductsPage.addFirstProductToCart();\nproductsPage.continueShoppingButton.click();\n// 9. Click 'Cart' button\nproductsPage.cartButton.click();\n// 10. Verify that cart page is displayed\ncy.url().should('include', '/view_cart');\n// 11. Click Proceed To Checkout\ncheckoutPage.proceedToCheckoutButton.click();\n// 12. Verify Address Details and Review Your Order\ncy.get('#address_delivery').should('be.visible');\ncy.get('#address_invoice').should('be.visible');\n// 13. Enter description in comment text area and click 'Place Order'\ncy.get('[name=\"message\"]').type('Test order comments');\ncheckoutPage.placeOrderButton.click();\n// 14. Enter payment details: Name on Card, Card Number, CVC, Expiration date\ncheckoutPage.nameOnCardInput.type('Test User');\ncheckoutPage.cardNumberInput.type('1234567890123456');\ncheckoutPage.cvcInput.type('123');\ncheckoutPage.expiryMonthInput.type('01');\ncheckoutPage.expiryYearInput.type('2026');\n// 15. Click 'Pay and Confirm Order' button\ncheckoutPage.payAndConfirmOrderButton.click();\n// 16. Verify success message 'Your order has been placed successfully!'\ncheckoutPage.orderPlacedMessage.should('be.visible');\n// 17. Click 'Delete Account' button\ncy.contains('Delete Account').click();\n// 18. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nregistrationPage.accountDeletedText.should('be.visible');\nregistrationPage.continueButton.click();",
+              "err": {},
+              "uuid": "6e64754b-6d31-45bb-8534-69171e096b0a",
+              "parentUUID": "db9691c1-1764-4b03-97ea-3d09e46b5150",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6e64754b-6d31-45bb-8534-69171e096b0a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 42958,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "1739e6e0-98f9-41df-901b-03110ff947d0",
+      "title": "",
+      "fullFile": "cypress/e2e/products_page.cy.ts",
+      "file": "cypress/e2e/products_page.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "520578f4-6737-43da-9579-a67bd5fa2e5e",
+          "title": "Test Case 8: Verify All Products and product detail page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should verify all products and product detail page",
+              "fullTitle": "Test Case 8: Verify All Products and product detail page should verify all products and product detail page",
+              "timedOut": null,
+              "duration": 24538,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/products_page.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Products' button\nproductsPage.productsButton.click();\n// 5. Verify user is navigated to ALL PRODUCTS page successfully\nproductsPage.allProductsText.should('be.visible');\ncy.url().should('include', '/products');\n// 6. The products list is visible\nproductsPage.productsList.should('be.visible');\n// 7. Click on 'View Product' of first product\nproductsPage.viewProductButton(1).click();\n// 8. User is landed to product detail page\ncy.url().should('include', '/product_details');\n// 9. Verify that detail detail is visible: product name, category, price, availability, condition, brand\nproductsPage.productNameDetail.should('be.visible');\nproductsPage.productCategoryDetail.should('be.visible');\nproductsPage.productPriceDetail.should('be.visible');\nproductsPage.productAvailabilityDetail.should('be.visible');\nproductsPage.productConditionDetail.should('be.visible');\nproductsPage.productBrandDetail.should('be.visible');",
+              "err": {},
+              "uuid": "e9908626-63dd-4313-8198-7a2b383b5c93",
+              "parentUUID": "520578f4-6737-43da-9579-a67bd5fa2e5e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e9908626-63dd-4313-8198-7a2b383b5c93"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 24538,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "cdcedc2a-bfe3-4713-bfc7-4a912ee6dc55",
+      "title": "",
+      "fullFile": "cypress/e2e/purchase_flow.cy.ts",
+      "file": "cypress/e2e/purchase_flow.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f029ef96-21d9-474b-97e8-c9320108b931",
+          "title": "End-to-End Purchase Flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should complete the purchase flow",
+              "fullTitle": "End-to-End Purchase Flow should complete the purchase flow",
+              "timedOut": null,
+              "duration": 24247,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/purchase_flow.cy.ts\"\n}",
+              "code": "// UI Login\ncy.visit('/login');\nloginPage.login(this.user.email, this.user.password);\ncy.contains('Logged in as').should('be.visible');\n// Add products to cart\nproductsPage.addFirstProductToCart();\ncy.get('.modal-footer button').click();\nproductsPage.addSecondProductToCart('Men Tshirt');\ncy.get('.modal-body a[href=\"/view_cart\"]').click({ force: true });\n// Proceed to checkout\ncheckoutPage.proceedToCheckoutButton.click();\ncy.get('#address_delivery').should('be.visible');\ncy.get('[name=\"message\"]').type('Test order');\ncheckoutPage.placeOrderButton.click();\n// Complete order\ncy.url().should('include', '/payment');\ncheckoutPage.nameOnCardInput.should('be.visible').type('Test User');\ncheckoutPage.cardNumberInput.type('1234567890123456');\ncheckoutPage.cvcInput.type('123');\ncheckoutPage.expiryMonthInput.type('01');\ncheckoutPage.expiryYearInput.type('2026');\ncheckoutPage.payAndConfirmOrderButton.click();\n// Verify order placement\ncheckoutPage.orderPlacedMessage.should('be.visible');\ncy.url().should('include', '/payment_done');\n// Download invoice\ncheckoutPage.downloadInvoiceButton.click();\n// Verify invoice file\ncy.readFile('cypress/downloads/invoice.txt').should('have.length.gt', 0);",
+              "err": {},
+              "uuid": "7008fed0-d90b-4e82-95c1-9c6866d2102f",
+              "parentUUID": "f029ef96-21d9-474b-97e8-c9320108b931",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7008fed0-d90b-4e82-95c1-9c6866d2102f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 24247,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "798306fd-59ef-4860-af13-a746579ccb10",
+      "title": "",
+      "fullFile": "cypress/e2e/register_existing_email.cy.ts",
+      "file": "cypress/e2e/register_existing_email.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "65586927-109c-4819-8a06-d96546f1a8d1",
+          "title": "Test Case 5: Register User with existing email",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should display error when registering with existing email",
+              "fullTitle": "Test Case 5: Register User with existing email should display error when registering with existing email",
+              "timedOut": null,
+              "duration": 12409,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/register_existing_email.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Signup / Login' button\nregistrationPage.signupLoginButton.click();\n// 5. Verify 'New User Signup!' is visible\nregistrationPage.newUserSignupText.should('be.visible');\n// 6. Enter name and already registered email address\nregistrationPage.signupNameInput.type(name);\nregistrationPage.signupEmailInput.type(existingEmail);\n// 7. Click 'Signup' button\nregistrationPage.signupButton.click();\n// 8. Verify error 'Email Address already exist!' is visible\nregistrationPage.emailAlreadyExistError.should('be.visible');",
+              "err": {},
+              "uuid": "3d7835cf-1402-4954-86ef-248b8a69cb85",
+              "parentUUID": "65586927-109c-4819-8a06-d96546f1a8d1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3d7835cf-1402-4954-86ef-248b8a69cb85"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12409,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ecc00230-9234-4d4c-8b19-604e32354049",
+      "title": "",
+      "fullFile": "cypress/e2e/registration.cy.ts",
+      "file": "cypress/e2e/registration.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "70e9533c-5297-4cd4-8585-97bb1dd6ccb8",
+          "title": "Test Case 1: Register User",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should register a new user",
+              "fullTitle": "Test Case 1: Register User should register a new user",
+              "timedOut": null,
+              "duration": 34348,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/registration.cy.ts\"\n}",
+              "code": "var uniqueEmail = \"testuser_\".concat(Date.now(), \"@example.com\");\n// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Signup / Login' button\nregistrationPage.signupLoginButton.click();\n// 5. Verify 'New User Signup!' is visible\nregistrationPage.newUserSignupText.should('be.visible');\n// 6. Enter name and email address\nregistrationPage.signupNameInput.type(name);\nregistrationPage.signupEmailInput.type(uniqueEmail);\n// 7. Click 'Signup' button\nregistrationPage.signupButton.click();\n// 8. Verify that 'ENTER ACCOUNT INFORMATION' is visible\nregistrationPage.enterAccountInformationText.should('be.visible');\n// 9. Fill details: Title, Name, Email, Password, Date of birth\nregistrationPage.titleRadioButton.check('Mr');\nregistrationPage.passwordInput.type('password123');\nregistrationPage.daysDropdown.select('1');\nregistrationPage.monthsDropdown.select('January');\nregistrationPage.yearsDropdown.select('1990');\n// 10. Select checkbox 'Sign up for our newsletter!'\nregistrationPage.newsletterCheckbox.check();\n// 11. Select checkbox 'Receive special offers from our partners!'\nregistrationPage.partnersCheckbox.check();\n// 12. Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number\nregistrationPage.firstNameInput.type('Test');\nregistrationPage.lastNameInput.type('User');\nregistrationPage.companyInput.type('Test Company');\nregistrationPage.address1Input.type('123 Test Street');\nregistrationPage.address2Input.type('Apt 4B');\nregistrationPage.countryDropdown.select('United States');\nregistrationPage.stateInput.type('New York');\nregistrationPage.cityInput.type('New York');\nregistrationPage.zipcodeInput.type('10001');\nregistrationPage.mobileNumberInput.type('1234567890');\n// 13. Click 'Create Account button'\nregistrationPage.createAccountButton.click();\n// 14. Verify that 'ACCOUNT CREATED!' is visible\nregistrationPage.accountCreatedText.should('be.visible');\n// 15. Click 'Continue' button\nregistrationPage.continueButton.click();\n// 16. Verify that 'Logged in as username' is visible\nregistrationPage.loggedInAsText.should('be.visible').and('contain', name);\n// 17. Click 'Delete Account' button\nregistrationPage.deleteAccountButton.click();\n// 18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button\nregistrationPage.accountDeletedText.should('be.visible');\nregistrationPage.continueButton.click();",
+              "err": {},
+              "uuid": "a2cf9b58-363b-4c12-b59c-51e0d98f49f4",
+              "parentUUID": "70e9533c-5297-4cd4-8585-97bb1dd6ccb8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a2cf9b58-363b-4c12-b59c-51e0d98f49f4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 34348,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "c57a0eee-2d03-439d-afe5-efbd96429c74",
+      "title": "",
+      "fullFile": "cypress/e2e/remove_products_from_cart.cy.ts",
+      "file": "cypress/e2e/remove_products_from_cart.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cfb9fbb4-d8ea-4055-8405-18e843852f3a",
+          "title": "Test Case 17: Remove Products From Cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should remove products from cart",
+              "fullTitle": "Test Case 17: Remove Products From Cart should remove products from cart",
+              "timedOut": null,
+              "duration": 21550,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/remove_products_from_cart.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Add products to cart\nproductsPage.productsButton.click(); // Navigate to products page first\nproductsPage.addFirstProductToCart();\n// 5. Click 'Cart' button\nproductsPage.viewCartButton.click();\n// 6. Verify that cart page is displayed\ncy.url().should('include', '/view_cart');\nproductsPage.productOneInCart.should('be.visible'); // Verify product is in cart\n// 7. Click 'X' button corresponding to particular product\nproductsPage.getRemoveFromCartButton(0).click();\n// 8. Verify that product is removed from the cart\nproductsPage.cartEmptyMessage.should('be.visible');",
+              "err": {},
+              "uuid": "833a0372-fa1e-4c94-9c9c-ac4972d33637",
+              "parentUUID": "cfb9fbb4-d8ea-4055-8405-18e843852f3a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "833a0372-fa1e-4c94-9c9c-ac4972d33637"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 21550,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8435449f-4f0d-47ec-bb1b-7bbe528d4d6a",
+      "title": "",
+      "fullFile": "cypress/e2e/scroll_up_and_down.cy.ts",
+      "file": "cypress/e2e/scroll_up_and_down.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "95a95ce5-396a-41a5-839d-d02ff70af545",
+          "title": "Test Case 25: Verify Scroll Up using 'Arrow' button and Scroll Down functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should scroll up and down and verify visibility of elements",
+              "fullTitle": "Test Case 25: Verify Scroll Up using 'Arrow' button and Scroll Down functionality should scroll up and down and verify visibility of elements",
+              "timedOut": null,
+              "duration": 8765,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/scroll_up_and_down.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Scroll down page to bottom\ncy.scrollTo('bottom');\n// 5. Verify 'SUBSCRIPTION' is visible\ncy.contains('Subscription').should('be.visible');\n// 6. Click on arrow at bottom right side to move upward\ncy.get('#scrollUp').click();\n// 7. Verify that page is scrolled up and 'Full-Fledged practice website for Automation Engineers' text is visible on screen\ncy.contains('Full-Fledged practice website for Automation Engineers').should('be.visible');",
+              "err": {},
+              "uuid": "ef23befd-d4d2-4a00-ad55-d11878173423",
+              "parentUUID": "95a95ce5-396a-41a5-839d-d02ff70af545",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ef23befd-d4d2-4a00-ad55-d11878173423"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8765,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "4112dc62-864f-4ad8-a4e9-a2e06063889a",
+      "title": "",
+      "fullFile": "cypress/e2e/scroll_up_without_arrow.cy.ts",
+      "file": "cypress/e2e/scroll_up_without_arrow.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a3f93059-b0a8-4cad-9f92-8c8bd7018244",
+          "title": "Test Case 26: Verify Scroll Up without 'Arrow' button and Scroll Down functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should scroll up and down and verify visibility of elements",
+              "fullTitle": "Test Case 26: Verify Scroll Up without 'Arrow' button and Scroll Down functionality should scroll up and down and verify visibility of elements",
+              "timedOut": null,
+              "duration": 22198,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/scroll_up_without_arrow.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Scroll down page to bottom\ncy.scrollTo('bottom');\n// 5. Verify 'SUBSCRIPTION' is visible\ncy.contains('Subscription').should('be.visible');\n// 6. Scroll up page to top\ncy.scrollTo('top');\n// 7. Verify that page is scrolled up and 'Full-Fledged practice website for Automation Engineers' text is visible on screen\ncy.contains('Full-Fledged practice website for Automation Engineers').should('be.visible');",
+              "err": {},
+              "uuid": "46763159-6c30-4fd0-8730-f286fa71583f",
+              "parentUUID": "a3f93059-b0a8-4cad-9f92-8c8bd7018244",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "46763159-6c30-4fd0-8730-f286fa71583f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22198,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "db843fd6-56d1-4208-8eaa-9a9595e98036",
+      "title": "",
+      "fullFile": "cypress/e2e/search_product.cy.ts",
+      "file": "cypress/e2e/search_product.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "577baa34-00d4-42b5-819e-d30c3ef12edf",
+          "title": "Test Case 9: Search Product",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should search for a product and verify results",
+              "fullTitle": "Test Case 9: Search Product should search for a product and verify results",
+              "timedOut": null,
+              "duration": 18609,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/search_product.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Products' button\nproductsPage.productsButton.click();\n// 5. Verify user is navigated to ALL PRODUCTS page successfully\nproductsPage.allProductsText.should('be.visible');\ncy.url().should('include', '/products');\n// 6. Enter product name in search input and click search button\nvar productName = 'T-Shirt'; // Example product name\nproductsPage.searchInput.type(productName);\nproductsPage.searchButton.click();\n// 7. Verify 'SEARCHED PRODUCTS' is visible\nproductsPage.searchedProductsText.should('be.visible');\n// 8. Verify all the products related to search are visible\nproductsPage.allSearchedProducts.each(function ($el) {\n    cy.wrap($el).should('contain.text', productName);\n});",
+              "err": {},
+              "uuid": "c2674220-aa4b-4e27-b9ed-1855a7d7d796",
+              "parentUUID": "577baa34-00d4-42b5-819e-d30c3ef12edf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c2674220-aa4b-4e27-b9ed-1855a7d7d796"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18609,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ab713742-c69c-4365-9a78-85593607aa74",
+      "title": "",
+      "fullFile": "cypress/e2e/search_products_verify_cart_after_login.cy.ts",
+      "file": "cypress/e2e/search_products_verify_cart_after_login.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4ca4abfe-f371-4dc8-a4e0-e34e3a69b20c",
+          "title": "Test Case 20: Search Products and Verify Cart After Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should search products and verify cart after login",
+              "fullTitle": "Test Case 20: Search Products and Verify Cart After Login should search products and verify cart after login",
+              "timedOut": null,
+              "duration": 48904,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/search_products_verify_cart_after_login.cy.ts\"\n}",
+              "code": "// 3. Click on 'Products' button\nproductsPage.productsButton.click();\n// 4. Verify user is navigated to ALL PRODUCTS page successfully\nproductsPage.allProductsText.should('be.visible');\n// 5. Enter product name in search input and click search button\nproductsPage.searchInput.type('Blue Top');\nproductsPage.searchButton.click();\n// 6. Verify 'SEARCHED PRODUCTS' is visible\nproductsPage.searchedProductsText.should('be.visible');\n// 7. Verify all the products related to search are visible\nproductsPage.allSearchedProducts.each(function ($el) {\n    cy.wrap($el).should('contain.text', 'Blue Top');\n});\n// 8. Add those products to cart\nproductsPage.addProductToCartByName('Blue Top');\nproductsPage.continueShoppingButton.click();\n// 9. Click 'Cart' button and verify that products are visible in cart\nproductsPage.cartButton.click();\nproductsPage.productOneInCart.should('be.visible');\n// 10. Click 'Signup / Login' button and submit login details\nregistrationPage.signupLoginButton.click();\nloginPage.login(userEmail, userPassword);\n// 11. Again, go to Cart page\nproductsPage.cartButton.click();\n// 12. Verify that those products are visible in cart after login as well\nproductsPage.productOneInCart.should('be.visible');\n// 13. Click 'Delete Account' button\ncy.contains('Delete Account').click();\n// 14. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nregistrationPage.accountDeletedText.should('be.visible');\nregistrationPage.continueButton.click();",
+              "err": {},
+              "uuid": "610ceed7-526e-4b84-9c70-a08ccca984a0",
+              "parentUUID": "4ca4abfe-f371-4dc8-a4e0-e34e3a69b20c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "610ceed7-526e-4b84-9c70-a08ccca984a0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 48904,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "dea434b5-6614-4549-a03c-0f774fe10231",
+      "title": "",
+      "fullFile": "cypress/e2e/subscription_cart_page.cy.ts",
+      "file": "cypress/e2e/subscription_cart_page.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bd597861-e463-4968-b40c-a940fc11d21c",
+          "title": "Test Case 11: Verify Subscription in Cart page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should verify subscription in cart page",
+              "fullTitle": "Test Case 11: Verify Subscription in Cart page should verify subscription in cart page",
+              "timedOut": null,
+              "duration": 13671,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/subscription_cart_page.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click 'Cart' button\nproductsPage.cartButton.click();\n// 5. Scroll down to footer\ncy.scrollTo('bottom');\n// 6. Verify text 'SUBSCRIPTION'\nhomePage.subscriptionText.should('be.visible');\n// 7. Enter email address in input and click arrow button\nhomePage.subscriptionEmailInput.type(\"test_sub_cart_\".concat(Date.now(), \"@example.com\"));\nhomePage.subscribeButton.click();\n// 8. Verify success message 'You have been successfully subscribed!' is visible\nhomePage.subscriptionSuccessMessage.should('be.visible');",
+              "err": {},
+              "uuid": "a213114b-4741-4b86-9940-005219374472",
+              "parentUUID": "bd597861-e463-4968-b40c-a940fc11d21c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a213114b-4741-4b86-9940-005219374472"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13671,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "b315710f-d0c2-4173-8b4e-14029bc930f5",
+      "title": "",
+      "fullFile": "cypress/e2e/subscription_home_page.cy.ts",
+      "file": "cypress/e2e/subscription_home_page.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "640a9a0f-168e-40f9-a903-63666db0d400",
+          "title": "Test Case 10: Verify Subscription in home page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should verify subscription in home page",
+              "fullTitle": "Test Case 10: Verify Subscription in home page should verify subscription in home page",
+              "timedOut": null,
+              "duration": 20349,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/subscription_home_page.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Scroll down to footer\ncy.scrollTo('bottom');\n// 5. Verify text 'SUBSCRIPTION'\nhomePage.subscriptionText.should('be.visible');\n// 6. Enter email address in input and click arrow button\nhomePage.subscriptionEmailInput.type(\"test_sub_\".concat(Date.now(), \"@example.com\"));\nhomePage.subscribeButton.click();\n// 7. Verify success message 'You have been successfully subscribed!' is visible\nhomePage.subscriptionSuccessMessage.should('be.visible');",
+              "err": {},
+              "uuid": "f455986b-8fe3-4170-a24f-6e4fd435fe00",
+              "parentUUID": "640a9a0f-168e-40f9-a903-63666db0d400",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f455986b-8fe3-4170-a24f-6e4fd435fe00"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 20349,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "58fe16d2-9e84-4be4-9e16-cf6fff6f5400",
+      "title": "",
+      "fullFile": "cypress/e2e/test_cases_page.cy.ts",
+      "file": "cypress/e2e/test_cases_page.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ecc997c5-f9fa-491d-bff9-fe5b7a16a175",
+          "title": "Test Case 7: Verify Test Cases Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should navigate to the test cases page",
+              "fullTitle": "Test Case 7: Verify Test Cases Page should navigate to the test cases page",
+              "timedOut": null,
+              "duration": 13194,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/test_cases_page.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Test Cases' button\nregistrationPage.testCasesButton.click();\n// 5. Verify user is navigated to test cases page successfully\ncy.url().should('include', '/test_cases');",
+              "err": {},
+              "uuid": "031b2da6-44ae-4317-ab98-f0cbae95f721",
+              "parentUUID": "ecc997c5-f9fa-491d-bff9-fe5b7a16a175",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "031b2da6-44ae-4317-ab98-f0cbae95f721"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13194,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "cb5a5ca8-6e78-4d41-b410-07b8d9e5ed0a",
+      "title": "",
+      "fullFile": "cypress/e2e/verify_address_details_in_checkout_page.cy.ts",
+      "file": "cypress/e2e/verify_address_details_in_checkout_page.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "55324442-09cc-4d43-9a42-8f6411f74059",
+          "title": "Verify address details in checkout page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should verify that the delivery and billing addresses are the same as the registration address",
+              "fullTitle": "Verify address details in checkout page should verify that the delivery and billing addresses are the same as the registration address",
+              "timedOut": null,
+              "duration": 38771,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/verify_address_details_in_checkout_page.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\n// 3. Verify that home page is visible successfully\ncy.get('body').should('be.visible');\n// 4. Click 'Signup / Login' button\nRegistrationPage_1.default.signupLoginButton.click();\n// 5. Fill all details in Signup and create account\nRegistrationPage_1.default.signup(name, email);\ncy.wait(2000);\nRegistrationPage_1.default.fillAccountDetails('Mrs', password, '1', // day (example value)\n'January', // month (example value)\n'1990', // year (example value)\nfirstName, lastName, company, address1, address2, country, state, city, zipcode, mobileNumber);\nRegistrationPage_1.default.createAccount();\n// 6. Verify 'ACCOUNT CREATED!' and click 'Continue' button\nRegistrationPage_1.default.accountCreatedMessage.should('be.visible');\nRegistrationPage_1.default.continueButton.click();\n// 7. Verify ' Logged in as username' at top\ncy.contains('Logged in as ' + name).should('be.visible');\n// 8. Add products to cart\nProductsPage_1.default.addFirstProductToCart();\nProductsPage_1.default.continueShoppingButton.click();\n// 9. Click 'Cart' button\nProductsPage_1.default.cartButton.click();\n// 10. Verify that cart page is displayed\ncy.url().should('include', '/view_cart');\n// 11. Click Proceed To Checkout\nCheckoutPage_1.default.proceedToCheckoutButton.click();\n// 12. Verify that the delivery address is same address filled at the time registration of account\nCheckoutPage_1.default.deliveryAddress.should('contain', address1);\nCheckoutPage_1.default.deliveryAddress.should('contain', address2);\nCheckoutPage_1.default.deliveryAddress.should('contain', city);\nCheckoutPage_1.default.deliveryAddress.should('contain', state);\nCheckoutPage_1.default.deliveryAddress.should('contain', zipcode);\nCheckoutPage_1.default.deliveryAddress.should('contain', country);\n// 13. Verify that the billing address is same address filled at the time registration of account\nCheckoutPage_1.default.billingAddress.should('contain', address1);\nCheckoutPage_1.default.billingAddress.should('contain', address2);\nCheckoutPage_1.default.billingAddress.should('contain', city);\nCheckoutPage_1.default.billingAddress.should('contain', state);\nCheckoutPage_1.default.billingAddress.should('contain', zipcode);\nCheckoutPage_1.default.billingAddress.should('contain', country);\n// 14. Click 'Delete Account' button\nRegistrationPage_1.default.deleteAccountButton.click();\n// 15. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nRegistrationPage_1.default.accountDeletedText.should('be.visible');\nRegistrationPage_1.default.continueButton.click();",
+              "err": {},
+              "uuid": "adc28c9a-4f63-421c-9d30-d2266cbd569d",
+              "parentUUID": "55324442-09cc-4d43-9a42-8f6411f74059",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "adc28c9a-4f63-421c-9d30-d2266cbd569d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 38771,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "45990371-2faf-411b-a215-16d419c136f3",
+      "title": "",
+      "fullFile": "cypress/e2e/verify_product_quantity_in_cart.cy.ts",
+      "file": "cypress/e2e/verify_product_quantity_in_cart.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "db9a6431-4387-42ae-8206-b4283577b8e1",
+          "title": "Test Case 13: Verify Product quantity in Cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should verify product quantity in cart",
+              "fullTitle": "Test Case 13: Verify Product quantity in Cart should verify product quantity in cart",
+              "timedOut": null,
+              "duration": 13930,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/verify_product_quantity_in_cart.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click 'View Product' for any product on home page\nproductsPage.viewProductButton(1).click(); // Assuming we view the first product\n// 5. Verify product detail is opened\nproductsPage.productNameDetail.should('be.visible');\nproductsPage.productPriceDetail.should('be.visible');\n// 6. Increase quantity to 4\ncy.get('#quantity').clear().type('4');\n// 7. Click 'Add to cart' button\ncy.get('button.btn.btn-default.cart').should('be.visible').click();\n// 8. Click 'View Cart' button\nproductsPage.viewCartButton.click();\n// 9. Verify that product is displayed in cart page with exact quantity\nproductsPage.productOneQuantity.should('contain.text', '4');",
+              "err": {},
+              "uuid": "84643423-3d07-4163-a985-3592c18f9f5d",
+              "parentUUID": "db9a6431-4387-42ae-8206-b4283577b8e1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "84643423-3d07-4163-a985-3592c18f9f5d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13930,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "1b653e09-84f2-47a1-8fc4-f4aca6a2ad50",
+      "title": "",
+      "fullFile": "cypress/e2e/view_cart_brand_products.cy.ts",
+      "file": "cypress/e2e/view_cart_brand_products.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3456a91b-7744-4536-b8a7-442e8b40633c",
+          "title": "Test Case 19: View & Cart Brand Products",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should view and cart brand products",
+              "fullTitle": "Test Case 19: View & Cart Brand Products should view and cart brand products",
+              "timedOut": null,
+              "duration": 18549,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/view_cart_brand_products.cy.ts\"\n}",
+              "code": "// 3. Click on 'Products' button\nproductsPage.productsButton.click();\n// 4. Verify that Brands are visible on left side bar\nproductsPage.brandsSidebar.should('be.visible');\n// 5. Click on any brand name, for example: Polo\nproductsPage.poloBrand.click();\n// 6. Verify that user is navigated to brand page and brand products are displayed\ncy.url().should('include', '/brand_products/Polo');\ncy.contains('Brand - Polo Products').should('be.visible');\n// 7. On left side bar, click on any other brand link, for example: H&M\nproductsPage.hmBrand.click();\n// 8. Verify that user is navigated to that brand page and can see products\ncy.url().should('include', '/brand_products/H&M');\ncy.contains('Brand - H&M Products').should('be.visible');",
+              "err": {},
+              "uuid": "e2405224-7ea9-41d6-851f-fadfcc6aeaf7",
+              "parentUUID": "3456a91b-7744-4536-b8a7-442e8b40633c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e2405224-7ea9-41d6-851f-fadfcc6aeaf7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18549,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "040564c9-5962-4e07-affc-6768750928b8",
+      "title": "",
+      "fullFile": "cypress/e2e/view_category_products.cy.ts",
+      "file": "cypress/e2e/view_category_products.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "690ca1e9-bc44-4ee9-b626-f68cc974562d",
+          "title": "Test Case 18: View Category Products",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should view category products",
+              "fullTitle": "Test Case 18: View Category Products should view category products",
+              "timedOut": null,
+              "duration": 12278,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/view_category_products.cy.ts\"\n}",
+              "code": "// 3. Verify that categories are visible on left side bar\nhomePage.categorySidebar.should('be.visible');\n// 4. Click on 'Women' category\nhomePage.womenCategory.click();\ncy.wait(500); // Wait for sub-categories to load\n// 5. Click on any category link under 'Women' category, for example: Dress\nhomePage.womenDressCategory.click();\ncy.url().should('include', '/category_products/1');\n// 6. Verify that category page is displayed and confirm text 'WOMEN - TOPS PRODUCTS'\ncy.get('.title.text-center').should('contain.text', 'Women - Dress Products');\n// 7. On left side bar, click on any sub-category link of 'Men' category\nhomePage.menCategory.click();\ncy.wait(500); // Wait for sub-categories to load\nhomePage.menTshirtsCategory.click();\ncy.url().should('include', '/category_products/3');\n// 8. Verify that user is navigated to that category page\ncy.get('.title.text-center').should('contain.text', 'Men - Tshirts Products');",
+              "err": {},
+              "uuid": "d7f43daa-203d-468a-9b56-5d1ae85f68f2",
+              "parentUUID": "690ca1e9-bc44-4ee9-b626-f68cc974562d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d7f43daa-203d-468a-9b56-5d1ae85f68f2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12278,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ccfc9876-6ec0-4300-b47a-7952783a668b",
+      "title": "",
+      "fullFile": "cypress/e2e/z_login.cy.ts",
+      "file": "cypress/e2e/z_login.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3a289fbe-4d86-4bf8-af9c-5fe7756dcfb5",
+          "title": "Test Case 2: Login User with correct email and password",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should login with correct credentials",
+              "fullTitle": "Test Case 2: Login User with correct email and password should login with correct credentials",
+              "timedOut": null,
+              "duration": 21251,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/z_login.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Signup / Login' button\nregistrationPage.signupLoginButton.click();\n// 5. Verify 'Login to your account' is visible\nloginPage.loginToYourAccountText.should('be.visible');\n// 6. Enter correct email address and password\nloginPage.login(this.user.email, this.user.password);\n// 7. Click 'login' button is handled by loginPage.login\n// 8. Verify that 'Logged in as username' is visible\nregistrationPage.loggedInAsText.should('be.visible').and('contain', this.user.name);\n// 9. Click 'Delete Account' button\nregistrationPage.deleteAccountButton.click();\n// 10. Verify that 'ACCOUNT DELETED!' is visible\nregistrationPage.accountDeletedText.should('be.visible');",
+              "err": {},
+              "uuid": "c9c63b38-2239-4586-9476-a3ad3787b185",
+              "parentUUID": "3a289fbe-4d86-4bf8-af9c-5fe7756dcfb5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c9c63b38-2239-4586-9476-a3ad3787b185"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 21251,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "273d2143-cc48-495e-b4b1-6ff235ea0008",
+      "title": "",
+      "fullFile": "cypress/e2e/add_products_to_cart.cy.ts",
+      "file": "cypress/e2e/add_products_to_cart.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "411c4553-d921-45e8-aac2-3ccd7e43880d",
+          "title": "Test Case 12: Add Products in Cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add products to cart and verify details",
+              "fullTitle": "Test Case 12: Add Products in Cart should add products to cart and verify details",
+              "timedOut": null,
+              "duration": 12244,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/add_products_to_cart.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click 'Products' button\nproductsPage.productsButton.click();\n// 5. Hover over first product and click 'Add to cart'\nproductsPage.addFirstProductToCart();\n// 6. Click 'Continue Shopping' button\nproductsPage.continueShoppingButton.click();\n// 7. Hover over second product and click 'Add to cart'\nproductsPage.addSecondProductToCart('Men Tshirt');\ncy.wait(500);\n// 8. Click 'View Cart' button\nproductsPage.viewCartButton.click();\n// 9. Verify both products are added to Cart\nproductsPage.productOneInCart.should('be.visible');\nproductsPage.productTwoInCart.should('be.visible');\n// 10. Verify their prices, quantity and total price\nproductsPage.productOnePrice.should('be.visible');\nproductsPage.productOneQuantity.should('contain.text', '1'); // Assuming quantity is 1 by default\nproductsPage.productOneTotalPrice.should('be.visible');\nproductsPage.productTwoPrice.should('be.visible');\nproductsPage.productTwoQuantity.should('contain.text', '1'); // Assuming quantity is 1 by default\nproductsPage.productTwoTotalPrice.should('be.visible');",
+              "err": {},
+              "uuid": "e19e10bc-9036-4ed4-b9ee-f25ea00a1d2c",
+              "parentUUID": "411c4553-d921-45e8-aac2-3ccd7e43880d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should remove products from cart",
+              "fullTitle": "Test Case 12: Add Products in Cart should remove products from cart",
+              "timedOut": null,
+              "duration": 7817,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/add_products_to_cart.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click 'Products' button\nproductsPage.productsButton.click();\n// 5. Hover over first product and click 'Add to cart'\nproductsPage.addFirstProductToCart();\n// 6. Click 'View Cart' button\nproductsPage.viewCartButton.click();\n// 7. Verify product is added to Cart\nproductsPage.productOneInCart.should('be.visible');\n// 8. Click 'X' button corresponding to particular product\nproductsPage.getRemoveFromCartButton(0).click();\n// 9. Verify that product is removed from the cart\nproductsPage.cartEmptyMessage.should('be.visible');",
+              "err": {},
+              "uuid": "50ab3ad0-4b4d-4dcd-b5ae-f9a33f357103",
+              "parentUUID": "411c4553-d921-45e8-aac2-3ccd7e43880d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e19e10bc-9036-4ed4-b9ee-f25ea00a1d2c",
+            "50ab3ad0-4b4d-4dcd-b5ae-f9a33f357103"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 20061,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "540b4a19-df2b-4cf6-9160-1e2f1df4f2f8",
+      "title": "",
+      "fullFile": "cypress/e2e/add_review_on_product.cy.ts",
+      "file": "cypress/e2e/add_review_on_product.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1c06da80-e853-434d-9ff6-fabb8214cadd",
+          "title": "Add review on product",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add a review on a product",
+              "fullTitle": "Add review on product should add a review on a product",
+              "timedOut": null,
+              "duration": 11555,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/add_review_on_product.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\ncy.url().should('eq', 'https://automationexercise.com/');\n// 3. Click on 'Products' button    \ncy.get('a[href=\"/products\"]').click();\n// 4. Verify user is navigated to ALL PRODUCTS page successfully\ncy.get('h2.title.text-center').should('contain', 'All Products');\n// 5. Click on 'View Product' button\ncy.get('a[href=\"/product_details/1\"]').click();\n// 6. Verify 'Write Your Review' is visible\ncy.get('.shop-details-tab').should('contain', 'Write Your Review');\n// 7. Enter name, email and review\ncy.get('a[href=\"#reviews\"]').should('be.visible');\ncy.get('input#name').type('Tisha');\ncy.get('input#email').type('tisha@example.com');\ncy.get('textarea#review').type('This is a great product!');\n// 8. Click 'Submit' button \ncy.get('button#button-review').click();\n// 9. Verify success message 'Thank you for your review.' is visible\ncy.get('div.alert-success span').should('contain', 'Thank you for your review.');",
+              "err": {},
+              "uuid": "19b008f7-e0d8-4c5a-ba86-604b61d2631b",
+              "parentUUID": "1c06da80-e853-434d-9ff6-fabb8214cadd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "19b008f7-e0d8-4c5a-ba86-604b61d2631b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11555,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "6cd0a75f-3f5c-48b2-9d49-473af502c713",
+      "title": "",
+      "fullFile": "cypress/e2e/add_to_cart_from_recommended.cy.ts",
+      "file": "cypress/e2e/add_to_cart_from_recommended.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0735c017-890a-49b1-9726-e356fb6dec8f",
+          "title": "Add to cart from Recommended items",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add a product to the cart from the recommended items section",
+              "fullTitle": "Add to cart from Recommended items should add a product to the cart from the recommended items section",
+              "timedOut": null,
+              "duration": 6200,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/add_to_cart_from_recommended.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\n// 3. Scroll to bottom of page\ncy.scrollTo('bottom');\n// 4. Verify 'RECOMMENDED ITEMS' are visible\nHomePage_1.default.getRecommendedItems().should('be.visible');\n// 5. Click on 'Add To Cart' on Recommended product\nHomePage_1.default.getAddToCartFromRecommended().first().click({ force: true });\n// 6. Click on 'View Cart' button\nProductsPage_1.default.viewCartButton.click();\n// 7. Verify that product is displayed in cart page\ncy.get('#cart_info_table').should('be.visible');",
+              "err": {},
+              "uuid": "07eb8963-2a76-446c-ac46-7047584c76db",
+              "parentUUID": "0735c017-890a-49b1-9726-e356fb6dec8f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "07eb8963-2a76-446c-ac46-7047584c76db"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6200,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "04e7cfe3-77e7-497e-a02b-faf056da9cb6",
+      "title": "",
+      "fullFile": "cypress/e2e/contact_us.cy.ts",
+      "file": "cypress/e2e/contact_us.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cef28481-db6d-428d-94eb-89c4ffac4143",
+          "title": "Test Case 6: Contact Us Form",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should submit the contact us form successfully",
+              "fullTitle": "Test Case 6: Contact Us Form should submit the contact us form successfully",
+              "timedOut": null,
+              "duration": 14418,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/contact_us.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Contact Us' button\ncontactUsPage.contactUsButton.click();\n// 5. Verify 'GET IN TOUCH' is visible\ncontactUsPage.getInTouchText.should('be.visible');\n// 6. Enter name, email, subject and message\ncontactUsPage.nameInput.type('Test User');\ncontactUsPage.emailInput.type('test@example.com');\ncontactUsPage.subjectInput.type('Test Subject');\ncontactUsPage.messageInput.type('This is a test message.');\n// 7. Upload file\nvar fileName = 'example.txt';\ncy.fixture(fileName).then(function (fileContent) {\n    contactUsPage.uploadFileInput.attachFile({ fileContent: fileContent, fileName: fileName, mimeType: 'text/plain' });\n});\n// 8. Click 'Submit' button\ncontactUsPage.submitButton.click();\n// 9. Click OK button on alert\ncy.on('window:confirm', function (str) {\n    expect(str).to.equal('Press OK to proceed!');\n    return true; // click OK\n});\n// 10. Verify success message 'Success! Your details have been submitted successfully.' is visible\ncontactUsPage.successMessage.should('be.visible');\n// 11. Click 'Home' button and verify that landed to home page successfully\ncontactUsPage.homeButton.click();\ncy.url().should('eq', 'https://automationexercise.com/');",
+              "err": {},
+              "uuid": "269de12f-d008-43dd-8008-b0fc297f0bab",
+              "parentUUID": "cef28481-db6d-428d-94eb-89c4ffac4143",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "269de12f-d008-43dd-8008-b0fc297f0bab"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14418,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "598bdbd5-712e-4050-a19b-7548273d9209",
+      "title": "",
+      "fullFile": "cypress/e2e/download_invoice_after_purchase.cy.ts",
+      "file": "cypress/e2e/download_invoice_after_purchase.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1307d343-08d1-48b2-b37d-82ad30a98c68",
+          "title": "Test Case 24: Download Invoice after purchase order",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should download invoice after purchase order",
+              "fullTitle": "Test Case 24: Download Invoice after purchase order should download invoice after purchase order",
+              "timedOut": null,
+              "duration": 41294,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/download_invoice_after_purchase.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Add products to cart\nproductsPage.addFirstProductToCart();\ncy.get('.modal-content').should('be.visible');\ncy.get('.modal-title').should('contain.text', 'Added!');\ncy.get('button.close-modal').click();\n// 5. Click 'Cart' button\nhomePage.clickCartButton();\n// 6. Verify that cart page is displayed\ncy.url().should('include', '/view_cart');\ncy.contains('Shopping Cart').should('be.visible');\n// 7. Click Proceed To Checkout\ncheckoutPage.clickProceedToCheckout();\n// 8. Click 'Register / Login' button\nregistrationPage.registerLoginButton.click();\n// 9. Fill all details in Signup and create account\nregistrationPage.signup(name, email);\nregistrationPage.fillAccountDetails('Mr', password, '1', 'January', '1990', firstName, lastName, company, address1, address2, 'United States', state, city, zipCode, mobileNumber);\nregistrationPage.createAccount();\n// 10. Verify 'ACCOUNT CREATED!' and click 'Continue' button\nregistrationPage.accountCreatedText.should('be.visible');\nregistrationPage.continueButton.click();\n// 11. Verify ' Logged in as username' at top\ncy.contains('Logged in as ' + name).should('be.visible');\n// 12. Click 'Cart' button\nhomePage.clickCartButton();\n// 13. Click 'Proceed To Checkout' button\ncheckoutPage.clickProceedToCheckout();\n// 14. Verify Address Details and Review Your Order\ncheckoutPage.verifyAddressDetails(firstName, lastName, company, address1, address2, city, state, zipCode, mobileNumber);\ncheckoutPage.verifyReviewOrder();\n// 15. Enter description in comment text area and click 'Place Order'\ncheckoutPage.enterComment('This is a test order comment.');\ncheckoutPage.clickPlaceOrder();\n// 16. Enter payment details: Name on Card, Card Number, CVC, Expiration date\ncheckoutPage.enterPaymentDetails(faker_1.faker.finance.accountName(), faker_1.faker.finance.creditCardNumber(), faker_1.faker.finance.creditCardCVV(), faker_1.faker.date.future().getMonth().toString(), faker_1.faker.date.future().getFullYear().toString());\n// 17. Click 'Pay and Confirm Order' button\ncheckoutPage.clickPayAndConfirmOrder();\n// 18. Verify success message 'Your order has been placed successfully!'\ncheckoutPage.verifyOrderPlacedSuccessMessage();\n// 19. Click 'Download Invoice' button and verify invoice is downloaded successfully.\ncy.contains('Download Invoice', { timeout: 10000 })\n    .should('be.visible')\n    .then(function ($el) {\n    var invoiceUrl = $el.attr('href');\n    cy.downloadFile(\"http://automationexercise.com\".concat(invoiceUrl), 'cypress/downloads', 'invoice.txt');\n});\ncy.readFile('cypress/downloads/invoice.txt').should('exist').and('not.be.empty');\n// 20. Click 'Continue' button\ncheckoutPage.clickContinueButton();\n// 21. Click 'Delete Account' button\nhomePage.clickDeleteAccountButton();\n// 22. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nregistrationPage.verifyAccountDeleted();\nregistrationPage.clickContinueButton();",
+              "err": {},
+              "uuid": "f9e77df6-2a64-4e4b-98a4-a32bcb7d3036",
+              "parentUUID": "1307d343-08d1-48b2-b37d-82ad30a98c68",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f9e77df6-2a64-4e4b-98a4-a32bcb7d3036"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 41294,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "12c61e1f-3ec1-4968-a8d3-a3e1b4a02ed9",
+      "title": "",
+      "fullFile": "cypress/e2e/login_incorrect.cy.ts",
+      "file": "cypress/e2e/login_incorrect.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "36818d45-f3fa-46b4-807a-7ea9334a27c6",
+          "title": "Test Case 3: Login User with incorrect email and password",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should not login with incorrect credentials",
+              "fullTitle": "Test Case 3: Login User with incorrect email and password should not login with incorrect credentials",
+              "timedOut": null,
+              "duration": 9951,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/login_incorrect.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Signup / Login' button\nregistrationPage.signupLoginButton.click();\n// 5. Verify 'Login to your account' is visible\nloginPage.loginToYourAccountText.should('be.visible');\n// 6. Enter incorrect email address and password\nloginPage.login('wrong@email.com', 'wrongpassword');\n// 7. Click 'login' button is handled by loginPage.login\n// 8. Verify error 'Your email or password is incorrect!' is visible\nloginPage.incorrectLoginError.should('be.visible');",
+              "err": {},
+              "uuid": "7b0d714d-90dd-4065-98dc-a66b8b154258",
+              "parentUUID": "36818d45-f3fa-46b4-807a-7ea9334a27c6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7b0d714d-90dd-4065-98dc-a66b8b154258"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9951,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "0b6be8de-7bba-4591-87d0-886848e6bbed",
+      "title": "",
+      "fullFile": "cypress/e2e/logout.cy.ts",
+      "file": "cypress/e2e/logout.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "87d35aff-32dd-4591-94bc-bc1565576f08",
+          "title": "Test Case 4: Logout User",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should logout a user",
+              "fullTitle": "Test Case 4: Logout User should logout a user",
+              "timedOut": null,
+              "duration": 49295,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/logout.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Signup / Login' button\nregistrationPage.signupLoginButton.click();\n// 5. Verify 'Login to your account' is visible\nloginPage.loginToYourAccountText.should('be.visible');\n// 6. Enter correct email address and password\nloginPage.login(this.user.email, this.user.password);\n// 7. Click 'login' button is handled by loginPage.login\n// 8. Verify that 'Logged in as username' is visible\nregistrationPage.loggedInAsText.should('be.visible').and('contain', this.user.name);\n// 9. Click 'Logout' button\nregistrationPage.logoutButton.click();\n// 10. Verify that user is navigated to login page\ncy.url().should('include', '/login');",
+              "err": {},
+              "uuid": "eb326f28-47c7-4d3c-abf7-e1f4b3b28237",
+              "parentUUID": "87d35aff-32dd-4591-94bc-bc1565576f08",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "eb326f28-47c7-4d3c-abf7-e1f4b3b28237"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 49295,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "caa9c3f7-8a3b-4c33-816e-a02caf9bfed5",
+      "title": "",
+      "fullFile": "cypress/e2e/place_order_login_before_checkout.cy.ts",
+      "file": "cypress/e2e/place_order_login_before_checkout.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6c73ada9-ed8c-4295-b2ac-d1e75efe5a2e",
+          "title": "Test Case 16: Place Order: Login before Checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should place order by logging in before checkout",
+              "fullTitle": "Test Case 16: Place Order: Login before Checkout should place order by logging in before checkout",
+              "timedOut": null,
+              "duration": 41776,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/place_order_login_before_checkout.cy.ts\"\n}",
+              "code": "// Create a user via API and write credentials to a fixture file\ncy.request({\n    method: 'POST',\n    url: \"\".concat(Cypress.env('API_URL'), \"/createAccount\"),\n    form: true,\n    body: {\n        name: 'Test User',\n        email: userEmail,\n        password: userPassword,\n        title: 'Mr',\n        birth_date: '01',\n        birth_month: 'January',\n        birth_year: '1990',\n        firstname: 'Test',\n        lastname: 'User',\n        company: 'Test Company',\n        address1: '123 Test Street',\n        address2: 'Apt 4B',\n        country: 'United States',\n        zipcode: '10001',\n        state: 'New York',\n        city: 'New York',\n        mobile_number: '1234567890'\n    }\n}).then(function (response) {\n    expect(response.status).to.eq(200);\n});\n// 4. Click 'Signup / Login' button\nregistrationPage.signupLoginButton.click();\n// 5. Fill email, password and click 'Login' button\nloginPage.login(userEmail, userPassword);\n// 6. Verify 'Logged in as username' at top\ncy.contains('Logged in as Test User').should('be.visible');\n// 8. Add products to cart\nproductsPage.addFirstProductToCart();\nproductsPage.continueShoppingButton.click();\n// 9. Click 'Cart' button\nproductsPage.cartButton.click();\n// 10. Verify that cart page is displayed\ncy.url().should('include', '/view_cart');\n// 11. Click Proceed To Checkout\ncheckoutPage.proceedToCheckoutButton.click();\n// 12. Verify Address Details and Review Your Order\ncy.get('#address_delivery').should('be.visible');\ncy.get('#address_invoice').should('be.visible');\n// 13. Enter description in comment text area and click 'Place Order'\ncy.get('[name=\"message\"]').type('Test order comments');\ncheckoutPage.placeOrderButton.click();\n// 14. Enter payment details: Name on Card, Card Number, CVC, Expiration date\ncheckoutPage.nameOnCardInput.type('Test User');\ncheckoutPage.cardNumberInput.type('1234567890123456');\ncheckoutPage.cvcInput.type('123');\ncheckoutPage.expiryMonthInput.type('01');\ncheckoutPage.expiryYearInput.type('2026');\n// 15. Click 'Pay and Confirm Order' button\ncheckoutPage.payAndConfirmOrderButton.click();\n// 16. Verify success message 'Your order has been placed successfully!'\ncheckoutPage.orderPlacedMessage.should('be.visible');\n// 17. Click 'Delete Account' button\ncy.contains('Delete Account').click();\n// 18. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nregistrationPage.accountDeletedText.should('be.visible');\nregistrationPage.continueButton.click();",
+              "err": {},
+              "uuid": "74072cb7-6e4b-47d6-9292-29adbed813ee",
+              "parentUUID": "6c73ada9-ed8c-4295-b2ac-d1e75efe5a2e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "74072cb7-6e4b-47d6-9292-29adbed813ee"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 41776,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "0298f679-2d1c-4a48-87c9-d4537944892d",
+      "title": "",
+      "fullFile": "cypress/e2e/place_order_register_before_checkout.cy.ts",
+      "file": "cypress/e2e/place_order_register_before_checkout.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b9f548fc-c0af-4a6e-b446-6e865015c04f",
+          "title": "Test Case 15: Place Order: Register before Checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should place order by registering while checkout",
+              "fullTitle": "Test Case 15: Place Order: Register before Checkout should place order by registering while checkout",
+              "timedOut": null,
+              "duration": 48367,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/place_order_register_before_checkout.cy.ts\"\n}",
+              "code": "// 4. Click 'Signup / Login' button on the home page.\nregistrationPage.signupLoginButton.click();\n// 5. Fill all details in Signup and create account\nregistrationPage.signup('Test User', userEmail);\nregistrationPage.fillAccountDetails('Mr', userPassword, '1', 'January', '1990', 'Test', 'User', 'Test Company', '123 Test Street', 'Apt 4B', 'United States', 'New York', 'New York', '10001', '1234567890');\nregistrationPage.createAccount();\n// 6. Verify 'ACCOUNT CREATED!' and click 'Continue' button\nregistrationPage.accountCreatedText.should('be.visible');\nregistrationPage.continueButton.click();\n// 7. Verify ' Logged in as username' at top\ncy.contains('Logged in as Test User').should('be.visible');\n// 8. Add products to cart\nproductsPage.addFirstProductToCart();\nproductsPage.continueShoppingButton.click();\n// 9. Click 'Cart' button\nproductsPage.cartButton.click();\n// 10. Verify that cart page is displayed\ncy.url().should('include', '/view_cart');\n// 11. Click Proceed To Checkout\ncheckoutPage.proceedToCheckoutButton.click();\n// 12. Verify Address Details and Review Your Order\ncy.get('#address_delivery').should('be.visible');\ncy.get('#address_invoice').should('be.visible');\n// 13. Enter description in comment text area and click 'Place Order'\ncy.get('[name=\"message\"]').type('Test order comments');\ncheckoutPage.placeOrderButton.click();\n// 14. Enter payment details: Name on Card, Card Number, CVC, Expiration date\ncheckoutPage.nameOnCardInput.type('Test User');\ncheckoutPage.cardNumberInput.type('1234567890123456');\ncheckoutPage.cvcInput.type('123');\ncheckoutPage.expiryMonthInput.type('01');\ncheckoutPage.expiryYearInput.type('2026');\n// 15. Click 'Pay and Confirm Order' button\ncheckoutPage.payAndConfirmOrderButton.click();\n// 16. Verify success message 'Your order has been placed successfully!'\ncheckoutPage.orderPlacedMessage.should('be.visible');\n// 17. Click 'Delete Account' button\ncy.contains('Delete Account').click();\n// 18. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nregistrationPage.accountDeletedText.should('be.visible');\nregistrationPage.continueButton.click();",
+              "err": {},
+              "uuid": "34258485-8ea0-4747-a099-72ca9039d9bd",
+              "parentUUID": "b9f548fc-c0af-4a6e-b446-6e865015c04f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "34258485-8ea0-4747-a099-72ca9039d9bd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 48367,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "04a69d85-ac28-4e94-8245-1e4c64d9046f",
+      "title": "",
+      "fullFile": "cypress/e2e/place_order_register_while_checkout.cy.ts",
+      "file": "cypress/e2e/place_order_register_while_checkout.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2dc68f71-2a72-475c-9d93-484dc1ef409f",
+          "title": "Test Case 14: Place Order: Register while Checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should place order by registering while checkout",
+              "fullTitle": "Test Case 14: Place Order: Register while Checkout should place order by registering while checkout",
+              "timedOut": null,
+              "duration": 40804,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/place_order_register_while_checkout.cy.ts\"\n}",
+              "code": "// 4. Click 'Signup / Login' button on the home page.\nregistrationPage.signupLoginButton.click();\n// 5. Fill all details in Signup and create account\nregistrationPage.signup('Test User', userEmail);\nregistrationPage.fillAccountDetails('Mr', userPassword, '1', 'January', '1990', 'Test', 'User', 'Test Company', '123 Test Street', 'Apt 4B', 'United States', 'New York', 'New York', '10001', '1234567890');\nregistrationPage.createAccount();\n// 6. Verify 'ACCOUNT CREATED!' and click 'Continue' button\nregistrationPage.accountCreatedText.should('be.visible');\nregistrationPage.continueButton.click();\n// 7. Verify ' Logged in as username' at top\ncy.contains('Logged in as Test User').should('be.visible');\n// 8. Add products to cart\nproductsPage.addFirstProductToCart();\nproductsPage.continueShoppingButton.click();\n// 9. Click 'Cart' button\nproductsPage.cartButton.click();\n// 10. Verify that cart page is displayed\ncy.url().should('include', '/view_cart');\n// 11. Click Proceed To Checkout\ncheckoutPage.proceedToCheckoutButton.click();\n// 12. Verify Address Details and Review Your Order\ncy.get('#address_delivery').should('be.visible');\ncy.get('#address_invoice').should('be.visible');\n// 13. Enter description in comment text area and click 'Place Order'\ncy.get('[name=\"message\"]').type('Test order comments');\ncheckoutPage.placeOrderButton.click();\n// 14. Enter payment details: Name on Card, Card Number, CVC, Expiration date\ncheckoutPage.nameOnCardInput.type('Test User');\ncheckoutPage.cardNumberInput.type('1234567890123456');\ncheckoutPage.cvcInput.type('123');\ncheckoutPage.expiryMonthInput.type('01');\ncheckoutPage.expiryYearInput.type('2026');\n// 15. Click 'Pay and Confirm Order' button\ncheckoutPage.payAndConfirmOrderButton.click();\n// 16. Verify success message 'Your order has been placed successfully!'\ncheckoutPage.orderPlacedMessage.should('be.visible');\n// 17. Click 'Delete Account' button\ncy.contains('Delete Account').click();\n// 18. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nregistrationPage.accountDeletedText.should('be.visible');\nregistrationPage.continueButton.click();",
+              "err": {},
+              "uuid": "cfbcc61d-0d0e-46fe-b2a9-a578c541bd14",
+              "parentUUID": "2dc68f71-2a72-475c-9d93-484dc1ef409f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cfbcc61d-0d0e-46fe-b2a9-a578c541bd14"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 40804,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ccdeb5a6-104a-40d5-b8c8-0b36e1200142",
+      "title": "",
+      "fullFile": "cypress/e2e/products_page.cy.ts",
+      "file": "cypress/e2e/products_page.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "818cba96-3d6c-4fe2-85f9-7c8b62eb9b7e",
+          "title": "Test Case 8: Verify All Products and product detail page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should verify all products and product detail page",
+              "fullTitle": "Test Case 8: Verify All Products and product detail page should verify all products and product detail page",
+              "timedOut": null,
+              "duration": 22555,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/products_page.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Products' button\nproductsPage.productsButton.click();\n// 5. Verify user is navigated to ALL PRODUCTS page successfully\nproductsPage.allProductsText.should('be.visible');\ncy.url().should('include', '/products');\n// 6. The products list is visible\nproductsPage.productsList.should('be.visible');\n// 7. Click on 'View Product' of first product\nproductsPage.viewProductButton(1).click();\n// 8. User is landed to product detail page\ncy.url().should('include', '/product_details');\n// 9. Verify that detail detail is visible: product name, category, price, availability, condition, brand\nproductsPage.productNameDetail.should('be.visible');\nproductsPage.productCategoryDetail.should('be.visible');\nproductsPage.productPriceDetail.should('be.visible');\nproductsPage.productAvailabilityDetail.should('be.visible');\nproductsPage.productConditionDetail.should('be.visible');\nproductsPage.productBrandDetail.should('be.visible');",
+              "err": {},
+              "uuid": "4aa4e721-27c8-4dad-b4cf-9be78a4b52ba",
+              "parentUUID": "818cba96-3d6c-4fe2-85f9-7c8b62eb9b7e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4aa4e721-27c8-4dad-b4cf-9be78a4b52ba"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22555,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "3e33c9ea-b82f-4b0c-8616-96803279f415",
+      "title": "",
+      "fullFile": "cypress/e2e/purchase_flow.cy.ts",
+      "file": "cypress/e2e/purchase_flow.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1650a480-9230-4399-a752-4525e9eca5c5",
+          "title": "End-to-End Purchase Flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should complete the purchase flow",
+              "fullTitle": "End-to-End Purchase Flow should complete the purchase flow",
+              "timedOut": null,
+              "duration": 20007,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/purchase_flow.cy.ts\"\n}",
+              "code": "// UI Login\ncy.visit('/login');\nloginPage.login(this.user.email, this.user.password);\ncy.contains('Logged in as').should('be.visible');\n// Add products to cart\nproductsPage.addFirstProductToCart();\ncy.get('.modal-footer button').click();\nproductsPage.addSecondProductToCart('Men Tshirt');\ncy.get('.modal-body a[href=\"/view_cart\"]').click({ force: true });\n// Proceed to checkout\ncheckoutPage.proceedToCheckoutButton.click();\ncy.get('#address_delivery').should('be.visible');\ncy.get('[name=\"message\"]').type('Test order');\ncheckoutPage.placeOrderButton.click();\n// Complete order\ncy.url().should('include', '/payment');\ncheckoutPage.nameOnCardInput.should('be.visible').type('Test User');\ncheckoutPage.cardNumberInput.type('1234567890123456');\ncheckoutPage.cvcInput.type('123');\ncheckoutPage.expiryMonthInput.type('01');\ncheckoutPage.expiryYearInput.type('2026');\ncheckoutPage.payAndConfirmOrderButton.click();\n// Verify order placement\ncheckoutPage.orderPlacedMessage.should('be.visible');\ncy.url().should('include', '/payment_done');\n// Download invoice\ncheckoutPage.downloadInvoiceButton.click();\n// Verify invoice file\ncy.readFile('cypress/downloads/invoice.txt').should('have.length.gt', 0);",
+              "err": {},
+              "uuid": "f3c0f21a-b16b-48c2-88d5-58248ad0ed4f",
+              "parentUUID": "1650a480-9230-4399-a752-4525e9eca5c5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f3c0f21a-b16b-48c2-88d5-58248ad0ed4f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 20007,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "5a7c7706-d97a-45e9-9409-20e3fbd18db2",
+      "title": "",
+      "fullFile": "cypress/e2e/register_existing_email.cy.ts",
+      "file": "cypress/e2e/register_existing_email.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c2f78784-8c46-4e49-9512-6f3996dee806",
+          "title": "Test Case 5: Register User with existing email",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should display error when registering with existing email",
+              "fullTitle": "Test Case 5: Register User with existing email should display error when registering with existing email",
+              "timedOut": null,
+              "duration": 10817,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/register_existing_email.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Signup / Login' button\nregistrationPage.signupLoginButton.click();\n// 5. Verify 'New User Signup!' is visible\nregistrationPage.newUserSignupText.should('be.visible');\n// 6. Enter name and already registered email address\nregistrationPage.signupNameInput.type(name);\nregistrationPage.signupEmailInput.type(existingEmail);\n// 7. Click 'Signup' button\nregistrationPage.signupButton.click();\n// 8. Verify error 'Email Address already exist!' is visible\nregistrationPage.emailAlreadyExistError.should('be.visible');",
+              "err": {},
+              "uuid": "67a8b534-b28a-4dae-9390-046ed1c0c6e5",
+              "parentUUID": "c2f78784-8c46-4e49-9512-6f3996dee806",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "67a8b534-b28a-4dae-9390-046ed1c0c6e5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10817,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "5dbad9d8-8c31-4dd6-a6a1-be6aadd3c4d9",
+      "title": "",
+      "fullFile": "cypress/e2e/registration.cy.ts",
+      "file": "cypress/e2e/registration.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bee1a80c-684b-4d1e-a99a-0416f8431dee",
+          "title": "Test Case 1: Register User",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should register a new user",
+              "fullTitle": "Test Case 1: Register User should register a new user",
+              "timedOut": null,
+              "duration": 41767,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/registration.cy.ts\"\n}",
+              "code": "var uniqueEmail = \"testuser_\".concat(Date.now(), \"@example.com\");\n// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Signup / Login' button\nregistrationPage.signupLoginButton.click();\n// 5. Verify 'New User Signup!' is visible\nregistrationPage.newUserSignupText.should('be.visible');\n// 6. Enter name and email address\nregistrationPage.signupNameInput.type(name);\nregistrationPage.signupEmailInput.type(uniqueEmail);\n// 7. Click 'Signup' button\nregistrationPage.signupButton.click();\n// 8. Verify that 'ENTER ACCOUNT INFORMATION' is visible\nregistrationPage.enterAccountInformationText.should('be.visible');\n// 9. Fill details: Title, Name, Email, Password, Date of birth\nregistrationPage.titleRadioButton.check('Mr');\nregistrationPage.passwordInput.type('password123');\nregistrationPage.daysDropdown.select('1');\nregistrationPage.monthsDropdown.select('January');\nregistrationPage.yearsDropdown.select('1990');\n// 10. Select checkbox 'Sign up for our newsletter!'\nregistrationPage.newsletterCheckbox.check();\n// 11. Select checkbox 'Receive special offers from our partners!'\nregistrationPage.partnersCheckbox.check();\n// 12. Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number\nregistrationPage.firstNameInput.type('Test');\nregistrationPage.lastNameInput.type('User');\nregistrationPage.companyInput.type('Test Company');\nregistrationPage.address1Input.type('123 Test Street');\nregistrationPage.address2Input.type('Apt 4B');\nregistrationPage.countryDropdown.select('United States');\nregistrationPage.stateInput.type('New York');\nregistrationPage.cityInput.type('New York');\nregistrationPage.zipcodeInput.type('10001');\nregistrationPage.mobileNumberInput.type('1234567890');\n// 13. Click 'Create Account button'\nregistrationPage.createAccountButton.click();\n// 14. Verify that 'ACCOUNT CREATED!' is visible\nregistrationPage.accountCreatedText.should('be.visible');\n// 15. Click 'Continue' button\nregistrationPage.continueButton.click();\n// 16. Verify that 'Logged in as username' is visible\nregistrationPage.loggedInAsText.should('be.visible').and('contain', name);\n// 17. Click 'Delete Account' button\nregistrationPage.deleteAccountButton.click();\n// 18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button\nregistrationPage.accountDeletedText.should('be.visible');\nregistrationPage.continueButton.click();",
+              "err": {},
+              "uuid": "07b31014-0b70-4b31-8dee-74ab7486e6f5",
+              "parentUUID": "bee1a80c-684b-4d1e-a99a-0416f8431dee",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "07b31014-0b70-4b31-8dee-74ab7486e6f5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 41767,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "34646bca-54f5-4ce7-9bb8-a1ab4099b962",
+      "title": "",
+      "fullFile": "cypress/e2e/remove_products_from_cart.cy.ts",
+      "file": "cypress/e2e/remove_products_from_cart.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "36cd2947-77e0-4221-af52-79e3a6d4528e",
+          "title": "Test Case 17: Remove Products From Cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should remove products from cart",
+              "fullTitle": "Test Case 17: Remove Products From Cart should remove products from cart",
+              "timedOut": null,
+              "duration": 31159,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/remove_products_from_cart.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Add products to cart\nproductsPage.productsButton.click(); // Navigate to products page first\nproductsPage.addFirstProductToCart();\n// 5. Click 'Cart' button\nproductsPage.viewCartButton.click();\n// 6. Verify that cart page is displayed\ncy.url().should('include', '/view_cart');\nproductsPage.productOneInCart.should('be.visible'); // Verify product is in cart\n// 7. Click 'X' button corresponding to particular product\nproductsPage.getRemoveFromCartButton(0).click();\n// 8. Verify that product is removed from the cart\nproductsPage.cartEmptyMessage.should('be.visible');",
+              "err": {},
+              "uuid": "9b104abd-6510-4a78-ae33-18dfc34fe5cd",
+              "parentUUID": "36cd2947-77e0-4221-af52-79e3a6d4528e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9b104abd-6510-4a78-ae33-18dfc34fe5cd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 31159,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "00672e01-312a-49b4-8027-94e617b2ce43",
+      "title": "",
+      "fullFile": "cypress/e2e/scroll_up_and_down.cy.ts",
+      "file": "cypress/e2e/scroll_up_and_down.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "05a6eb62-82c2-4436-8a56-a709aa4e414b",
+          "title": "Test Case 25: Verify Scroll Up using 'Arrow' button and Scroll Down functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should scroll up and down and verify visibility of elements",
+              "fullTitle": "Test Case 25: Verify Scroll Up using 'Arrow' button and Scroll Down functionality should scroll up and down and verify visibility of elements",
+              "timedOut": null,
+              "duration": 8678,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/scroll_up_and_down.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Scroll down page to bottom\ncy.scrollTo('bottom');\n// 5. Verify 'SUBSCRIPTION' is visible\ncy.contains('Subscription').should('be.visible');\n// 6. Click on arrow at bottom right side to move upward\ncy.get('#scrollUp').click();\n// 7. Verify that page is scrolled up and 'Full-Fledged practice website for Automation Engineers' text is visible on screen\ncy.contains('Full-Fledged practice website for Automation Engineers').should('be.visible');",
+              "err": {},
+              "uuid": "58aff40c-9189-4343-8a2c-fb8a9b97b9c4",
+              "parentUUID": "05a6eb62-82c2-4436-8a56-a709aa4e414b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "58aff40c-9189-4343-8a2c-fb8a9b97b9c4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8678,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ee9c641d-cb7a-4315-96d0-af2699f682b5",
+      "title": "",
+      "fullFile": "cypress/e2e/scroll_up_without_arrow.cy.ts",
+      "file": "cypress/e2e/scroll_up_without_arrow.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0d2e7c26-379f-4d67-b581-2762f41840c6",
+          "title": "Test Case 26: Verify Scroll Up without 'Arrow' button and Scroll Down functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should scroll up and down and verify visibility of elements",
+              "fullTitle": "Test Case 26: Verify Scroll Up without 'Arrow' button and Scroll Down functionality should scroll up and down and verify visibility of elements",
+              "timedOut": null,
+              "duration": 9486,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/scroll_up_without_arrow.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Scroll down page to bottom\ncy.scrollTo('bottom');\n// 5. Verify 'SUBSCRIPTION' is visible\ncy.contains('Subscription').should('be.visible');\n// 6. Scroll up page to top\ncy.scrollTo('top');\n// 7. Verify that page is scrolled up and 'Full-Fledged practice website for Automation Engineers' text is visible on screen\ncy.contains('Full-Fledged practice website for Automation Engineers').should('be.visible');",
+              "err": {},
+              "uuid": "2e9560e3-b3ad-48f9-b77f-6771ff137eb1",
+              "parentUUID": "0d2e7c26-379f-4d67-b581-2762f41840c6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2e9560e3-b3ad-48f9-b77f-6771ff137eb1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9486,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "05dd9564-d3ee-4970-baef-41ff65b08a17",
+      "title": "",
+      "fullFile": "cypress/e2e/search_product.cy.ts",
+      "file": "cypress/e2e/search_product.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "21becb75-0bd7-4ff7-8af6-ffa62566f401",
+          "title": "Test Case 9: Search Product",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should search for a product and verify results",
+              "fullTitle": "Test Case 9: Search Product should search for a product and verify results",
+              "timedOut": null,
+              "duration": 18859,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/search_product.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Products' button\nproductsPage.productsButton.click();\n// 5. Verify user is navigated to ALL PRODUCTS page successfully\nproductsPage.allProductsText.should('be.visible');\ncy.url().should('include', '/products');\n// 6. Enter product name in search input and click search button\nvar productName = 'T-Shirt'; // Example product name\nproductsPage.searchInput.type(productName);\nproductsPage.searchButton.click();\n// 7. Verify 'SEARCHED PRODUCTS' is visible\nproductsPage.searchedProductsText.should('be.visible');\n// 8. Verify all the products related to search are visible\nproductsPage.allSearchedProducts.each(function ($el) {\n    cy.wrap($el).should('contain.text', productName);\n});",
+              "err": {},
+              "uuid": "9a13a31f-06e7-4584-bd29-c6ffd845f23f",
+              "parentUUID": "21becb75-0bd7-4ff7-8af6-ffa62566f401",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9a13a31f-06e7-4584-bd29-c6ffd845f23f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18859,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8344ff65-83ad-48a9-8939-321c9246511f",
+      "title": "",
+      "fullFile": "cypress/e2e/search_products_verify_cart_after_login.cy.ts",
+      "file": "cypress/e2e/search_products_verify_cart_after_login.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "366c72dd-06f3-4081-8156-45ffab5a284a",
+          "title": "Test Case 20: Search Products and Verify Cart After Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should search products and verify cart after login",
+              "fullTitle": "Test Case 20: Search Products and Verify Cart After Login should search products and verify cart after login",
+              "timedOut": null,
+              "duration": 40764,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/search_products_verify_cart_after_login.cy.ts\"\n}",
+              "code": "// 3. Click on 'Products' button\nproductsPage.productsButton.click();\n// 4. Verify user is navigated to ALL PRODUCTS page successfully\nproductsPage.allProductsText.should('be.visible');\n// 5. Enter product name in search input and click search button\nproductsPage.searchInput.type('Blue Top');\nproductsPage.searchButton.click();\n// 6. Verify 'SEARCHED PRODUCTS' is visible\nproductsPage.searchedProductsText.should('be.visible');\n// 7. Verify all the products related to search are visible\nproductsPage.allSearchedProducts.each(function ($el) {\n    cy.wrap($el).should('contain.text', 'Blue Top');\n});\n// 8. Add those products to cart\nproductsPage.addProductToCartByName('Blue Top');\nproductsPage.continueShoppingButton.click();\n// 9. Click 'Cart' button and verify that products are visible in cart\nproductsPage.cartButton.click();\nproductsPage.productOneInCart.should('be.visible');\n// 10. Click 'Signup / Login' button and submit login details\nregistrationPage.signupLoginButton.click();\nloginPage.login(userEmail, userPassword);\n// 11. Again, go to Cart page\nproductsPage.cartButton.click();\n// 12. Verify that those products are visible in cart after login as well\nproductsPage.productOneInCart.should('be.visible');\n// 13. Click 'Delete Account' button\ncy.contains('Delete Account').click();\n// 14. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nregistrationPage.accountDeletedText.should('be.visible');\nregistrationPage.continueButton.click();",
+              "err": {},
+              "uuid": "60b92394-3d94-4e65-8f22-420d7f66c006",
+              "parentUUID": "366c72dd-06f3-4081-8156-45ffab5a284a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "60b92394-3d94-4e65-8f22-420d7f66c006"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 40764,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "c27d7de3-5df8-4e5a-b8ef-3094fadc5200",
+      "title": "",
+      "fullFile": "cypress/e2e/subscription_cart_page.cy.ts",
+      "file": "cypress/e2e/subscription_cart_page.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a8f8d523-81dc-4173-bd10-dbac1c842cab",
+          "title": "Test Case 11: Verify Subscription in Cart page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should verify subscription in cart page",
+              "fullTitle": "Test Case 11: Verify Subscription in Cart page should verify subscription in cart page",
+              "timedOut": null,
+              "duration": 10988,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/subscription_cart_page.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click 'Cart' button\nproductsPage.cartButton.click();\n// 5. Scroll down to footer\ncy.scrollTo('bottom');\n// 6. Verify text 'SUBSCRIPTION'\nhomePage.subscriptionText.should('be.visible');\n// 7. Enter email address in input and click arrow button\nhomePage.subscriptionEmailInput.type(\"test_sub_cart_\".concat(Date.now(), \"@example.com\"));\nhomePage.subscribeButton.click();\n// 8. Verify success message 'You have been successfully subscribed!' is visible\nhomePage.subscriptionSuccessMessage.should('be.visible');",
+              "err": {},
+              "uuid": "cdaaea63-8b60-4d3f-a42f-9159bd246950",
+              "parentUUID": "a8f8d523-81dc-4173-bd10-dbac1c842cab",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cdaaea63-8b60-4d3f-a42f-9159bd246950"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10988,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "c77e4944-45d2-4ef1-a8a2-685a014a7053",
+      "title": "",
+      "fullFile": "cypress/e2e/subscription_home_page.cy.ts",
+      "file": "cypress/e2e/subscription_home_page.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ca6b6a50-35bf-4af9-9916-14b1f0b578c0",
+          "title": "Test Case 10: Verify Subscription in home page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should verify subscription in home page",
+              "fullTitle": "Test Case 10: Verify Subscription in home page should verify subscription in home page",
+              "timedOut": null,
+              "duration": 9551,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/subscription_home_page.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Scroll down to footer\ncy.scrollTo('bottom');\n// 5. Verify text 'SUBSCRIPTION'\nhomePage.subscriptionText.should('be.visible');\n// 6. Enter email address in input and click arrow button\nhomePage.subscriptionEmailInput.type(\"test_sub_\".concat(Date.now(), \"@example.com\"));\nhomePage.subscribeButton.click();\n// 7. Verify success message 'You have been successfully subscribed!' is visible\nhomePage.subscriptionSuccessMessage.should('be.visible');",
+              "err": {},
+              "uuid": "d481eb45-f4fa-4013-9655-22f2f232c1dc",
+              "parentUUID": "ca6b6a50-35bf-4af9-9916-14b1f0b578c0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d481eb45-f4fa-4013-9655-22f2f232c1dc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9551,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "689ec01f-43b6-46cb-88a4-ddd68798ec8c",
+      "title": "",
+      "fullFile": "cypress/e2e/test_cases_page.cy.ts",
+      "file": "cypress/e2e/test_cases_page.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "92ca72c4-e7f1-42cf-a5dc-e5d0fc63a7af",
+          "title": "Test Case 7: Verify Test Cases Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should navigate to the test cases page",
+              "fullTitle": "Test Case 7: Verify Test Cases Page should navigate to the test cases page",
+              "timedOut": null,
+              "duration": 10295,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/test_cases_page.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Test Cases' button\nregistrationPage.testCasesButton.click();\n// 5. Verify user is navigated to test cases page successfully\ncy.url().should('include', '/test_cases');",
+              "err": {},
+              "uuid": "aa602bee-fb26-481f-9b0e-641ea4e6f4c6",
+              "parentUUID": "92ca72c4-e7f1-42cf-a5dc-e5d0fc63a7af",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "aa602bee-fb26-481f-9b0e-641ea4e6f4c6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10295,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "bc336ec0-a676-486c-8fbb-d6c548098f9d",
+      "title": "",
+      "fullFile": "cypress/e2e/verify_address_details_in_checkout_page.cy.ts",
+      "file": "cypress/e2e/verify_address_details_in_checkout_page.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8b06f1fa-9985-4bb4-8747-cf7ea1e0ef7f",
+          "title": "Verify address details in checkout page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should verify that the delivery and billing addresses are the same as the registration address",
+              "fullTitle": "Verify address details in checkout page should verify that the delivery and billing addresses are the same as the registration address",
+              "timedOut": null,
+              "duration": 55571,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/verify_address_details_in_checkout_page.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\n// 3. Verify that home page is visible successfully\ncy.get('body').should('be.visible');\n// 4. Click 'Signup / Login' button\nRegistrationPage_1.default.signupLoginButton.click();\n// 5. Fill all details in Signup and create account\nRegistrationPage_1.default.signup(name, email);\ncy.wait(2000);\nRegistrationPage_1.default.fillAccountDetails('Mrs', password, '1', // day (example value)\n'January', // month (example value)\n'1990', // year (example value)\nfirstName, lastName, company, address1, address2, country, state, city, zipcode, mobileNumber);\nRegistrationPage_1.default.createAccount();\n// 6. Verify 'ACCOUNT CREATED!' and click 'Continue' button\nRegistrationPage_1.default.accountCreatedMessage.should('be.visible');\nRegistrationPage_1.default.continueButton.click();\n// 7. Verify ' Logged in as username' at top\ncy.contains('Logged in as ' + name).should('be.visible');\n// 8. Add products to cart\nProductsPage_1.default.addFirstProductToCart();\nProductsPage_1.default.continueShoppingButton.click();\n// 9. Click 'Cart' button\nProductsPage_1.default.cartButton.click();\n// 10. Verify that cart page is displayed\ncy.url().should('include', '/view_cart');\n// 11. Click Proceed To Checkout\nCheckoutPage_1.default.proceedToCheckoutButton.click();\n// 12. Verify that the delivery address is same address filled at the time registration of account\nCheckoutPage_1.default.deliveryAddress.should('contain', address1);\nCheckoutPage_1.default.deliveryAddress.should('contain', address2);\nCheckoutPage_1.default.deliveryAddress.should('contain', city);\nCheckoutPage_1.default.deliveryAddress.should('contain', state);\nCheckoutPage_1.default.deliveryAddress.should('contain', zipcode);\nCheckoutPage_1.default.deliveryAddress.should('contain', country);\n// 13. Verify that the billing address is same address filled at the time registration of account\nCheckoutPage_1.default.billingAddress.should('contain', address1);\nCheckoutPage_1.default.billingAddress.should('contain', address2);\nCheckoutPage_1.default.billingAddress.should('contain', city);\nCheckoutPage_1.default.billingAddress.should('contain', state);\nCheckoutPage_1.default.billingAddress.should('contain', zipcode);\nCheckoutPage_1.default.billingAddress.should('contain', country);\n// 14. Click 'Delete Account' button\nRegistrationPage_1.default.deleteAccountButton.click();\n// 15. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nRegistrationPage_1.default.accountDeletedText.should('be.visible');\nRegistrationPage_1.default.continueButton.click();",
+              "err": {},
+              "uuid": "0ba8750f-b279-4500-a288-7bed34ab610f",
+              "parentUUID": "8b06f1fa-9985-4bb4-8747-cf7ea1e0ef7f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0ba8750f-b279-4500-a288-7bed34ab610f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 55571,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "a94de40b-262b-4dcd-a9a7-82e6f33ed907",
+      "title": "",
+      "fullFile": "cypress/e2e/verify_product_quantity_in_cart.cy.ts",
+      "file": "cypress/e2e/verify_product_quantity_in_cart.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "276cb242-feb2-47e5-8f2e-bc03df0554aa",
+          "title": "Test Case 13: Verify Product quantity in Cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should verify product quantity in cart",
+              "fullTitle": "Test Case 13: Verify Product quantity in Cart should verify product quantity in cart",
+              "timedOut": null,
+              "duration": 14302,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/verify_product_quantity_in_cart.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click 'View Product' for any product on home page\nproductsPage.viewProductButton(1).click(); // Assuming we view the first product\n// 5. Verify product detail is opened\nproductsPage.productNameDetail.should('be.visible');\nproductsPage.productPriceDetail.should('be.visible');\n// 6. Increase quantity to 4\ncy.get('#quantity').clear().type('4');\n// 7. Click 'Add to cart' button\ncy.get('button.btn.btn-default.cart').should('be.visible').click();\n// 8. Click 'View Cart' button\nproductsPage.viewCartButton.click();\n// 9. Verify that product is displayed in cart page with exact quantity\nproductsPage.productOneQuantity.should('contain.text', '4');",
+              "err": {},
+              "uuid": "67822ef5-f10b-47de-9a38-c16f85db53a3",
+              "parentUUID": "276cb242-feb2-47e5-8f2e-bc03df0554aa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "67822ef5-f10b-47de-9a38-c16f85db53a3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14302,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "88ab1e81-6da9-4706-a038-c5dd145da93d",
+      "title": "",
+      "fullFile": "cypress/e2e/view_cart_brand_products.cy.ts",
+      "file": "cypress/e2e/view_cart_brand_products.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7050ecf7-f6bc-48e7-82d5-8f154a496ea1",
+          "title": "Test Case 19: View & Cart Brand Products",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should view and cart brand products",
+              "fullTitle": "Test Case 19: View & Cart Brand Products should view and cart brand products",
+              "timedOut": null,
+              "duration": 26411,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/view_cart_brand_products.cy.ts\"\n}",
+              "code": "// 3. Click on 'Products' button\nproductsPage.productsButton.click();\n// 4. Verify that Brands are visible on left side bar\nproductsPage.brandsSidebar.should('be.visible');\n// 5. Click on any brand name, for example: Polo\nproductsPage.poloBrand.click();\n// 6. Verify that user is navigated to brand page and brand products are displayed\ncy.url().should('include', '/brand_products/Polo');\ncy.contains('Brand - Polo Products').should('be.visible');\n// 7. On left side bar, click on any other brand link, for example: H&M\nproductsPage.hmBrand.click();\n// 8. Verify that user is navigated to that brand page and can see products\ncy.url().should('include', '/brand_products/H&M');\ncy.contains('Brand - H&M Products').should('be.visible');",
+              "err": {},
+              "uuid": "e0a73c1e-0249-43a5-8d70-9d850090f7d9",
+              "parentUUID": "7050ecf7-f6bc-48e7-82d5-8f154a496ea1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e0a73c1e-0249-43a5-8d70-9d850090f7d9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 26411,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "1d76ebaa-50b3-490f-bb6d-126cc694f393",
+      "title": "",
+      "fullFile": "cypress/e2e/view_category_products.cy.ts",
+      "file": "cypress/e2e/view_category_products.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c007bd73-1da6-4fbe-ae91-b13a668e0096",
+          "title": "Test Case 18: View Category Products",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should view category products",
+              "fullTitle": "Test Case 18: View Category Products should view category products",
+              "timedOut": null,
+              "duration": 18237,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/view_category_products.cy.ts\"\n}",
+              "code": "// 3. Verify that categories are visible on left side bar\nhomePage.categorySidebar.should('be.visible');\n// 4. Click on 'Women' category\nhomePage.womenCategory.click();\ncy.wait(500); // Wait for sub-categories to load\n// 5. Click on any category link under 'Women' category, for example: Dress\nhomePage.womenDressCategory.click();\ncy.url().should('include', '/category_products/1');\n// 6. Verify that category page is displayed and confirm text 'WOMEN - TOPS PRODUCTS'\ncy.get('.title.text-center').should('contain.text', 'Women - Dress Products');\n// 7. On left side bar, click on any sub-category link of 'Men' category\nhomePage.menCategory.click();\ncy.wait(500); // Wait for sub-categories to load\nhomePage.menTshirtsCategory.click();\ncy.url().should('include', '/category_products/3');\n// 8. Verify that user is navigated to that category page\ncy.get('.title.text-center').should('contain.text', 'Men - Tshirts Products');",
+              "err": {},
+              "uuid": "fa5ed7e8-eadb-4034-9b4b-30ec326bb52b",
+              "parentUUID": "c007bd73-1da6-4fbe-ae91-b13a668e0096",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fa5ed7e8-eadb-4034-9b4b-30ec326bb52b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18237,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "deec8f97-bd51-4885-8c90-6f3ada5eba0c",
+      "title": "",
+      "fullFile": "cypress/e2e/z_login.cy.ts",
+      "file": "cypress/e2e/z_login.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5266352c-b5b3-466f-88ac-f4efe0a7cc46",
+          "title": "Test Case 2: Login User with correct email and password",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should login with correct credentials",
+              "fullTitle": "Test Case 2: Login User with correct email and password should login with correct credentials",
+              "timedOut": null,
+              "duration": 28061,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/z_login.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Signup / Login' button\nregistrationPage.signupLoginButton.click();\n// 5. Verify 'Login to your account' is visible\nloginPage.loginToYourAccountText.should('be.visible');\n// 6. Enter correct email address and password\nloginPage.login(this.user.email, this.user.password);\n// 7. Click 'login' button is handled by loginPage.login\n// 8. Verify that 'Logged in as username' is visible\nregistrationPage.loggedInAsText.should('be.visible').and('contain', this.user.name);\n// 9. Click 'Delete Account' button\nregistrationPage.deleteAccountButton.click();\n// 10. Verify that 'ACCOUNT DELETED!' is visible\nregistrationPage.accountDeletedText.should('be.visible');",
+              "err": {},
+              "uuid": "d215df2e-6fe1-4ddf-9a95-0899fc2abb85",
+              "parentUUID": "5266352c-b5b3-466f-88ac-f4efe0a7cc46",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d215df2e-6fe1-4ddf-9a95-0899fc2abb85"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28061,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "charts": true,
+        "reportPageTitle": "Kinetik QA Assessment",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -20,24 +20,23 @@ export default defineConfig({
           }
           return null;
         },
-      });
+      });    
     },
     env: {
       API_URL: "https://automationexercise.com/api",
     },
+    watchForFileChanges: false,
     video: true,
     screenshotOnRunFailure: true,
     downloadsFolder: "cypress/downloads",
     reporter: "cypress-mochawesome-reporter",
     reporterOptions: {
-      reportDir: "mochawesome-report",
+      reportDir: "cypress/reports",
       charts: true,
       reportPageTitle: "Kinetik QA Assessment",
       embeddedScreenshots: true,
       inlineAssets: true,
-      overwrite: false,
-      html: true,
-      json: true
+      saveAllAttempts: true
     },
     retries: {
       runMode: 2,

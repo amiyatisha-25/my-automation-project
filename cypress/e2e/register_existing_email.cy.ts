@@ -35,13 +35,7 @@ describe('Test Case 5: Register User with existing email', () => {
         mobile_number: '1234567890'
       }
     }).then((response) => {
-      expect(response.status).to.eq(200);
-      // Optionally delete the account after creation if needed, but for this test, we need it to exist.
-      // cy.request({
-      //   method: 'GET',
-      //   url: `${Cypress.env('API_URL')}/deleteAccount`,
-      //   qs: { email: email, password: password }
-      // });
+      expect(response.status).to.eq(200);     
     });
   });
 
