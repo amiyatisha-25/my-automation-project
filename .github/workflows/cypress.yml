@@ -90,7 +90,4 @@ jobs:
         with:
           name: final-report
           path: cypress/reports/merged-report.html
-      - name: Show current directory
-        run: pwd
-      - name: List all files
-        run: find . -type f
+     
