@@ -89,4 +89,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: final-report
-          path: cypress/reports/mochawesome.html
+          path: cypress/reports/merged-report.html
+      - name: Show current directory
+        run: pwd
+      - name: List all files
+        run: find . -type f

@@ -11,7 +11,7 @@
     "cy:run": "cypress run --reporter mochawesome",
     "cy:run:chrome": "cypress run --browser chrome --reporter mochawesome",
     "cy:run:firefox": "cypress run --browser firefox --reporter mochawesome",
-    "cy:report": "mochawesome-merge cypress/reports/.jsons/*.json > cypress/reports/merged-report.json && marge cypress/reports/merged-report.json --reportDir cypress/reports --enable-html"
+   "cy:report": "mochawesome-merge cypress/reports/.jsons/*.json > cypress/reports/merged-report.json && marge cypress/reports/merged-report.json --reportDir cypress/reports --enable-html"
   },
   "keywords": [],
   "author": "",
