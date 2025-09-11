@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-09-11T07:48:08.640Z",
-    "end": "2025-09-11T07:48:18.960Z",
-    "duration": 10320,
+    "start": "2025-09-11T09:46:55.472Z",
+    "end": "2025-09-11T09:47:05.579Z",
+    "duration": 10107,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "6ce7f4a4-c4b3-46a1-9b51-aa1f2598e67f",
+      "uuid": "9f0a6ed5-bcf0-4ea0-aaca-4cca59a4eaa1",
       "title": "",
       "fullFile": "cypress/e2e/login_incorrect.cy.ts",
       "file": "cypress/e2e/login_incorrect.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3d3761ee-8530-41e6-89e1-c2d7cb0819f6",
+          "uuid": "2c02fc54-cdf3-4eb0-8aef-7ccd21d8d1fa",
           "title": "Test Case 3: Login User with incorrect email and password",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "should not login with incorrect credentials",
               "fullTitle": "Test Case 3: Login User with incorrect email and password should not login with incorrect credentials",
               "timedOut": null,
-              "duration": 10194,
+              "duration": 9669,
               "state": "passed",
-              "speed": "slow",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/login_incorrect.cy.ts\"\n}",
               "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Signup / Login' button\nregistrationPage.signupLoginButton.click();\n// 5. Verify 'Login to your account' is visible\nloginPage.loginToYourAccountText.should('be.visible');\n// 6. Enter incorrect email address and password\nloginPage.login('wrong@email.com', 'wrongpassword');\n// 7. Click 'login' button is handled by loginPage.login\n// 8. Verify error 'Your email or password is incorrect!' is visible\nloginPage.incorrectLoginError.should('be.visible');",
               "err": {},
-              "uuid": "6684b034-453c-4e0c-b835-efdb7c5e2990",
-              "parentUUID": "3d3761ee-8530-41e6-89e1-c2d7cb0819f6",
+              "uuid": "01f868b3-925e-4963-bb20-900f7a62c306",
+              "parentUUID": "2c02fc54-cdf3-4eb0-8aef-7ccd21d8d1fa",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "6684b034-453c-4e0c-b835-efdb7c5e2990"
+            "01f868b3-925e-4963-bb20-900f7a62c306"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 10194,
+          "duration": 9669,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -95,14 +95,14 @@
     "marge": {
       "options": {
         "reportDir": "cypress/reports/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
         "charts": true,
         "reportPageTitle": "Kinetik QA Assessment",
         "embeddedScreenshots": true,
         "inlineAssets": true,
-        "saveAllAttempts": true,
-        "overwrite": false,
-        "html": false,
-        "json": true
+        "saveAllAttempts": true
       },
       "version": "6.2.0"
     }

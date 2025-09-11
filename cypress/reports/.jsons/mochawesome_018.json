@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-09-11T07:54:33.396Z",
-    "end": "2025-09-11T07:55:22.419Z",
-    "duration": 49023,
+    "start": "2025-09-11T09:52:39.888Z",
+    "end": "2025-09-11T09:53:15.057Z",
+    "duration": 35169,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ab713742-c69c-4365-9a78-85593607aa74",
+      "uuid": "6391549c-2b78-4ded-a5bb-24f70a4a67c5",
       "title": "",
       "fullFile": "cypress/e2e/search_products_verify_cart_after_login.cy.ts",
       "file": "cypress/e2e/search_products_verify_cart_after_login.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4ca4abfe-f371-4dc8-a4e0-e34e3a69b20c",
+          "uuid": "232be757-58a3-4e31-96e8-ee1b37003709",
           "title": "Test Case 20: Search Products and Verify Cart After Login",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should search products and verify cart after login",
               "fullTitle": "Test Case 20: Search Products and Verify Cart After Login should search products and verify cart after login",
               "timedOut": null,
-              "duration": 48904,
+              "duration": 34863,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/search_products_verify_cart_after_login.cy.ts\"\n}",
               "code": "// 3. Click on 'Products' button\nproductsPage.productsButton.click();\n// 4. Verify user is navigated to ALL PRODUCTS page successfully\nproductsPage.allProductsText.should('be.visible');\n// 5. Enter product name in search input and click search button\nproductsPage.searchInput.type('Blue Top');\nproductsPage.searchButton.click();\n// 6. Verify 'SEARCHED PRODUCTS' is visible\nproductsPage.searchedProductsText.should('be.visible');\n// 7. Verify all the products related to search are visible\nproductsPage.allSearchedProducts.each(function ($el) {\n    cy.wrap($el).should('contain.text', 'Blue Top');\n});\n// 8. Add those products to cart\nproductsPage.addProductToCartByName('Blue Top');\nproductsPage.continueShoppingButton.click();\n// 9. Click 'Cart' button and verify that products are visible in cart\nproductsPage.cartButton.click();\nproductsPage.productOneInCart.should('be.visible');\n// 10. Click 'Signup / Login' button and submit login details\nregistrationPage.signupLoginButton.click();\nloginPage.login(userEmail, userPassword);\n// 11. Again, go to Cart page\nproductsPage.cartButton.click();\n// 12. Verify that those products are visible in cart after login as well\nproductsPage.productOneInCart.should('be.visible');\n// 13. Click 'Delete Account' button\ncy.contains('Delete Account').click();\n// 14. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nregistrationPage.accountDeletedText.should('be.visible');\nregistrationPage.continueButton.click();",
               "err": {},
-              "uuid": "610ceed7-526e-4b84-9c70-a08ccca984a0",
-              "parentUUID": "4ca4abfe-f371-4dc8-a4e0-e34e3a69b20c",
+              "uuid": "cfb13c8b-0261-4317-a1f3-142c14a26d16",
+              "parentUUID": "232be757-58a3-4e31-96e8-ee1b37003709",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "610ceed7-526e-4b84-9c70-a08ccca984a0"
+            "cfb13c8b-0261-4317-a1f3-142c14a26d16"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 48904,
+          "duration": 34863,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -95,14 +95,14 @@
     "marge": {
       "options": {
         "reportDir": "cypress/reports/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
         "charts": true,
         "reportPageTitle": "Kinetik QA Assessment",
         "embeddedScreenshots": true,
         "inlineAssets": true,
-        "saveAllAttempts": true,
-        "overwrite": false,
-        "html": false,
-        "json": true
+        "saveAllAttempts": true
       },
       "version": "6.2.0"
     }

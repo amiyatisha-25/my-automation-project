@@ -32,12 +32,15 @@ export default defineConfig({
     reporter: "cypress-mochawesome-reporter",
     reporterOptions: {
       reportDir: "cypress/reports",
+      overwrite: false,
+      html: true,
+      json: true,
       charts: true,
       reportPageTitle: "Kinetik QA Assessment",
       embeddedScreenshots: true,
       inlineAssets: true,
       saveAllAttempts: true
-    },
+},
     retries: {
       runMode: 2,
       openMode: 0,

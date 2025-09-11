@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-09-11T07:46:36.072Z",
-    "end": "2025-09-11T07:46:43.805Z",
-    "duration": 7733,
+    "start": "2025-09-11T09:45:23.483Z",
+    "end": "2025-09-11T09:45:30.637Z",
+    "duration": 7154,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "464eb2e6-ee8c-4698-b615-a89dc14de67d",
+      "uuid": "fd465c3c-98ae-4ad6-8c82-643b7fa1c8a8",
       "title": "",
       "fullFile": "cypress/e2e/add_to_cart_from_recommended.cy.ts",
       "file": "cypress/e2e/add_to_cart_from_recommended.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "9c046587-9e10-4e04-b085-4d537093354d",
+          "uuid": "716ac189-566a-44a8-976c-c06b0a91d893",
           "title": "Add to cart from Recommended items",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should add a product to the cart from the recommended items section",
               "fullTitle": "Add to cart from Recommended items should add a product to the cart from the recommended items section",
               "timedOut": null,
-              "duration": 7646,
+              "duration": 6963,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/add_to_cart_from_recommended.cy.ts\"\n}",
               "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\n// 3. Scroll to bottom of page\ncy.scrollTo('bottom');\n// 4. Verify 'RECOMMENDED ITEMS' are visible\nHomePage_1.default.getRecommendedItems().should('be.visible');\n// 5. Click on 'Add To Cart' on Recommended product\nHomePage_1.default.getAddToCartFromRecommended().first().click({ force: true });\n// 6. Click on 'View Cart' button\nProductsPage_1.default.viewCartButton.click();\n// 7. Verify that product is displayed in cart page\ncy.get('#cart_info_table').should('be.visible');",
               "err": {},
-              "uuid": "efecc0f6-2021-4c1a-8441-2d06aab27cc8",
-              "parentUUID": "9c046587-9e10-4e04-b085-4d537093354d",
+              "uuid": "7418f0fb-7973-42e1-8768-678f6f0e3ad5",
+              "parentUUID": "716ac189-566a-44a8-976c-c06b0a91d893",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "efecc0f6-2021-4c1a-8441-2d06aab27cc8"
+            "7418f0fb-7973-42e1-8768-678f6f0e3ad5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 7646,
+          "duration": 6963,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -95,14 +95,14 @@
     "marge": {
       "options": {
         "reportDir": "cypress/reports/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
         "charts": true,
         "reportPageTitle": "Kinetik QA Assessment",
         "embeddedScreenshots": true,
         "inlineAssets": true,
-        "saveAllAttempts": true,
-        "overwrite": false,
-        "html": false,
-        "json": true
+        "saveAllAttempts": true
       },
       "version": "6.2.0"
     }

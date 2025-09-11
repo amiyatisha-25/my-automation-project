@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-09-11T07:56:14.065Z",
-    "end": "2025-09-11T07:56:27.343Z",
-    "duration": 13278,
+    "start": "2025-09-11T09:54:16.423Z",
+    "end": "2025-09-11T09:54:55.878Z",
+    "duration": 39455,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,49 +18,49 @@
   },
   "results": [
     {
-      "uuid": "58fe16d2-9e84-4be4-9e16-cf6fff6f5400",
+      "uuid": "25314a09-081d-4795-b4bb-01a518358f8b",
       "title": "",
-      "fullFile": "cypress/e2e/test_cases_page.cy.ts",
-      "file": "cypress/e2e/test_cases_page.cy.ts",
+      "fullFile": "cypress/e2e/verify_address_details_in_checkout_page.cy.ts",
+      "file": "cypress/e2e/verify_address_details_in_checkout_page.cy.ts",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "ecc997c5-f9fa-491d-bff9-fe5b7a16a175",
-          "title": "Test Case 7: Verify Test Cases Page",
+          "uuid": "b6353e08-27fa-463e-8e22-6279c76081c3",
+          "title": "Verify address details in checkout page",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "should navigate to the test cases page",
-              "fullTitle": "Test Case 7: Verify Test Cases Page should navigate to the test cases page",
+              "title": "should verify that the delivery and billing addresses are the same as the registration address",
+              "fullTitle": "Verify address details in checkout page should verify that the delivery and billing addresses are the same as the registration address",
               "timedOut": null,
-              "duration": 13194,
+              "duration": 39099,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/test_cases_page.cy.ts\"\n}",
-              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Test Cases' button\nregistrationPage.testCasesButton.click();\n// 5. Verify user is navigated to test cases page successfully\ncy.url().should('include', '/test_cases');",
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/verify_address_details_in_checkout_page.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\n// 3. Verify that home page is visible successfully\ncy.get('body').should('be.visible');\n// 4. Click 'Signup / Login' button\nRegistrationPage_1.default.signupLoginButton.click();\n// 5. Fill all details in Signup and create account\nRegistrationPage_1.default.signup(name, email);\ncy.wait(2000);\nRegistrationPage_1.default.fillAccountDetails('Mrs', password, '1', // day (example value)\n'January', // month (example value)\n'1990', // year (example value)\nfirstName, lastName, company, address1, address2, country, state, city, zipcode, mobileNumber);\nRegistrationPage_1.default.createAccount();\n// 6. Verify 'ACCOUNT CREATED!' and click 'Continue' button\nRegistrationPage_1.default.accountCreatedMessage.should('be.visible');\nRegistrationPage_1.default.continueButton.click();\n// 7. Verify ' Logged in as username' at top\ncy.contains('Logged in as ' + name).should('be.visible');\n// 8. Add products to cart\nProductsPage_1.default.addFirstProductToCart();\nProductsPage_1.default.continueShoppingButton.click();\n// 9. Click 'Cart' button\nProductsPage_1.default.cartButton.click();\n// 10. Verify that cart page is displayed\ncy.url().should('include', '/view_cart');\n// 11. Click Proceed To Checkout\nCheckoutPage_1.default.proceedToCheckoutButton.click();\n// 12. Verify that the delivery address is same address filled at the time registration of account\nCheckoutPage_1.default.deliveryAddress.should('contain', address1);\nCheckoutPage_1.default.deliveryAddress.should('contain', address2);\nCheckoutPage_1.default.deliveryAddress.should('contain', city);\nCheckoutPage_1.default.deliveryAddress.should('contain', state);\nCheckoutPage_1.default.deliveryAddress.should('contain', zipcode);\nCheckoutPage_1.default.deliveryAddress.should('contain', country);\n// 13. Verify that the billing address is same address filled at the time registration of account\nCheckoutPage_1.default.billingAddress.should('contain', address1);\nCheckoutPage_1.default.billingAddress.should('contain', address2);\nCheckoutPage_1.default.billingAddress.should('contain', city);\nCheckoutPage_1.default.billingAddress.should('contain', state);\nCheckoutPage_1.default.billingAddress.should('contain', zipcode);\nCheckoutPage_1.default.billingAddress.should('contain', country);\n// 14. Click 'Delete Account' button\nRegistrationPage_1.default.deleteAccountButton.click();\n// 15. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nRegistrationPage_1.default.accountDeletedText.should('be.visible');\nRegistrationPage_1.default.continueButton.click();",
               "err": {},
-              "uuid": "031b2da6-44ae-4317-ab98-f0cbae95f721",
-              "parentUUID": "ecc997c5-f9fa-491d-bff9-fe5b7a16a175",
+              "uuid": "7768a9c8-74a1-46ec-a5a6-092508705fd2",
+              "parentUUID": "b6353e08-27fa-463e-8e22-6279c76081c3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "031b2da6-44ae-4317-ab98-f0cbae95f721"
+            "7768a9c8-74a1-46ec-a5a6-092508705fd2"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 13194,
+          "duration": 39099,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -95,14 +95,14 @@
     "marge": {
       "options": {
         "reportDir": "cypress/reports/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
         "charts": true,
         "reportPageTitle": "Kinetik QA Assessment",
         "embeddedScreenshots": true,
         "inlineAssets": true,
-        "saveAllAttempts": true,
-        "overwrite": false,
-        "html": false,
-        "json": true
+        "saveAllAttempts": true
       },
       "version": "6.2.0"
     }

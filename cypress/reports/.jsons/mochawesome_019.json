@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-09-11T07:55:26.256Z",
-    "end": "2025-09-11T07:55:40.031Z",
-    "duration": 13775,
+    "start": "2025-09-11T09:53:20.448Z",
+    "end": "2025-09-11T09:53:29.297Z",
+    "duration": 8849,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "dea434b5-6614-4549-a03c-0f774fe10231",
+      "uuid": "d7ad6635-4dd3-4b97-b8fa-9ebb4637587f",
       "title": "",
       "fullFile": "cypress/e2e/subscription_cart_page.cy.ts",
       "file": "cypress/e2e/subscription_cart_page.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "bd597861-e463-4968-b40c-a940fc11d21c",
+          "uuid": "9383831b-c67d-4764-99af-70ba8abca841",
           "title": "Test Case 11: Verify Subscription in Cart page",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "should verify subscription in cart page",
               "fullTitle": "Test Case 11: Verify Subscription in Cart page should verify subscription in cart page",
               "timedOut": null,
-              "duration": 13671,
+              "duration": 8694,
               "state": "passed",
-              "speed": "slow",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/subscription_cart_page.cy.ts\"\n}",
               "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click 'Cart' button\nproductsPage.cartButton.click();\n// 5. Scroll down to footer\ncy.scrollTo('bottom');\n// 6. Verify text 'SUBSCRIPTION'\nhomePage.subscriptionText.should('be.visible');\n// 7. Enter email address in input and click arrow button\nhomePage.subscriptionEmailInput.type(\"test_sub_cart_\".concat(Date.now(), \"@example.com\"));\nhomePage.subscribeButton.click();\n// 8. Verify success message 'You have been successfully subscribed!' is visible\nhomePage.subscriptionSuccessMessage.should('be.visible');",
               "err": {},
-              "uuid": "a213114b-4741-4b86-9940-005219374472",
-              "parentUUID": "bd597861-e463-4968-b40c-a940fc11d21c",
+              "uuid": "d474a776-e232-4f86-a20a-25613d6cee61",
+              "parentUUID": "9383831b-c67d-4764-99af-70ba8abca841",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a213114b-4741-4b86-9940-005219374472"
+            "d474a776-e232-4f86-a20a-25613d6cee61"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 13671,
+          "duration": 8694,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -95,14 +95,14 @@
     "marge": {
       "options": {
         "reportDir": "cypress/reports/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
         "charts": true,
         "reportPageTitle": "Kinetik QA Assessment",
         "embeddedScreenshots": true,
         "inlineAssets": true,
-        "saveAllAttempts": true,
-        "overwrite": false,
-        "html": false,
-        "json": true
+        "saveAllAttempts": true
       },
       "version": "6.2.0"
     }

@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-09-11T07:53:44.936Z",
-    "end": "2025-09-11T07:54:07.196Z",
-    "duration": 22260,
+    "start": "2025-09-11T09:51:59.284Z",
+    "end": "2025-09-11T09:52:06.730Z",
+    "duration": 7446,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "4112dc62-864f-4ad8-a4e9-a2e06063889a",
+      "uuid": "15d62169-a799-47f6-955c-8c01fd55714d",
       "title": "",
       "fullFile": "cypress/e2e/scroll_up_without_arrow.cy.ts",
       "file": "cypress/e2e/scroll_up_without_arrow.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a3f93059-b0a8-4cad-9f92-8c8bd7018244",
+          "uuid": "43edddec-0f7b-43de-a2ac-0040f9c6ea75",
           "title": "Test Case 26: Verify Scroll Up without 'Arrow' button and Scroll Down functionality",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "should scroll up and down and verify visibility of elements",
               "fullTitle": "Test Case 26: Verify Scroll Up without 'Arrow' button and Scroll Down functionality should scroll up and down and verify visibility of elements",
               "timedOut": null,
-              "duration": 22198,
+              "duration": 7173,
               "state": "passed",
-              "speed": "slow",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/scroll_up_without_arrow.cy.ts\"\n}",
               "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Scroll down page to bottom\ncy.scrollTo('bottom');\n// 5. Verify 'SUBSCRIPTION' is visible\ncy.contains('Subscription').should('be.visible');\n// 6. Scroll up page to top\ncy.scrollTo('top');\n// 7. Verify that page is scrolled up and 'Full-Fledged practice website for Automation Engineers' text is visible on screen\ncy.contains('Full-Fledged practice website for Automation Engineers').should('be.visible');",
               "err": {},
-              "uuid": "46763159-6c30-4fd0-8730-f286fa71583f",
-              "parentUUID": "a3f93059-b0a8-4cad-9f92-8c8bd7018244",
+              "uuid": "0ecbd5eb-9093-46ba-b64f-f95edfb352e6",
+              "parentUUID": "43edddec-0f7b-43de-a2ac-0040f9c6ea75",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "46763159-6c30-4fd0-8730-f286fa71583f"
+            "0ecbd5eb-9093-46ba-b64f-f95edfb352e6"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 22198,
+          "duration": 7173,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -95,14 +95,14 @@
     "marge": {
       "options": {
         "reportDir": "cypress/reports/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
         "charts": true,
         "reportPageTitle": "Kinetik QA Assessment",
         "embeddedScreenshots": true,
         "inlineAssets": true,
-        "saveAllAttempts": true,
-        "overwrite": false,
-        "html": false,
-        "json": true
+        "saveAllAttempts": true
       },
       "version": "6.2.0"
     }

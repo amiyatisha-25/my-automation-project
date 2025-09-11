@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-09-11T07:53:07.004Z",
-    "end": "2025-09-11T07:53:28.654Z",
-    "duration": 21650,
+    "start": "2025-09-11T09:51:16.666Z",
+    "end": "2025-09-11T09:51:31.880Z",
+    "duration": 15214,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c57a0eee-2d03-439d-afe5-efbd96429c74",
+      "uuid": "8afd66dd-0fd9-4f2f-aa5f-aa44ea2600f4",
       "title": "",
       "fullFile": "cypress/e2e/remove_products_from_cart.cy.ts",
       "file": "cypress/e2e/remove_products_from_cart.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "cfb9fbb4-d8ea-4055-8405-18e843852f3a",
+          "uuid": "09621063-3bd3-405e-8063-3f334f45ac3d",
           "title": "Test Case 17: Remove Products From Cart",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should remove products from cart",
               "fullTitle": "Test Case 17: Remove Products From Cart should remove products from cart",
               "timedOut": null,
-              "duration": 21550,
+              "duration": 14909,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/remove_products_from_cart.cy.ts\"\n}",
               "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Add products to cart\nproductsPage.productsButton.click(); // Navigate to products page first\nproductsPage.addFirstProductToCart();\n// 5. Click 'Cart' button\nproductsPage.viewCartButton.click();\n// 6. Verify that cart page is displayed\ncy.url().should('include', '/view_cart');\nproductsPage.productOneInCart.should('be.visible'); // Verify product is in cart\n// 7. Click 'X' button corresponding to particular product\nproductsPage.getRemoveFromCartButton(0).click();\n// 8. Verify that product is removed from the cart\nproductsPage.cartEmptyMessage.should('be.visible');",
               "err": {},
-              "uuid": "833a0372-fa1e-4c94-9c9c-ac4972d33637",
-              "parentUUID": "cfb9fbb4-d8ea-4055-8405-18e843852f3a",
+              "uuid": "46f4fc22-37c1-40ee-b909-137718eafdcb",
+              "parentUUID": "09621063-3bd3-405e-8063-3f334f45ac3d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "833a0372-fa1e-4c94-9c9c-ac4972d33637"
+            "46f4fc22-37c1-40ee-b909-137718eafdcb"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 21550,
+          "duration": 14909,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -95,14 +95,14 @@
     "marge": {
       "options": {
         "reportDir": "cypress/reports/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
         "charts": true,
         "reportPageTitle": "Kinetik QA Assessment",
         "embeddedScreenshots": true,
         "inlineAssets": true,
-        "saveAllAttempts": true,
-        "overwrite": false,
-        "html": false,
-        "json": true
+        "saveAllAttempts": true
       },
       "version": "6.2.0"
     }

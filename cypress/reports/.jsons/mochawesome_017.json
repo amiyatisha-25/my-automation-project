@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-09-11T07:54:10.881Z",
-    "end": "2025-09-11T07:54:29.608Z",
-    "duration": 18727,
+    "start": "2025-09-11T09:52:14.640Z",
+    "end": "2025-09-11T09:52:33.353Z",
+    "duration": 18713,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "db843fd6-56d1-4208-8eaa-9a9595e98036",
+      "uuid": "5a069c5c-1582-4120-a11f-c6fc3392d8b6",
       "title": "",
       "fullFile": "cypress/e2e/search_product.cy.ts",
       "file": "cypress/e2e/search_product.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "577baa34-00d4-42b5-819e-d30c3ef12edf",
+          "uuid": "dfec7efa-7324-452a-81a1-72c1acad7bbe",
           "title": "Test Case 9: Search Product",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should search for a product and verify results",
               "fullTitle": "Test Case 9: Search Product should search for a product and verify results",
               "timedOut": null,
-              "duration": 18609,
+              "duration": 18322,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/search_product.cy.ts\"\n}",
               "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Products' button\nproductsPage.productsButton.click();\n// 5. Verify user is navigated to ALL PRODUCTS page successfully\nproductsPage.allProductsText.should('be.visible');\ncy.url().should('include', '/products');\n// 6. Enter product name in search input and click search button\nvar productName = 'T-Shirt'; // Example product name\nproductsPage.searchInput.type(productName);\nproductsPage.searchButton.click();\n// 7. Verify 'SEARCHED PRODUCTS' is visible\nproductsPage.searchedProductsText.should('be.visible');\n// 8. Verify all the products related to search are visible\nproductsPage.allSearchedProducts.each(function ($el) {\n    cy.wrap($el).should('contain.text', productName);\n});",
               "err": {},
-              "uuid": "c2674220-aa4b-4e27-b9ed-1855a7d7d796",
-              "parentUUID": "577baa34-00d4-42b5-819e-d30c3ef12edf",
+              "uuid": "71da8f4e-50aa-4cca-ae5b-19838b545230",
+              "parentUUID": "dfec7efa-7324-452a-81a1-72c1acad7bbe",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c2674220-aa4b-4e27-b9ed-1855a7d7d796"
+            "71da8f4e-50aa-4cca-ae5b-19838b545230"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 18609,
+          "duration": 18322,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -95,14 +95,14 @@
     "marge": {
       "options": {
         "reportDir": "cypress/reports/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
         "charts": true,
         "reportPageTitle": "Kinetik QA Assessment",
         "embeddedScreenshots": true,
         "inlineAssets": true,
-        "saveAllAttempts": true,
-        "overwrite": false,
-        "html": false,
-        "json": true
+        "saveAllAttempts": true
       },
       "version": "6.2.0"
     }

@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-09-11T07:52:12.834Z",
-    "end": "2025-09-11T07:52:25.332Z",
-    "duration": 12498,
+    "start": "2025-09-11T09:50:28.108Z",
+    "end": "2025-09-11T09:50:38.167Z",
+    "duration": 10059,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "798306fd-59ef-4860-af13-a746579ccb10",
+      "uuid": "21e34b3e-1030-4087-bc21-b291080f7af8",
       "title": "",
       "fullFile": "cypress/e2e/register_existing_email.cy.ts",
       "file": "cypress/e2e/register_existing_email.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "65586927-109c-4819-8a06-d96546f1a8d1",
+          "uuid": "78725a3d-51c5-4c76-8a06-9f85b8f231ea",
           "title": "Test Case 5: Register User with existing email",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "should display error when registering with existing email",
               "fullTitle": "Test Case 5: Register User with existing email should display error when registering with existing email",
               "timedOut": null,
-              "duration": 12409,
+              "duration": 9877,
               "state": "passed",
-              "speed": "slow",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/register_existing_email.cy.ts\"\n}",
               "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Signup / Login' button\nregistrationPage.signupLoginButton.click();\n// 5. Verify 'New User Signup!' is visible\nregistrationPage.newUserSignupText.should('be.visible');\n// 6. Enter name and already registered email address\nregistrationPage.signupNameInput.type(name);\nregistrationPage.signupEmailInput.type(existingEmail);\n// 7. Click 'Signup' button\nregistrationPage.signupButton.click();\n// 8. Verify error 'Email Address already exist!' is visible\nregistrationPage.emailAlreadyExistError.should('be.visible');",
               "err": {},
-              "uuid": "3d7835cf-1402-4954-86ef-248b8a69cb85",
-              "parentUUID": "65586927-109c-4819-8a06-d96546f1a8d1",
+              "uuid": "ac130dbc-b889-4d73-97f9-bea990f4df67",
+              "parentUUID": "78725a3d-51c5-4c76-8a06-9f85b8f231ea",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3d7835cf-1402-4954-86ef-248b8a69cb85"
+            "ac130dbc-b889-4d73-97f9-bea990f4df67"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 12409,
+          "duration": 9877,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -95,14 +95,14 @@
     "marge": {
       "options": {
         "reportDir": "cypress/reports/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
         "charts": true,
         "reportPageTitle": "Kinetik QA Assessment",
         "embeddedScreenshots": true,
         "inlineAssets": true,
-        "saveAllAttempts": true,
-        "overwrite": false,
-        "html": false,
-        "json": true
+        "saveAllAttempts": true
       },
       "version": "6.2.0"
     }

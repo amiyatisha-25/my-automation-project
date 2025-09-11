@@ -1,23 +1,80 @@
 {
   "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-09-11T07:56:07.488Z",
-    "end": "2025-09-11T07:56:07.488Z",
-    "duration": 0,
-    "testsRegistered": 0,
-    "passPercent": null,
-    "pendingPercent": null,
+    "start": "2025-09-11T09:53:49.658Z",
+    "end": "2025-09-11T09:53:58.991Z",
+    "duration": 9333,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false
   },
   "results": [
-    false
+    {
+      "uuid": "728baa8d-fd88-4592-9025-8d2d32c3136a",
+      "title": "",
+      "fullFile": "cypress/e2e/test_cases_page.cy.ts",
+      "file": "cypress/e2e/test_cases_page.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a793d3e7-6a8b-47b6-88fd-cac3cd5767ec",
+          "title": "Test Case 7: Verify Test Cases Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should navigate to the test cases page",
+              "fullTitle": "Test Case 7: Verify Test Cases Page should navigate to the test cases page",
+              "timedOut": null,
+              "duration": 9012,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/test_cases_page.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Test Cases' button\nregistrationPage.testCasesButton.click();\n// 5. Verify user is navigated to test cases page successfully\ncy.url().should('include', '/test_cases');",
+              "err": {},
+              "uuid": "9d71ec77-ce14-427a-8582-d5886de9f5dd",
+              "parentUUID": "a793d3e7-6a8b-47b6-88fd-cac3cd5767ec",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9d71ec77-ce14-427a-8582-d5886de9f5dd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9012,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
   ],
   "meta": {
     "mocha": {
@@ -38,14 +95,14 @@
     "marge": {
       "options": {
         "reportDir": "cypress/reports/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
         "charts": true,
         "reportPageTitle": "Kinetik QA Assessment",
         "embeddedScreenshots": true,
         "inlineAssets": true,
-        "saveAllAttempts": true,
-        "overwrite": false,
-        "html": false,
-        "json": true
+        "saveAllAttempts": true
       },
       "version": "6.2.0"
     }

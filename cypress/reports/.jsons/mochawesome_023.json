@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-09-11T07:56:35.259Z",
-    "end": "2025-09-11T07:57:14.132Z",
-    "duration": 38873,
+    "start": "2025-09-11T09:55:00.948Z",
+    "end": "2025-09-11T09:55:11.279Z",
+    "duration": 10331,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,49 +18,49 @@
   },
   "results": [
     {
-      "uuid": "cb5a5ca8-6e78-4d41-b410-07b8d9e5ed0a",
+      "uuid": "bac424d9-690e-452b-a7b2-7f9d8c393b0e",
       "title": "",
-      "fullFile": "cypress/e2e/verify_address_details_in_checkout_page.cy.ts",
-      "file": "cypress/e2e/verify_address_details_in_checkout_page.cy.ts",
+      "fullFile": "cypress/e2e/verify_product_quantity_in_cart.cy.ts",
+      "file": "cypress/e2e/verify_product_quantity_in_cart.cy.ts",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "55324442-09cc-4d43-9a42-8f6411f74059",
-          "title": "Verify address details in checkout page",
+          "uuid": "24ce6bd5-84d1-4c4d-a750-4297042fc49b",
+          "title": "Test Case 13: Verify Product quantity in Cart",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "should verify that the delivery and billing addresses are the same as the registration address",
-              "fullTitle": "Verify address details in checkout page should verify that the delivery and billing addresses are the same as the registration address",
+              "title": "should verify product quantity in cart",
+              "fullTitle": "Test Case 13: Verify Product quantity in Cart should verify product quantity in cart",
               "timedOut": null,
-              "duration": 38771,
+              "duration": 10080,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/verify_address_details_in_checkout_page.cy.ts\"\n}",
-              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\n// 3. Verify that home page is visible successfully\ncy.get('body').should('be.visible');\n// 4. Click 'Signup / Login' button\nRegistrationPage_1.default.signupLoginButton.click();\n// 5. Fill all details in Signup and create account\nRegistrationPage_1.default.signup(name, email);\ncy.wait(2000);\nRegistrationPage_1.default.fillAccountDetails('Mrs', password, '1', // day (example value)\n'January', // month (example value)\n'1990', // year (example value)\nfirstName, lastName, company, address1, address2, country, state, city, zipcode, mobileNumber);\nRegistrationPage_1.default.createAccount();\n// 6. Verify 'ACCOUNT CREATED!' and click 'Continue' button\nRegistrationPage_1.default.accountCreatedMessage.should('be.visible');\nRegistrationPage_1.default.continueButton.click();\n// 7. Verify ' Logged in as username' at top\ncy.contains('Logged in as ' + name).should('be.visible');\n// 8. Add products to cart\nProductsPage_1.default.addFirstProductToCart();\nProductsPage_1.default.continueShoppingButton.click();\n// 9. Click 'Cart' button\nProductsPage_1.default.cartButton.click();\n// 10. Verify that cart page is displayed\ncy.url().should('include', '/view_cart');\n// 11. Click Proceed To Checkout\nCheckoutPage_1.default.proceedToCheckoutButton.click();\n// 12. Verify that the delivery address is same address filled at the time registration of account\nCheckoutPage_1.default.deliveryAddress.should('contain', address1);\nCheckoutPage_1.default.deliveryAddress.should('contain', address2);\nCheckoutPage_1.default.deliveryAddress.should('contain', city);\nCheckoutPage_1.default.deliveryAddress.should('contain', state);\nCheckoutPage_1.default.deliveryAddress.should('contain', zipcode);\nCheckoutPage_1.default.deliveryAddress.should('contain', country);\n// 13. Verify that the billing address is same address filled at the time registration of account\nCheckoutPage_1.default.billingAddress.should('contain', address1);\nCheckoutPage_1.default.billingAddress.should('contain', address2);\nCheckoutPage_1.default.billingAddress.should('contain', city);\nCheckoutPage_1.default.billingAddress.should('contain', state);\nCheckoutPage_1.default.billingAddress.should('contain', zipcode);\nCheckoutPage_1.default.billingAddress.should('contain', country);\n// 14. Click 'Delete Account' button\nRegistrationPage_1.default.deleteAccountButton.click();\n// 15. Verify 'ACCOUNT DELETED!' and click 'Continue' button\nRegistrationPage_1.default.accountDeletedText.should('be.visible');\nRegistrationPage_1.default.continueButton.click();",
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/verify_product_quantity_in_cart.cy.ts\"\n}",
+              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click 'View Product' for any product on home page\nproductsPage.viewProductButton(1).click(); // Assuming we view the first product\n// 5. Verify product detail is opened\nproductsPage.productNameDetail.should('be.visible');\nproductsPage.productPriceDetail.should('be.visible');\n// 6. Increase quantity to 4\ncy.get('#quantity').clear().type('4');\n// 7. Click 'Add to cart' button\ncy.get('button.btn.btn-default.cart').should('be.visible').click();\n// 8. Click 'View Cart' button\nproductsPage.viewCartButton.click();\n// 9. Verify that product is displayed in cart page with exact quantity\nproductsPage.productOneQuantity.should('contain.text', '4');",
               "err": {},
-              "uuid": "adc28c9a-4f63-421c-9d30-d2266cbd569d",
-              "parentUUID": "55324442-09cc-4d43-9a42-8f6411f74059",
+              "uuid": "fa01ba1f-d65e-4c5c-a43f-4f68aeb82376",
+              "parentUUID": "24ce6bd5-84d1-4c4d-a750-4297042fc49b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "adc28c9a-4f63-421c-9d30-d2266cbd569d"
+            "fa01ba1f-d65e-4c5c-a43f-4f68aeb82376"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 38771,
+          "duration": 10080,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -95,14 +95,14 @@
     "marge": {
       "options": {
         "reportDir": "cypress/reports/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
         "charts": true,
         "reportPageTitle": "Kinetik QA Assessment",
         "embeddedScreenshots": true,
         "inlineAssets": true,
-        "saveAllAttempts": true,
-        "overwrite": false,
-        "html": false,
-        "json": true
+        "saveAllAttempts": true
       },
       "version": "6.2.0"
     }

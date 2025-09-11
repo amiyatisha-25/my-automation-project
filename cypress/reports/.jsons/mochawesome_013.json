@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-09-11T07:52:28.901Z",
-    "end": "2025-09-11T07:53:03.421Z",
-    "duration": 34520,
+    "start": "2025-09-11T09:50:42.182Z",
+    "end": "2025-09-11T09:51:10.448Z",
+    "duration": 28266,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ecc00230-9234-4d4c-8b19-604e32354049",
+      "uuid": "a1f4b2aa-30bb-4b87-b669-021212b49982",
       "title": "",
       "fullFile": "cypress/e2e/registration.cy.ts",
       "file": "cypress/e2e/registration.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "70e9533c-5297-4cd4-8585-97bb1dd6ccb8",
+          "uuid": "325a1066-ec1e-4620-bd81-e9063dc878f5",
           "title": "Test Case 1: Register User",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should register a new user",
               "fullTitle": "Test Case 1: Register User should register a new user",
               "timedOut": null,
-              "duration": 34348,
+              "duration": 27839,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/registration.cy.ts\"\n}",
               "code": "var uniqueEmail = \"testuser_\".concat(Date.now(), \"@example.com\");\n// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Signup / Login' button\nregistrationPage.signupLoginButton.click();\n// 5. Verify 'New User Signup!' is visible\nregistrationPage.newUserSignupText.should('be.visible');\n// 6. Enter name and email address\nregistrationPage.signupNameInput.type(name);\nregistrationPage.signupEmailInput.type(uniqueEmail);\n// 7. Click 'Signup' button\nregistrationPage.signupButton.click();\n// 8. Verify that 'ENTER ACCOUNT INFORMATION' is visible\nregistrationPage.enterAccountInformationText.should('be.visible');\n// 9. Fill details: Title, Name, Email, Password, Date of birth\nregistrationPage.titleRadioButton.check('Mr');\nregistrationPage.passwordInput.type('password123');\nregistrationPage.daysDropdown.select('1');\nregistrationPage.monthsDropdown.select('January');\nregistrationPage.yearsDropdown.select('1990');\n// 10. Select checkbox 'Sign up for our newsletter!'\nregistrationPage.newsletterCheckbox.check();\n// 11. Select checkbox 'Receive special offers from our partners!'\nregistrationPage.partnersCheckbox.check();\n// 12. Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number\nregistrationPage.firstNameInput.type('Test');\nregistrationPage.lastNameInput.type('User');\nregistrationPage.companyInput.type('Test Company');\nregistrationPage.address1Input.type('123 Test Street');\nregistrationPage.address2Input.type('Apt 4B');\nregistrationPage.countryDropdown.select('United States');\nregistrationPage.stateInput.type('New York');\nregistrationPage.cityInput.type('New York');\nregistrationPage.zipcodeInput.type('10001');\nregistrationPage.mobileNumberInput.type('1234567890');\n// 13. Click 'Create Account button'\nregistrationPage.createAccountButton.click();\n// 14. Verify that 'ACCOUNT CREATED!' is visible\nregistrationPage.accountCreatedText.should('be.visible');\n// 15. Click 'Continue' button\nregistrationPage.continueButton.click();\n// 16. Verify that 'Logged in as username' is visible\nregistrationPage.loggedInAsText.should('be.visible').and('contain', name);\n// 17. Click 'Delete Account' button\nregistrationPage.deleteAccountButton.click();\n// 18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button\nregistrationPage.accountDeletedText.should('be.visible');\nregistrationPage.continueButton.click();",
               "err": {},
-              "uuid": "a2cf9b58-363b-4c12-b59c-51e0d98f49f4",
-              "parentUUID": "70e9533c-5297-4cd4-8585-97bb1dd6ccb8",
+              "uuid": "bd8a99b0-ab06-4ba3-a63e-d0fbe44b77a3",
+              "parentUUID": "325a1066-ec1e-4620-bd81-e9063dc878f5",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a2cf9b58-363b-4c12-b59c-51e0d98f49f4"
+            "bd8a99b0-ab06-4ba3-a63e-d0fbe44b77a3"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 34348,
+          "duration": 27839,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -95,14 +95,14 @@
     "marge": {
       "options": {
         "reportDir": "cypress/reports/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
         "charts": true,
         "reportPageTitle": "Kinetik QA Assessment",
         "embeddedScreenshots": true,
         "inlineAssets": true,
-        "saveAllAttempts": true,
-        "overwrite": false,
-        "html": false,
-        "json": true
+        "saveAllAttempts": true
       },
       "version": "6.2.0"
     }

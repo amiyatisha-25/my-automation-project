@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-09-11T07:48:22.556Z",
-    "end": "2025-09-11T07:48:44.356Z",
-    "duration": 21800,
+    "start": "2025-09-11T09:47:11.757Z",
+    "end": "2025-09-11T09:47:27.604Z",
+    "duration": 15847,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "107f2383-206f-4c59-8c33-76fde652cb78",
+      "uuid": "447fe065-129f-4962-9f0a-a2aae5a8e35b",
       "title": "",
       "fullFile": "cypress/e2e/logout.cy.ts",
       "file": "cypress/e2e/logout.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d5d0fcc7-eff6-4641-ab69-ecfb9dabf81b",
+          "uuid": "6d6921b1-b0e3-41b3-a507-38d5da4f575f",
           "title": "Test Case 4: Logout User",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should logout a user",
               "fullTitle": "Test Case 4: Logout User should logout a user",
               "timedOut": null,
-              "duration": 21679,
+              "duration": 15551,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/logout.cy.ts\"\n}",
               "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click on 'Signup / Login' button\nregistrationPage.signupLoginButton.click();\n// 5. Verify 'Login to your account' is visible\nloginPage.loginToYourAccountText.should('be.visible');\n// 6. Enter correct email address and password\nloginPage.login(this.user.email, this.user.password);\n// 7. Click 'login' button is handled by loginPage.login\n// 8. Verify that 'Logged in as username' is visible\nregistrationPage.loggedInAsText.should('be.visible').and('contain', this.user.name);\n// 9. Click 'Logout' button\nregistrationPage.logoutButton.click();\n// 10. Verify that user is navigated to login page\ncy.url().should('include', '/login');",
               "err": {},
-              "uuid": "9f521350-ed17-4948-b507-eae10c13b50a",
-              "parentUUID": "d5d0fcc7-eff6-4641-ab69-ecfb9dabf81b",
+              "uuid": "e9b14214-bf93-4f4a-879d-6134a6dd11dd",
+              "parentUUID": "6d6921b1-b0e3-41b3-a507-38d5da4f575f",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9f521350-ed17-4948-b507-eae10c13b50a"
+            "e9b14214-bf93-4f4a-879d-6134a6dd11dd"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 21679,
+          "duration": 15551,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -95,14 +95,14 @@
     "marge": {
       "options": {
         "reportDir": "cypress/reports/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
         "charts": true,
         "reportPageTitle": "Kinetik QA Assessment",
         "embeddedScreenshots": true,
         "inlineAssets": true,
-        "saveAllAttempts": true,
-        "overwrite": false,
-        "html": false,
-        "json": true
+        "saveAllAttempts": true
       },
       "version": "6.2.0"
     }

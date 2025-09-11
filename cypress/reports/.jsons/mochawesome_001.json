@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-09-11T07:46:16.967Z",
-    "end": "2025-09-11T07:46:32.340Z",
-    "duration": 15373,
+    "start": "2025-09-11T09:45:04.288Z",
+    "end": "2025-09-11T09:45:17.667Z",
+    "duration": 13379,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "9fc59ad0-2c95-4bc8-8228-8d4bef49ca14",
+      "uuid": "907a09e2-f4bf-4d12-bf61-35c1f231be4d",
       "title": "",
       "fullFile": "cypress/e2e/add_review_on_product.cy.ts",
       "file": "cypress/e2e/add_review_on_product.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7ac48369-be7e-4089-a018-990763cf2dac",
+          "uuid": "3ae5c19d-6782-49fa-8623-d8ef7346bcb3",
           "title": "Add review on product",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should add a review on a product",
               "fullTitle": "Add review on product should add a review on a product",
               "timedOut": null,
-              "duration": 15289,
+              "duration": 13068,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/add_review_on_product.cy.ts\"\n}",
               "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\ncy.url().should('eq', 'https://automationexercise.com/');\n// 3. Click on 'Products' button    \ncy.get('a[href=\"/products\"]').click();\n// 4. Verify user is navigated to ALL PRODUCTS page successfully\ncy.get('h2.title.text-center').should('contain', 'All Products');\n// 5. Click on 'View Product' button\ncy.get('a[href=\"/product_details/1\"]').click();\n// 6. Verify 'Write Your Review' is visible\ncy.get('.shop-details-tab').should('contain', 'Write Your Review');\n// 7. Enter name, email and review\ncy.get('a[href=\"#reviews\"]').should('be.visible');\ncy.get('input#name').type('Tisha');\ncy.get('input#email').type('tisha@example.com');\ncy.get('textarea#review').type('This is a great product!');\n// 8. Click 'Submit' button \ncy.get('button#button-review').click();\n// 9. Verify success message 'Thank you for your review.' is visible\ncy.get('div.alert-success span').should('contain', 'Thank you for your review.');",
               "err": {},
-              "uuid": "d38e5ad1-f32f-4766-8ba6-521397cd4786",
-              "parentUUID": "7ac48369-be7e-4089-a018-990763cf2dac",
+              "uuid": "bb8642b3-c230-421c-a431-8f8a87e5f58e",
+              "parentUUID": "3ae5c19d-6782-49fa-8623-d8ef7346bcb3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "d38e5ad1-f32f-4766-8ba6-521397cd4786"
+            "bb8642b3-c230-421c-a431-8f8a87e5f58e"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 15289,
+          "duration": 13068,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -95,14 +95,14 @@
     "marge": {
       "options": {
         "reportDir": "cypress/reports/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
         "charts": true,
         "reportPageTitle": "Kinetik QA Assessment",
         "embeddedScreenshots": true,
         "inlineAssets": true,
-        "saveAllAttempts": true,
-        "overwrite": false,
-        "html": false,
-        "json": true
+        "saveAllAttempts": true
       },
       "version": "6.2.0"
     }

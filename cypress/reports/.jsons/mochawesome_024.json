@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-09-11T07:57:17.601Z",
-    "end": "2025-09-11T07:57:31.630Z",
-    "duration": 14029,
+    "start": "2025-09-11T09:55:16.137Z",
+    "end": "2025-09-11T09:55:32.006Z",
+    "duration": 15869,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,49 +18,49 @@
   },
   "results": [
     {
-      "uuid": "45990371-2faf-411b-a215-16d419c136f3",
+      "uuid": "dc35a478-fe84-4802-9de0-799e4d0254bd",
       "title": "",
-      "fullFile": "cypress/e2e/verify_product_quantity_in_cart.cy.ts",
-      "file": "cypress/e2e/verify_product_quantity_in_cart.cy.ts",
+      "fullFile": "cypress/e2e/view_cart_brand_products.cy.ts",
+      "file": "cypress/e2e/view_cart_brand_products.cy.ts",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "db9a6431-4387-42ae-8206-b4283577b8e1",
-          "title": "Test Case 13: Verify Product quantity in Cart",
+          "uuid": "0705d341-983a-4ffa-872b-f704de72b47e",
+          "title": "Test Case 19: View & Cart Brand Products",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "should verify product quantity in cart",
-              "fullTitle": "Test Case 13: Verify Product quantity in Cart should verify product quantity in cart",
+              "title": "should view and cart brand products",
+              "fullTitle": "Test Case 19: View & Cart Brand Products should view and cart brand products",
               "timedOut": null,
-              "duration": 13930,
+              "duration": 15624,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/verify_product_quantity_in_cart.cy.ts\"\n}",
-              "code": "// 1. Launch browser\n// 2. Navigate to url 'http://automationexercise.com'\ncy.visit('/');\n// 3. Verify that home page is visible successfully\ncy.url().should('eq', 'https://automationexercise.com/');\n// 4. Click 'View Product' for any product on home page\nproductsPage.viewProductButton(1).click(); // Assuming we view the first product\n// 5. Verify product detail is opened\nproductsPage.productNameDetail.should('be.visible');\nproductsPage.productPriceDetail.should('be.visible');\n// 6. Increase quantity to 4\ncy.get('#quantity').clear().type('4');\n// 7. Click 'Add to cart' button\ncy.get('button.btn.btn-default.cart').should('be.visible').click();\n// 8. Click 'View Cart' button\nproductsPage.viewCartButton.click();\n// 9. Verify that product is displayed in cart page with exact quantity\nproductsPage.productOneQuantity.should('contain.text', '4');",
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/view_cart_brand_products.cy.ts\"\n}",
+              "code": "// 3. Click on 'Products' button\nproductsPage.productsButton.click();\n// 4. Verify that Brands are visible on left side bar\nproductsPage.brandsSidebar.should('be.visible');\n// 5. Click on any brand name, for example: Polo\nproductsPage.poloBrand.click();\n// 6. Verify that user is navigated to brand page and brand products are displayed\ncy.url().should('include', '/brand_products/Polo');\ncy.contains('Brand - Polo Products').should('be.visible');\n// 7. On left side bar, click on any other brand link, for example: H&M\nproductsPage.hmBrand.click();\n// 8. Verify that user is navigated to that brand page and can see products\ncy.url().should('include', '/brand_products/H&M');\ncy.contains('Brand - H&M Products').should('be.visible');",
               "err": {},
-              "uuid": "84643423-3d07-4163-a985-3592c18f9f5d",
-              "parentUUID": "db9a6431-4387-42ae-8206-b4283577b8e1",
+              "uuid": "8f8d1ce1-ca0b-48a6-95bf-41a093ac6a65",
+              "parentUUID": "0705d341-983a-4ffa-872b-f704de72b47e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "84643423-3d07-4163-a985-3592c18f9f5d"
+            "8f8d1ce1-ca0b-48a6-95bf-41a093ac6a65"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 13930,
+          "duration": 15624,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -95,14 +95,14 @@
     "marge": {
       "options": {
         "reportDir": "cypress/reports/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
         "charts": true,
         "reportPageTitle": "Kinetik QA Assessment",
         "embeddedScreenshots": true,
         "inlineAssets": true,
-        "saveAllAttempts": true,
-        "overwrite": false,
-        "html": false,
-        "json": true
+        "saveAllAttempts": true
       },
       "version": "6.2.0"
     }
